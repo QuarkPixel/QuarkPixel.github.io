@@ -24,3 +24,14 @@
 	</div>
 	<SocialLinks />
 </div>
+
+<svelte:head>
+	<title>About Hsuan</title>
+	<meta name="description" content="Get to know Xuancong Meng (Hsuan) - A passionate developer and creative mind sharing thoughts and experiences" />
+	<meta property="og:title" content="About Hsuan" />
+	<meta property="og:description" content="Get to know Xuancong Meng (Hsuan) - A passionate developer and creative mind sharing thoughts and experiences" />
+	<meta property="og:type" content="profile" />
+	<meta property="profile:first_name" content="Xuancong" />
+	<meta property="profile:last_name" content="Meng" />
+	<meta property="profile:username" content="Hsuan" />
+</svelte:head>

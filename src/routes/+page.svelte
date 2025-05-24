@@ -36,3 +36,7 @@
 		<PostList posts={loadedPosts} />
 	{/await}
 </div>
+
+<svelte:head>
+	<title>Hsuan's Space</title>
+</svelte:head>
