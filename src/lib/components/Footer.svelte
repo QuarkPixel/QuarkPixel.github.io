@@ -26,7 +26,7 @@
 </script>
 
 <div
-	class="bg-surface-950-50 text-surface-50-950 sticky bottom-0 z-0"
+	class="bg-surface-800-200 text-surface-50-950 sticky bottom-0 z-0"
 	style:height={HEIGHT + 'px'}
 	style:opacity={footerDisplayArea}
 >
