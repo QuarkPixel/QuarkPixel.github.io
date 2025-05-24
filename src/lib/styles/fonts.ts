@@ -6,7 +6,7 @@ import '@fontsource-variable/noto-sans-sc';
 
 // Supports only weight 400
 // import '@fontsource-variable/climate-crisis'; // I have no idea why this doesn't work
-import '@fontsource-variable/climate-crisis/full.css';
+// import '@fontsource-variable/climate-crisis/full.css';
 
 // Supports weights 400-700
 import '@fontsource-variable/caveat';
