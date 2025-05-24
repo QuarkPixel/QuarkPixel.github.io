@@ -26,11 +26,11 @@ jobs:
         run: npm run build
 
       - name: Add .nojekyll
-        run: touch build/.nojekyll # 在 build 文件夹中添加 .nojekyll
+        run: touch build/.nojekyll
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          personal_token: ${{ secrets.DEPLOY_TOKEN }}
           publish_dir: ./build
           keep_files: false
