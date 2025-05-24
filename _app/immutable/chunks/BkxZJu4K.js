@@ -1,0 +1,1 @@
+import{o as c,q as r,v as s,E as i,w as h,x as p,y as d}from"./DFdCWIrp.js";function u(o,t,f){r&&s();var n=o,a,e;c(()=>{a!==(a=t())&&(e&&(p(e),e=null),a&&(e=h(()=>f(n,a))))},i),r&&(n=d)}export{u as c};
