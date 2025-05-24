@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@theme {
+    --ease-jelly: cubic-bezier(.26, 1.48, .36, 1);
+
+    --font-noto-serif: 'Noto Serif SC Variable', serif;
+    --font-noto-sans: 'Noto Sans SC Variable', sans-serif;
+    --font-caveat: 'Caveat Variable', cursive, system-ui;
+    --font-gravitas-one: 'Gravitas One', serif;
+    --font-lxgw-bright: 'LXGW Bright', serif;
+    --font-unbounded: 'Unbounded Sans', sans-serif;
+}
+
+:root {
+    --auto-width: clamp(665px, 90%, 2160px);
+}
+
+@layer utilities {
+    .auto-width {
+        width: var(--auto-width);
+    }
+
+}

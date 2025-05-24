@@ -1,0 +1,20 @@
+Copyright © Xuancong Meng 2025
+
+This license governs the use of the entire project, including both the blog articles and the source code. The project is divided into two distinct components with separate licensing terms as follows:
+
+1. Blog Articles
+All blog articles published on this website, unless otherwise noted or identified as reproduced content, are the exclusive property of Xuancong Meng. No individual or entity may use, reproduce, modify, distribute, or create derivative works from these articles without the express permission of Xuancong Meng. Any unauthorized use constitutes copyright infringement and may be subject to legal action.
+
+For clarity, this license applies to all textual content presented as blog articles, regardless of their format or method of publication.
+
+2. Source Code
+All source code and configuration files of this project, excluding the blog articles, are licensed under the GNU General Public License v3.0 (GPLv3). You are free to use, modify, and distribute the source code, provided that any derivative works are also licensed under GPLv3 and the source code is made available.
+
+The full text of the GPLv3 is available at: https://www.gnu.org/licenses/gpl-3.0.txt
+
+Summary
+- Blog Articles: Require explicit permission from Xuancong Meng for any use.
+- Source Code: Licensed under GPLv3, allowing use, modification, and distribution under the terms of GPLv3.
+- Exceptions: Blog articles identified as reproduced content or otherwise noted are excluded from the above copyright restrictions and may have separate licensing terms as indicated.
+
+For any questions regarding this license, refer to the project documentation or the website's license page.

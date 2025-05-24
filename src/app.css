@@ -1,0 +1,19 @@
+/* Tailwind CSS */
+@import 'tailwindcss';
+/* Skeleton UI */
+@import "$lib/styles/skeleton.css";
+/*Marquee*/
+@import "$lib/styles/marquee.css";
+
+/* Custom styles */
+@import '$lib/styles/variable.css';
+
+@custom-variant dark (&:where([data-mode="dark"], [data-mode="dark"] *));
+
+* {
+    font-synthesis: none;
+}
+
+body {
+    min-width: 665px;
+}

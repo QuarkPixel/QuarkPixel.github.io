@@ -1,0 +1,19 @@
+@source "../../../node_modules/@selemondev/svelte-marquee/dist/*.svelte";
+@plugin "tailwindcss-animate";
+
+@theme {
+    --gap: 1rem;
+    --duration: 40s;
+    --animate-marquee-left: marquee-left var(--duration) linear infinite;
+    --animate-marquee-up: marquee-up var(--duration) linear infinite;
+
+    @keyframes marquee-left {
+        from { transform: translateX(0); }
+        to { transform: translateX(calc(-100% - var(--gap))); }
+    }
+
+    @keyframes marquee-up {
+        from { transform: translateY(0); }
+        to { transform: translateY(calc(-100% - var(--gap))); }
+    }
+}
