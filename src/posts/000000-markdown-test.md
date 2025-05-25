@@ -1,8 +1,8 @@
 ---
 title: Markdown语法测试文档
 description: 这是一个包含所有Markdown语法特性的测试文档
-date: 2000-00-00
-tags: ['Markdown', '测试']
+date: 1970-01-01
+tags: ['Markdown', 'Test']
 layout: blog
 copyright: false
 ---
