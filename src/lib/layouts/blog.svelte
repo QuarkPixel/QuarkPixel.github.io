@@ -58,7 +58,7 @@
 	} = $props();
 </script>
 
-<article class="auto-width px-[5%] mb-4">
+<article class="auto-width max-w-[1080px] px-[5%] mb-4">
 	<header class="mb-10">
 		<H1 class="font-[900]">{title}</H1>
 		<div class="font-noto-sans text-base opacity-70">{description}</div>
