@@ -83,7 +83,7 @@
 						onclick={() => history.back()}>
 						<Icon icon="gravity-ui:chevron-left" />
 					</button>
-					<H6 class="font-unbounded text-center py-2 px-4">{titleInfo.title}</H6>
+					<H6 class="font-noto-serif text-center py-2 px-4">{titleInfo.title}</H6>
 				</div>
 			{:else}
 				<div transition:blur class="self-baseline flex items-end gap-1">
