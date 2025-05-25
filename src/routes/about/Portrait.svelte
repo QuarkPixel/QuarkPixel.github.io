@@ -64,7 +64,7 @@
 				left: 0;
 				width: 100%;
 				height: 100%;
-				background: url('../../../static/cover.webp') center bottom;
+				background: url('/cover.webp') center bottom;
 				background-size: cover;
 			}
 		}
