@@ -15,6 +15,3 @@ import '@fontsource/gravitas-one';
 
 // 霞鹜文楷
 import '$lib/font_source/lxgw-bright/index.css';
-
-// Unbounded Sans
-import '$lib/font_source/unbounded-sans/index.css';
