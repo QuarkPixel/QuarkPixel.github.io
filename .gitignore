@@ -1,6 +1,10 @@
 node_modules
 .idea
 
+src/lib/font_source/*/*/index.html
+src/lib/font_source/*/*/preview.svg
+src/lib/font_source/*/*/reporter.json
+
 # Output
 .output
 .vercel
