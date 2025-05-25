@@ -1,8 +1,7 @@
 <script lang="ts">
 	import Landing from './Landing.svelte';
-	import PostList from '$lib/components/PostList.svelte';
+	import ListItem from '$lib/components/ListItem.svelte';
 	import type Metadata from '$lib/types/postMetadata.js';
-	import Logo from '$lib/components/Logo.svelte';
 
 	interface MarkdownModule {
 		metadata: Metadata;
@@ -33,7 +32,12 @@
 
 <div class="auto-width px-20 group">
 	{#await loadedPostsPromise then loadedPosts}
-		<PostList posts={loadedPosts} />
+		{#each loadedPosts as { path, metadata }, i (path)}
+			<ListItem {path} {metadata} />
+			{#if i !== posts.length - 1}
+				<hr class="hr border-dashed my-3 duration-700 group-hover:border-primary-500" />
+			{/if}
+		{/each}
 	{/await}
 </div>
 
