@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { Marquee } from '@selemondev/svelte-marquee';
-	import Icon from '@iconify/svelte';
 
 	import { onMount } from 'svelte';
 
