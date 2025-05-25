@@ -2,6 +2,7 @@
   "name": "hsuans-space",
   "version": "0.0.1",
   "homepage": "https://QuarkPixel.github.io",
+  "license": "LGPL-3.0-or-later",
   "scripts": {
     "dev": "vite dev",
     "build": "vite build && npm run prepack",
