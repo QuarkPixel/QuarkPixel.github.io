@@ -18,7 +18,9 @@
 		OrderedList,
 		Image,
 		Table,
-		TableBody
+		TableBody,
+		Italic,
+		Hr
 	} from '$lib/components/typography/index.js';
 
 	export {
@@ -39,7 +41,9 @@
 		OrderedList as ol,
 		Image as img,
 		Table as table,
-		TableBody as tbody
+		TableBody as tbody,
+		Italic as em,
+		Hr as hr
 	};
 </script>
 
@@ -61,7 +65,7 @@
 <article class="auto-width max-w-[1080px] px-[5%] mb-4">
 	<header class="mb-10">
 		<H1 class="font-[900]">{title}</H1>
-		<div class="font-noto-sans text-base opacity-70">{description}</div>
+		<div class="font-noto-sans text-base opacity-70 mt-2">{description}</div>
 		<div class="flex justify-between my-4">
 			<Tags tags={tags} />
 			<div class="flex gap-4 font-[Georgia] oldstyle-nums opacity-80">
@@ -87,11 +91,19 @@
 <style lang="scss">
   :global {
     .blog-article {
+      //font-family: "LXGW WenKai Medium";
+      //font-feature-settings: 'halt';
+
       h1, h2, h3, h4, h5, h6 {
         margin-top: .8em;
       }
-    }
 
+      p {
+        line-height: 1.6em;
+        word-break: normal;
+        hanging-punctuation: allow-end;
+        overflow-wrap: break-word;
+      }
+    }
   }
 </style>
-

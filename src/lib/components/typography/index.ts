@@ -19,3 +19,5 @@ export { default as BaseList } from './BaseList.svelte';
 export { default as Image } from './Image.svelte';
 export { default as Table } from './Table.svelte';
 export { default as TableBody } from './TableBody.svelte';
+export { default as Italic } from './Italic.svelte';
+export { default as Hr } from './Hr.svelte';

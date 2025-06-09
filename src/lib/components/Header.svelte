@@ -106,6 +106,7 @@
 <style>
     .header {
         min-width: 100%;
+				padding: 0 10px;
         position: sticky;
         top: 0;
         z-index: 2;
