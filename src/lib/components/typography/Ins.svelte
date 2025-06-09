@@ -2,4 +2,4 @@
 	const { children, class: className = '', ...rest } = $props();
 </script>
 
-<ins class="ins font-lxgw-bright {className}" {...rest}>{@render children()}</ins>
+<ins class="ins font-lxgw-wenkai {className}" {...rest}>{@render children()}</ins>

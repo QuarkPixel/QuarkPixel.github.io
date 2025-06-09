@@ -16,7 +16,7 @@ layout: blog
 
 ## 1. 字体
 
-正文部分使用 [霞鹜文楷](https://github.com/lxgw/LxgwBright?tab=readme-ov-file)。
+正文部分使用 [霞鹜文楷](https://github.com/lxgw/LxgwWenKai)。
 
 #### 其余字体
 
