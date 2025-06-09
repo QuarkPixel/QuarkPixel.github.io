@@ -14,4 +14,4 @@ import '@fontsource-variable/caveat';
 import '@fontsource/gravitas-one';
 
 // 霞鹜文楷
-import '$lib/font_source/lxgw-bright/index.css';
+import '$lib/font_source/lxgw-wenkai/index.css';

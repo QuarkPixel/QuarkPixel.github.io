@@ -8,7 +8,7 @@
     --text-scaling: 1.2;
     --base-font-color: var(--color-surface-950);
     --base-font-color-dark: var(--color-surface-50);
-    --base-font-family: 'LXGW Bright', serif;
+    --base-font-family: 'LXGW WenKai', serif;
     --base-font-size: 24px;
     --base-line-height: 36px;
     --base-font-weight: normal;
@@ -22,7 +22,7 @@
     --heading-letter-spacing: inherit;
     --anchor-font-color: var(--color-primary-600);
     --anchor-font-color-dark: var(--color-primary-500);
-    --anchor-font-family: 'LXGW Bright', serif;
+    --anchor-font-family: 'LXGW WenKai', serif;
     --anchor-font-size: inherit;
     --anchor-line-height: inherit;
     --anchor-font-weight: inherit;
