@@ -51,7 +51,6 @@
 		useAutoTheme = false;
 		sessionStorage.setItem('auto-theme-mode', 'false');
 		const newTheme: ThemeMode = event.checked ? 'light' : 'dark';
-		console.log(1);
 		setThemeMode(newTheme);
 	}
 
