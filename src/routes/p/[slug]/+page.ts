@@ -5,7 +5,7 @@ export const entries = () => posts.map((slug) => ({ slug }));
 
 export const prerender = true;
 
-export async function load({ params }) {
+export async function load({ params }: { params: { slug: string } }) {
 	try {
 		const post = await import(`../../../posts/${params.slug}.md`);
 
