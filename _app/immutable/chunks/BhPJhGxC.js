@@ -1,0 +1,1 @@
+import{g as o,w as a,d as s}from"./Csa9PCK1.js";const m="dark",t=a(sessionStorage.getItem("theme-mode")?sessionStorage.getItem("theme-mode"):m),n=s(t,e=>e==="dark");s(t,e=>e==="light");function r(e){document.documentElement.setAttribute("data-mode",e),sessionStorage.setItem("theme-mode",e),t.set(e)}function i(){return o(t)}export{i as g,n as i,r as s,t};
