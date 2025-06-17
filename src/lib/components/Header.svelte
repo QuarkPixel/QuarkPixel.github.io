@@ -1,16 +1,14 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
-	import { onMount } from 'svelte';
 	import { page } from '$app/state';
 	import ThemeSwitch from '$lib/components/ThemeSwitch.svelte';
 	import { H6 } from '$lib/components/typography/index.js';
 	import Icon from '@iconify/svelte';
 	import { blur } from 'svelte/transition';
 	import Logo from '$lib/components/Logo.svelte';
+	import { usePixelPerfectedNoise } from '../utils/pixelPerfectedNoise.js';
 
 	const { titleInfo, links } = $props();
-
-	const NOISE_TEXTURE_SIZE: number = 50 * 2;
 
 	const COLOR_SCHEME = [
 		'hover:text-primary-700-300',
@@ -18,23 +16,7 @@
 		'hover:text-tertiary-700-300'
 	];
 
-	let noiseTextureSize = $state(NOISE_TEXTURE_SIZE);
-
-	function calcNoiseSize() {
-		const dpr = window.devicePixelRatio || 1;
-		noiseTextureSize = NOISE_TEXTURE_SIZE / dpr;
-	}
-
-	if (browser) {
-		calcNoiseSize();
-	}
-
-	onMount(() => {
-		window.addEventListener('resize', calcNoiseSize);
-
-		return () => window.removeEventListener('resize', calcNoiseSize);
-	});
-
+	const noiseTextureSize = usePixelPerfectedNoise();
 
 	let displayTitle: boolean = $state.raw(browser
 		&& titleInfo.scrollThreshold != 0
@@ -59,7 +41,7 @@
 	let logoOfficial = $state.raw(true);
 </script>
 
-<div class="header relative" style:--size="{noiseTextureSize}px">
+<div class="header relative" style:--size="{$noiseTextureSize}px">
 	<div>
 		<div class="grow flex gap-4">
 			<a href="/" class="logo self-baseline">
@@ -103,22 +85,17 @@
 	</div>
 </div>
 
-<style>
+<style lang="scss">
+    @use '../styles/variable.css' as *;
+
     .header {
+        @extend .noise-texture;
         min-width: 100%;
 				padding: 0 10px;
         position: sticky;
         top: 0;
         z-index: 2;
 
-        background-color: color-mix(
-                in oklch,
-                light-dark(var(--color-surface-50), var(--color-surface-900)) 80%,
-                transparent
-        );
-        background-image: url(/noise-texture.png);
-        background-size: var(--size);
-        image-rendering: pixelated;
         backdrop-filter: blur(10px) saturate(80%);
 
         &::after {
