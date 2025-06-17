@@ -26,6 +26,6 @@
             light-dark(var(--color-surface-50), var(--color-surface-900)) 80%,
             transparent);
     background-image: url(/noise-texture.png);
-    background-size: var(--size, 50px);
+    background-size: var(--noise-size, 50px);
     image-rendering: pixelated;
 }

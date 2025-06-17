@@ -41,7 +41,7 @@
 	let logoOfficial = $state.raw(true);
 </script>
 
-<div class="header relative" style:--size="{$noiseTextureSize}px">
+<div class="header relative" style:--noise-size="{$noiseTextureSize}px">
 	<div>
 		<div class="grow flex gap-4">
 			<a href="/" class="logo self-baseline">
