@@ -12,14 +12,14 @@
 		metadata: Metadata;
 	}
 
-	const posts = Object.entries(import.meta.glob<MarkdownModule>('/src/posts/*.md'));
+	const posts = Object.entries(import.meta.glob<MarkdownModule>('/posts/*.md'));
 
 	const loadedPostsPromise: Promise<Post[]> = Promise.all(
 		posts
 			.map(([path, resolver]) =>
 				resolver().then((post) => {
 					return {
-						path: path.replace('/src/posts/', '/p/').replace('.md', ''),
+						path: path.replace('/posts/', '/p/').replace('.md', ''),
 						metadata: post.metadata
 					};
 				})

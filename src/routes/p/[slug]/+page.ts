@@ -7,7 +7,7 @@ export const prerender = true;
 
 export async function load({ params }: { params: { slug: string } }) {
 	try {
-		const post = await import(`../../../posts/${params.slug}.md`);
+		const post = await import(`../../../../posts/${params.slug}.md`);
 
 		return {
 			content: post.default,

@@ -9,7 +9,7 @@ export async function load({ params, url }: { params: any; url: URL }): Promise<
 			scrollThreshold: 0
 		};
 	try {
-		const post = await import(`../posts/${params.slug}.md`);
+		const post = await import(`../../posts/${params.slug}.md`);
 		return {
 			scrollThreshold: 200,
 			title: post.metadata.title

@@ -5,7 +5,7 @@ export function generatePostsList() {
   return {
     name: 'generate-posts-list',
     async configResolved() {
-      const postsDir = path.resolve('src/posts');
+      const postsDir = path.resolve('posts');
       const files = fs.readdirSync(postsDir).filter(file => file.endsWith('.md'));
 
       const posts = files.map(file => file.replace('.md', ''));

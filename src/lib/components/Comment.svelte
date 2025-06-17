@@ -24,8 +24,6 @@
 				},
 				'https://giscus.app'
 			);
-		} else {
-			console.error('giscusFrame is not loaded');
 		}
 	});
 </script>

@@ -5,5 +5,10 @@ import { generatePostsList } from './vite-plugin-generate-posts.js';
 import { giscusThemePlugin } from './vite-plugin-giscus-theme.js';
 
 export default defineConfig({
-  plugins: [sveltekit(), tailwindcss(), generatePostsList(), giscusThemePlugin()]
+  plugins: [sveltekit(), tailwindcss(), generatePostsList(), giscusThemePlugin()],
+  server: {
+    fs: {
+      allow: ['posts']
+    }
+  }
 });
