@@ -3,7 +3,7 @@ title: 上线评论功能～
 description: 添加基于 Giscus 的评论系统
 date: 2025-06-16
 author: Xuancong Meng
-tags: [ 'Diary' ]
+tags: [ 'Develop Diary' ]
 layout: blog
 ---
 
