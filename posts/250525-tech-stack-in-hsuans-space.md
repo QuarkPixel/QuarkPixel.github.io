@@ -25,6 +25,8 @@ layout: blog
 - Caveat Variable
 - Gravitas One
 
+值得注意的是，本网站使用了[字体分包](https://chinese-font.netlify.app/zh-cn/online-split/)技术，由[中文网字计划](https://chinese-font.netlify.app/zh-cn/)支持。因此在初次访问网站时，字体会有很独特的加载顺序。
+
 ## 2. 动画
 
 ### 可变字体动画
