@@ -16,4 +16,13 @@
 
 body {
     min-width: 665px;
+    height: 100vh;
+    overflow: hidden;
+}
+
+body > div {
+    height: 100vh;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
 }

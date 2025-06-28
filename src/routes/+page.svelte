@@ -28,9 +28,9 @@
 	);
 </script>
 
-<Landing class="mb-15" />
+<Landing class="my-15" />
 
-<div class="auto-width px-20 group">
+<div class="auto-width px-20 mt-5 mb-40 group">
 	{#await loadedPostsPromise then loadedPosts}
 		{#each loadedPosts as { path, metadata }, i (path)}
 			<ListItem {path} {metadata} />

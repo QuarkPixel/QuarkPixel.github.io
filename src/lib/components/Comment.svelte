@@ -1,5 +1,5 @@
 <script lang="ts">
-	const { ...rest } = $props();
+	const { class: ClassName, ...rest } = $props();
 	import { browser } from '$app/environment';
 	import { page } from '$app/state';
 	import { getThemeMode, themeMode } from '$lib/stores/theme.js';
@@ -28,7 +28,7 @@
 	});
 </script>
 
-<div {...rest}>
+<div class="min-h-[372px] {ClassName}" {...rest}>
 	{#if browser && themeUrl}
 		<script
 			src="https://giscus.app/client.js"
@@ -43,7 +43,6 @@
 			data-input-position="top"
 			data-theme={themeUrl}
 			data-lang="en"
-			data-loading="lazy"
 			crossorigin="anonymous"
 			async
 		>

@@ -7,14 +7,15 @@
 	import { blur } from 'svelte/transition';
 	import Logo from '$lib/components/Logo.svelte';
 	import { usePixelPerfectedNoise } from '../utils/pixelPerfectedNoise.js';
+  import { getColorful } from '../utils/colorful.js';
 
 	const { titleInfo, links } = $props();
 
-	const COLOR_SCHEME = [
-		'hover:text-primary-700-300',
-		'hover:text-secondary-700-300',
-		'hover:text-tertiary-700-300'
-	];
+	// const COLOR_SCHEME = [
+	// 	'hover:text-primary-700-300',
+	// 	'hover:text-secondary-700-300',
+	// 	'hover:text-tertiary-700-300'
+	// ];
 
 	const noiseTextureSize = usePixelPerfectedNoise();
 
@@ -65,7 +66,7 @@
 						onclick={() => history.back()}>
 						<Icon icon="gravity-ui:chevron-left" />
 					</button>
-					<H6 class="font-noto-serif text-center py-2 px-4">{titleInfo.title}</H6>
+					<H6 class="font-noto-serif text-center py-2 px-3">{titleInfo.title}</H6>
 				</div>
 			{:else}
 				<div transition:blur class="self-baseline flex items-end gap-1">
@@ -73,7 +74,7 @@
 						<a
 							{href}
 							class="link h6
-								{COLOR_SCHEME[i % COLOR_SCHEME.length]}
+								{getColorful(i)}
 								{(page.url.pathname === href) ? 'selected' : ''}
 							"
 						>{label}</a>
@@ -86,110 +87,115 @@
 </div>
 
 <style lang="scss">
-    @use '../styles/variable.css' as *;
+  @use '../styles/variable.css' as *;
 
-    .header {
-        @extend .noise-texture;
-        min-width: 100%;
-				padding: 0 10px;
-        position: sticky;
-        top: 0;
-        z-index: 2;
+  .header {
+    @extend .noise-texture;
+    min-width: 100%;
+    padding: 0 10px;
+    position: sticky;
+    top: 0;
+    z-index: 2;
 
-        backdrop-filter: blur(10px) saturate(80%);
+    backdrop-filter: blur(10px) saturate(80%);
 
-        &::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 1px;
-            background-color: light-dark(#fffa, #fff2);
-        }
-
-        > div {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 1rem;
-
-            width: var(--auto-width);
-            margin: 0 auto;
-            /*padding: 0 5%;*/
-        }
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background-color: light-dark(#fffa, #fff2);
     }
 
-    .logo {
-        margin: .8rem 0;
-        font-size: 30px;
-        @media (width >= 48rem) {
-            font-size: 33.75px; /* 30px * 1.125 */
-        }
+    > div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+
+      width: var(--auto-width);
+      margin: 0 auto;
+      /*padding: 0 5%;*/
+    }
+  }
+
+  .logo {
+    margin: .8rem 0;
+    font-size: 30px;
+    @media (width >= 48rem) {
+      font-size: 33.75px; /* 30px * 1.125 */
+    }
+  }
+
+  .title {
+
+    > button {
+      transition: .6s var(--ease-jelly) !important;
+      opacity: 0;
+      width: 0;
+      border-radius: var(--radius-base);
+      scale: 1 .4;
+			filter: blur(3px);
     }
 
-    .title {
-
-        > button {
-            transition: .6s var(--ease-jelly) !important;
-            opacity: 0;
-            width: 0;
-            border-radius: var(--radius-base);
-        }
-
-        &:hover > button {
-            opacity: 1;
-            width: 24px;
-        }
-
+    &:hover > button {
+      opacity: 1;
+      width: 28px;
+      padding: 2px;
+      scale: 1;
+			filter: unset;
     }
 
-    .link {
-        align-items: center;
-        display: flex;
-        flex-direction: row;
-        opacity: .8;
-        padding: 0 1rem;
-        position: relative;
-        transition: 500ms var(--ease-jelly);
-        white-space: nowrap;
-        font-family: var(--font-gravitas-one);
+  }
 
-        &::before,
-        &::after {
-            background-color: currentColor;
-            content: '';
-            display: block;
-            height: 1px;
-            margin: 0 .3rem;
-            opacity: 0;
-            position: absolute;
-            transition: 500ms var(--ease-jelly);
-            width: 1.5rem;
-        }
+  .link {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    opacity: .8;
+    padding: 0 1rem;
+    position: relative;
+    transition: 500ms var(--ease-jelly);
+    white-space: nowrap;
+    font-family: var(--font-gravitas-one);
 
-        &::before {
-            left: 0;
-        }
-
-        &::after {
-            right: 0;
-        }
-
-        &:hover {
-            opacity: 1;
-
-            &::before,
-            &::after {
-                width: .7rem;
-                margin: 0;
-                opacity: 1;
-            }
-        }
+    &::before,
+    &::after {
+      background-color: currentColor;
+      content: '';
+      display: block;
+      height: 1px;
+      margin: 0 .3rem;
+      opacity: 0;
+      position: absolute;
+      transition: 500ms var(--ease-jelly);
+      width: 1.5rem;
     }
 
-    .selected {
+    &::before {
+      left: 0;
+    }
+
+    &::after {
+      right: 0;
+    }
+
+    &:hover {
+      opacity: 1;
+
+      &::before,
+      &::after {
+        width: .7rem;
+        margin: 0;
         opacity: 1;
-        text-decoration: underline;
+      }
     }
+  }
+
+  .selected {
+    opacity: 1;
+    text-decoration: underline;
+  }
 </style>
