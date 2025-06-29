@@ -5,6 +5,7 @@ src/lib/font_source/*/*/index.html
 src/lib/font_source/*/*/preview.svg
 src/lib/font_source/*/*/reporter.json
 static/feed/*
+/src/lib/posts.js
 
 # Output
 .output
@@ -28,5 +29,3 @@ Thumbs.db
 # Vite
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
-
-/src/lib/posts.ts

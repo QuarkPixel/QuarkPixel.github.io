@@ -1,6 +1,6 @@
 import type { Plugin, ViteDevServer } from 'vite';
 import path from 'path';
-import { generateRssFeed } from '../src/lib/utils/rss.js';
+import { generateRssFeed } from '../../src/lib/utils/rss.js';
 
 export function rssPlugin(): Plugin {
   return {
