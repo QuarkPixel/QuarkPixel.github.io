@@ -16,7 +16,7 @@ const config = {
 			strict: true
 		}),
 		prerender: {
-			entries: ['*'],
+			entries: ['*', '/feed/rss.xml', '/feed/atom.xml', '/feed/feed.json'],
 			handleHttpError: ({ path, referrer, message }) => {
 				if (path.startsWith('/feed/')) {
 					return;

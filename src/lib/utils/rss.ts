@@ -105,22 +105,29 @@ export async function generateRssFeed() {
       });
     });
 
-    // Write files
-    const feedDir = 'static/feed';
-    fs.mkdirSync(feedDir, { recursive: true });
+    // Write files to both static and build directories
+    const directories = ['static/feed'];
+    // 如果在构建过程中，也写入到构建目录
+    if (process.env.NODE_ENV === 'production') {
+      directories.push('build/feed');
+    }
     
-    const writeFeeds = [
-      { filename: 'rss.xml', content: feed.rss2() },
-      { filename: 'atom.xml', content: feed.atom1() },
-      { filename: 'feed.json', content: feed.json1() }
-    ];
+    for (const dir of directories) {
+      fs.mkdirSync(dir, { recursive: true });
+      
+      const writeFeeds = [
+        { filename: 'rss.xml', content: feed.rss2() },
+        { filename: 'atom.xml', content: feed.atom1() },
+        { filename: 'feed.json', content: feed.json1() }
+      ];
 
-    for (const { filename, content } of writeFeeds) {
-      try {
-        fs.writeFileSync(path.join(feedDir, filename), content);
-        console.log(`Generated ${filename} successfully`);
-      } catch (error) {
-        console.error(`Error writing ${filename}:`, error);
+      for (const { filename, content } of writeFeeds) {
+        try {
+          fs.writeFileSync(path.join(dir, filename), content);
+          console.log(`Generated ${filename} in ${dir} successfully`);
+        } catch (error) {
+          console.error(`Error writing ${filename} to ${dir}:`, error);
+        }
       }
     }
   } catch (error) {
