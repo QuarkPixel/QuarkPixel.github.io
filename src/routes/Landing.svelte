@@ -81,6 +81,7 @@
 	aria-valuenow={progress.current}
 	aria-valuemin={0}
 	aria-valuemax={1}
+	style="overflow-anchor: none;"
 >
 	<TextAnimation
 		text="Hsuan's Space"
