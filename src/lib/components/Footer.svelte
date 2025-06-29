@@ -3,7 +3,7 @@
 
 	const links = [
 		{ label: 'Privacy Policy', href: '/privacy', blank: false },
-		{ label: 'RSS', href: '#', blank: true },
+		{ label: 'RSS', href: '/feed/rss.xml', blank: true },
 		{
 			label: 'Source Code',
 			href: 'https://github.com/QuarkPixel/QuarkPixel.github.io',

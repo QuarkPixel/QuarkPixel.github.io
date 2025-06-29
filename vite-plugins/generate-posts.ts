@@ -1,9 +1,10 @@
 import fs from 'fs';
 import path from 'path';
+import type { Plugin } from 'vite';
 
-export function generatePostsList() {
+export function generatePostsList(): Plugin {
   return {
-    name: 'generate-posts-list',
+    name: 'vite-plugin-generate-posts',
     async configResolved() {
       const postsDir = path.resolve('posts');
       const files = fs.readdirSync(postsDir).filter(file => file.endsWith('.md'));
@@ -15,7 +16,7 @@ export const posts = ${JSON.stringify(posts, null, 2)};
 `;
 
       fs.writeFileSync(path.resolve('src/lib/posts.ts'), output);
-      console.log('Generated src/lib/posts.ts');
+      console.log('✨ Generated src/lib/posts.ts');
     }
   };
 }

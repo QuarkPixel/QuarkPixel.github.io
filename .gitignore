@@ -4,6 +4,7 @@ node_modules
 src/lib/font_source/*/*/index.html
 src/lib/font_source/*/*/preview.svg
 src/lib/font_source/*/*/reporter.json
+static/feed/*
 
 # Output
 .output

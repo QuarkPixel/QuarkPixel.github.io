@@ -3,4 +3,5 @@ export default interface Metadata {
 	description: string;
 	date: Date | string;
 	tags: string[];
+	cover?: string;
 }

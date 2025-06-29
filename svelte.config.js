@@ -16,7 +16,14 @@ const config = {
 			strict: true
 		}),
 		prerender: {
-			entries: ['*']
+			entries: ['*'],
+			handleHttpError: ({ path, referrer, message }) => {
+				if (path.startsWith('/feed/')) {
+					return;
+				}
+
+				throw new Error(message);
+			}
 		}
 	}
 };

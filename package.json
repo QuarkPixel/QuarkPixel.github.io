@@ -79,6 +79,8 @@
     "@fontsource/gravitas-one": "^5.2.5",
     "@selemondev/svelte-marquee": "^0.0.3",
     "@sveltejs/kit": "^2.20.8",
+    "feed": "^5.1.0",
+    "marked": "^16.0.0",
     "svelte-text-animation": "^0.1.0",
     "tailwindcss-animate": "^1.0.7"
   }
