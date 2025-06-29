@@ -1,10 +1,10 @@
 <!-- Umami Analytics Component -->
 <script>
   import { onMount } from 'svelte';
-  import { browser } from '$app/environment';
+  import { browser, dev } from '$app/environment';
 
   onMount(() => {
-    if (browser) {
+    if (browser && !dev) {
       const script = document.createElement('script');
       script.defer = true;
       script.src = 'https://cloud.umami.is/script.js';
