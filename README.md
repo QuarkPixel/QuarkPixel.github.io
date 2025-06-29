@@ -1,58 +1,55 @@
-# Svelte library
+# Hsuan's Space
 
-Everything you need to build a Svelte library, powered by [`sv`](https://npmjs.com/package/sv).
+## 友链添加说明
 
-Read more about creating a library [in the docs](https://svelte.dev/docs/kit/packaging).
+### 基本要求
 
-## Creating a project
+- 网站内容健康，无违法违规内容
+- 网站以原创内容为主
+- 确保网站能够正常访问
 
-If you're seeing this, you've probably already done this step. Congrats!
+### 数据格式
 
-```bash
-# create a new project in the current directory
-npx sv create
+友链数据存放在 `src/data/friends.ts` 文件中，格式如下：
 
-# create a new project in my-app
-npx sv create my-app
+```typescript
+export interface FriendLink {
+	href: string;    // 网站链接
+	name: string;    // 网站名称
+	desc?: string;   // 网站描述（可选）
+	icon?: string;   // 图标名称（可选，使用 Iconify 图标）
+}
 ```
 
-## Developing
+其中，`icon`可以从 [Icônes](https://icones.netlify.app/) 上寻找合适的。
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+### 添加方式
 
-```bash
-npm run dev
+1. Fork 本仓库
+2. 在 `src/data/friends.ts` 中的 `friendLinks` 数组中添加你的网站信息
+3. 提交 Pull Request
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+### 示例
+
+```json5
+{
+  "href": "https://example.com",
+  "name": "Name",
+  "desc": "Description", // 可选
+  "icon": "tabler:world" // 可选，使用 Iconify 图标
+}
 ```
 
-Everything inside `src/lib` is part of your library, everything inside `src/routes` can be used as a showcase or preview app.
+### 我的友链信息
 
-## Building
+如果你想添加本站到你的友链，可以使用以下信息：
 
-To build your library:
+- 名称：Hsuan's Space
+- 链接：https://quarkpixel.github.io/
 
-```bash
-npm run package
-```
+### 注意事项
 
-To create a production version of your showcase app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
-
-## Publishing
-
-Go into the `package.json` and give your package the desired name through the `"name"` option. Also consider adding a `"license"` field and point it to a `LICENSE` file which you can create from a template (one popular option is the [MIT license](https://opensource.org/license/mit/)).
-
-To publish your library to [npm](https://www.npmjs.com):
-
-```bash
-npm publish
-```
+- 请确保提供的信息准确无误
+- 建议添加网站描述，让访客更好地了解你的网站
+- 图标推荐使用 [Icônes](https://icones.netlify.app/) 中的图标
+- 提交 PR 前请确保数据格式正确，且能通过 TypeScript 类型检查

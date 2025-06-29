@@ -31,8 +31,9 @@
 	];
 </script>
 
+
 <div
-	class="social-list flex gap-5 justify-center flex-wrap absolute bottom-16 left-0 right-0 rounded-2xl *:btn
+	class="social-list flex gap-5 justify-center flex-wrap rounded-2xl *:btn
 		*:text-xl *:hover:preset-filled-primary-500"
 >
 	{#each socialLinks as { href, icon, desc, class: className } (href)}

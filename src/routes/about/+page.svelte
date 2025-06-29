@@ -3,6 +3,7 @@
 	import Portrait from './Portrait.svelte';
 	import { Mark } from '$lib/components/typography/index.js';
 	import SocialLinks from './SocialLinks.svelte';
+	import FriendLinks from './FriendLinks.svelte';
 </script>
 
 <div class="mx-5 *:text-center *:font-gravitas-one relative">
@@ -23,7 +24,10 @@
 		</span>
 	</div>
 </div>
-<SocialLinks />
+<div class="absolute bottom-16 left-0 right-0 flex flex-col gap-4">
+	<SocialLinks />
+	<FriendLinks />
+</div>
 
 <svelte:head>
 	<title>About Hsuan</title>
