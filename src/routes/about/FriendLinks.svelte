@@ -16,6 +16,7 @@
 		<Icon
 			icon="gravity-ui:chevron-up"
 			class="duration-300"
+			width={16}
 			style="rotate: {isOpen ? '0deg' : '180deg'}"
 		/>
 		<span class="font-caveat duration-300" style:font-weight={isOpen ? 'bold' : 'normal'}>
