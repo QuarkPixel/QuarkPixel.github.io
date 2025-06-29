@@ -17,7 +17,7 @@
 </script>
 
 <div
-	class="main min-h-[100vh] bg-surface-50-950 flex flex-col shadow dark:shadow-none relative snap-end"
+	class="main min-h-[100vh] bg-surface-50-950 flex flex-col relative snap-end"
 >
 	<Header titleInfo={data} {links} />
 	<div class="flex-1 flex flex-col items-center justify-center py-5">
