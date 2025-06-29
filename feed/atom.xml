@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://quarkpixel.github.io</id>
+    <title>Hsuan's Space</title>
+    <updated>2025-06-29T08:35:53.660Z</updated>
+    <generator>Feed for Node.js</generator>
+    <author>
+        <name>Xuancong Meng</name>
+        <email>xuancongmeng@gmail.com</email>
+        <uri>https://quarkpixel.github.io</uri>
+    </author>
+    <link rel="alternate" href="https://quarkpixel.github.io"/>
+    <link rel="self" href="https://quarkpixel.github.io/feed/atom.xml"/>
+    <subtitle>Hsuan's personal blog about tech, life, and thoughts</subtitle>
+    <logo>https://quarkpixel.github.io/logos/large-black.svg</logo>
+    <icon>https://quarkpixel.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2025, Xuancong Meng</rights>
+    <entry>
+        <title type="html"><![CDATA[支持 RSS 订阅啦！]]></title>
+        <id>https://quarkpixel.github.io/p/250629-new-rss-feature</id>
+        <link href="https://quarkpixel.github.io/p/250629-new-rss-feature"/>
+        <updated>2025-06-29T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[添加 RSS Feed 支持，方便订阅博客更新]]></summary>
+        <content type="html"><![CDATA[<p>为博客添加了 RSS 订阅功能！🎉</p>
+<p>现在你可以通过 RSS 阅读器订阅本博客的更新了。支持以下几种订阅格式：</p>
+<ul>
+<li><a href="/feed/rss.xml">RSS 2.0</a></li>
+<li><a href="/feed/atom.xml">Atom</a></li>
+<li><a href="/feed/feed.json">JSON Feed</a></li>
+</ul>
+<p>RSS（Really Simple Syndication）是一种很棒的信息获取方式。通过 RSS，你可以在自己喜欢的阅读器中统一管理和阅读订阅的内容，不会错过任何更新，也不用担心算法推荐的干扰。</p>
+<p>欢迎订阅本博客的 RSS feed！📮</p>
+]]></content>
+        <author>
+            <name>Xuancong Meng</name>
+            <email>xuancongmeng@gmail.com</email>
+            <uri>https://quarkpixel.github.io</uri>
+        </author>
+        <category label="[ 'Develop Diary' ]"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Rust 是一门非常适合 Vibe Coding 的语言]]></title>
+        <id>https://quarkpixel.github.io/p/250623-rust-is-suitable-for-vibe-coding</id>
+        <link href="https://quarkpixel.github.io/p/250623-rust-is-suitable-for-vibe-coding"/>
+        <updated>2025-06-23T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[从安全特性、错误提示和自动化验证的角度，探讨为什么 Rust 可能是最适合 AI 编程的语言]]></summary>
+        <content type="html"><![CDATA[<p><strong>以下内容纯属个人观点，权当暴论一则。</strong></p>
+<p><a href="https://en.wikipedia.org/wiki/Vibe_coding">Vibe Coding</a> 是一种依赖 AI 快速生成代码并通过直觉调整的编程范式，特别适合快速原型开发、黑客马拉松等需要快速验证想法的场景。在这样的编程模式下，我认为 Rust 是一门非常适合的编程语言。</p>
+<h2>Rust 与 AI 的完美契合</h2>
+<p>Rust 的安全特性恰好弥补了 AI 生成代码时的 “先天不足”。在 Vibe Coding 中，最大的风险就是 AI 可能生成包含不可预知 bug 的代码。而 Rust 的编译器能在编译阶段就捕获大多数潜在问题，不论是边界条件的忽略，还是其他隐藏的安全隐患。</p>
+<p>经常有人说 “Rust 是给编程菜鸟用的，只有菜鸟才需要这些规则来约束保证安全。高手都用 C 语言这样自由的语言。” 不论这个观点本身是否正确，但 “Rust 更适合容易出错的编程者” 这一点确实是客观存在的。而在 Vibe Coding 的场景下，AI 恰恰就是这样一个 “需要被约束的菜鸟”。</p>
+<h2>错误提示系统的革新价值</h2>
+<p>Rust 完善的错误提示系统，其最大的优势在于对 AI 的友好性。详细的错误信息使得 AI 能够更准确地理解问题所在，并进行精确的代码修正。这种特性让 AI 能够自主完成大部分代码优化工作，人类开发者只需要在最后环节进行把关。</p>
+<h2>自动化验证的突破</h2>
+<p>目前的 Vibe Coding 范式中，代码验证和检查主要依赖人工完成。这在软件工程的角度来看是不合理的——能交给机器完成的工作，就不应该依赖人工。Rust 的编译器恰好可以扮演这个自动化验证工具的角色，让我们真正实现&quot;机器生成，机器验证&quot;的理想状态。</p>
+<h2>当前的局限性</h2>
+<p>尽管 Rust 在理论上非常适合 Vibe Coding，但目前它还没有成为这一领域的主流选择。这主要是因为像 Python、JavaScript 这样的语言拥有更丰富的代码语料库、更多的教程资源和更完善的生态系统，这些都是训练 AI 模型所必需的基础设施。相比之下，Rust 生态虽然在快速发展，但在资源丰富程度上还有一定差距。不过，随着 Rust 社区的不断壮大和应用场景的拓展，这个差距正在逐步缩小。</p>
+<h2>结论</h2>
+<p>Rust 不仅仅是一个适合 Vibe Coding 的语言，它通过独特的安全特性、友好的错误提示和强大的编译器验证，从根本上解决了 AI 编程中的核心问题。尽管目前在资源上还有一定局限，但 Rust 在 Vibe Coding 领域展现出的潜力是不容忽视的。</p>
+]]></content>
+        <author>
+            <name>Xuancong Meng</name>
+            <email>xuancongmeng@gmail.com</email>
+            <uri>https://quarkpixel.github.io</uri>
+        </author>
+        <category label="[ 'Rust'"/>
+        <category label="'AI']"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[上线评论功能～]]></title>
+        <id>https://quarkpixel.github.io/p/250616-new-giscus-module</id>
+        <link href="https://quarkpixel.github.io/p/250616-new-giscus-module"/>
+        <updated>2025-06-16T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[添加基于 Giscus 的评论系统]]></summary>
+        <content type="html"><![CDATA[<p>终于给博客加上了评论功能！🎉</p>
+<p>选用了 <a href="https://giscus.app/">giscus</a> 作为评论系统，它基于 GitHub Discussions，完全开源且免费。最重要的是，它支持 Markdown 语法，可以让我们能更好地交流想法。</p>
+<p>现在，你可以在每篇文章的底部看到评论区了。欢迎来聊聊天呀～</p>
+]]></content>
+        <author>
+            <name>Xuancong Meng</name>
+            <email>xuancongmeng@gmail.com</email>
+            <uri>https://quarkpixel.github.io</uri>
+        </author>
+        <category label="[ 'Develop Diary' ]"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[也许我们早已在电车难题中做出了选择？]]></title>
+        <id>https://quarkpixel.github.io/p/250609-the-trolley-problem-and-suicide</id>
+        <link href="https://quarkpixel.github.io/p/250609-the-trolley-problem-and-suicide"/>
+        <updated>2025-06-09T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[聊聊阻止自杀与电车难题]]></summary>
+        <content type="html"><![CDATA[<p>最近我在思考一个问题：电车难题的选择与阻止自杀的抉择是否有着相似的本质？</p>
+<p>最初的思考源于一个假设：</p>
+<blockquote>
+<p>假设世界有这样一条设定（尽管价值观未必正确，但有助于讨论）：存在天堂，只有通过自杀（主观选择死亡）的人因其“勇敢”而获得更好的待遇，而非自主死亡的人则命运平庸。<br>在此设定下，一个人选择自杀，另一人阻止他，是否正确？</p>
+</blockquote>
+<p>这看似荒谬，但换个角度：<strong>选择自杀的人往往因极度痛苦而寻求解脱</strong>。自杀对他们而言，如同进入“天堂”或摆脱苦难。从这点看，自杀的动机与“天堂假设”殊途同归：主体都追求更好的结果。但前提是，若自杀未遂，生活未改善，痛苦依旧。</p>
+<p>关键问题是：若救下自杀者却无法善待他，阻止自杀是否成了错误？</p>
+<hr>
+<h3>我们可以将此与<strong>电车难题</strong>类比：</h3>
+<ul>
+<li><em><em>一人</em>（自杀者）</em>**：若不拉杆*（不阻止自杀）*，他得以“解脱”<em>（如同进入天堂或摆脱痛苦）</em>。</li>
+<li><em><em>五人</em>（在意他的人）</em>**：泛指任何得知自杀后会伤心的人，如亲友。</li>
+<li><strong>抉择</strong>：拉杆*（阻止自杀）<em>亦或 不拉杆</em>（放任自杀）*。</li>
+</ul>
+<h3>由此，问题转化为：</h3>
+<ul>
+<li><strong>不拉杆</strong>：自杀者解脱，但在意他的人因失去他而痛苦。</li>
+<li><strong>拉杆</strong>：自杀者被救下，若未被善待，则继续痛苦；在意他的人免于悲伤。</li>
+</ul>
+<p>阻止自杀的人做错了吗？我的答案是：没有。他只是做出了电车难题中的选择，权衡了个体解脱与他人的情感损失。同样，若有人选择不阻止自杀，也不应苛责，因为这也是基于个人价值观的决定。</p>
+<p>那么，对于电车难题中的拉杆抉择，我们是否早已在生活中做出了选择？在“被救者未被善待”的前提下，阻止自杀可能让痛苦延续，类似电车难题中牺牲一人救多数的道德困境。然而，若救下的人能被善待，痛苦得以缓解，这场抉择的意义便截然不同。</p>
+<h4>结尾</h4>
+<p>或许，电车难题与阻止自杀的共通之处在于：我们都在有限的信息与复杂的道德权重中挣扎。拉杆与否，没有绝对的正误，关键在于后续的善待能否实现。如果我们能确保救下的灵魂被温柔以待，电车难题的拉杆，或许早已有了答案。否则，我们的选择可能只是将痛苦从一方移到另一方，永远在伦理的灰色地带徘徊。</p>
+]]></content>
+        <author>
+            <name>Xuancong Meng</name>
+            <email>xuancongmeng@gmail.com</email>
+            <uri>https://quarkpixel.github.io</uri>
+        </author>
+        <category label="[ 'Thinking'"/>
+        <category label="]"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Hsuan's Space 中用到的技术栈]]></title>
+        <id>https://quarkpixel.github.io/p/250525-tech-stack-in-hsuans-space</id>
+        <link href="https://quarkpixel.github.io/p/250525-tech-stack-in-hsuans-space"/>
+        <updated>2025-05-25T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[谈谈本站的开发历程]]></summary>
+        <content type="html"><![CDATA[<p>关于「我要做一个关于自己的网页」这个 Flag 我已经立了若干年了，最近这段时间终于有动力来完成它。尝试了没有接触过的技术，花了近半个月的时间，完成了网页的搭建。</p>
+<img alt="Wakatime badage" src="https://wakatime.com/badge/user/018b19a3-343c-48f6-8ba9-5713e3a014cc/project/e4f1a103-1fe2-4a7b-afe8-35b4df2164b6.svg?style=flat-square"/>
+<div class="text-xs opacity-65">Time in this web project over all time</div>
+
+<p>本站采用了现代化的 Web 开发技术栈，主要包括：SvelteKit、TailwindCSS、MDsveX 和 Skeleton UI.</p>
+<h2>1. 字体</h2>
+<p>正文部分使用 <a href="https://github.com/lxgw/LxgwWenKai">霞鹜文楷</a>。</p>
+<h4>其余字体</h4>
+<ul>
+<li>Noto Serif SC Variable</li>
+<li>Noto Sans SC Variable</li>
+<li>Caveat Variable</li>
+<li>Gravitas One</li>
+</ul>
+<p>值得注意的是，本网站使用了<a href="https://chinese-font.netlify.app/zh-cn/online-split/">字体分包</a>技术，由<a href="https://chinese-font.netlify.app/zh-cn/">中文网字计划</a>支持。因此在初次访问网站时，字体会有很独特的加载顺序。</p>
+<h2>2. 动画</h2>
+<h3>可变字体动画</h3>
+<p>使用自己做的另外一款组件<a href="https://github.com/QuarkPixel/svelte-text-animation"><code>svelte-text-animation</code></a>
+，这款组件的开发是在网页的开发过程中想到的灵感，就花了差不多一个下午的时间来实现。整体效果还是很惊艳的，用在了首页 Landing
+的部分 😆。</p>
+<p>具体实现的细节其实很是很简单的，使用一个高斯函数叠加上一个边缘递减函数，就可以实现一个平滑的动画效果。</p>
+<h3>Logo 动画</h3>
+<p>我尝试了市面上很多的 SVG 动画库，但是要么就是太过臃肿，要么就是实现的效果很奇怪，没法做到我要求的“点对点移动”的效果。于是我心一狠，直接手撕了一个SVG动画引擎。其实实际实现起来，没有想象的那么复杂。这也多亏了
+Svelte 大量的内置函数，使用起来体验很不错。</p>
+<script>
+    import Logo from '$lib/components/Logo.svelte';
+    import { bounceOut, elasticOut } from 'svelte/easing'; 
+	let logoOfficial = true;
+</script>
+
+<p>&lt;button 
+    class=&quot;mt-20 mb-3 w-full flex justify-around gap-10 *:h-30 *:w-40&quot;
+    onmouseenter={() =&gt; logoOfficial = false}
+    onmouseleave={() =&gt; logoOfficial = true}</p>
+<blockquote>
+</blockquote>
+<pre><code>&lt;Logo
+    official={logoOfficial}
+    easing={elasticOut}
+/&gt;
+&lt;Logo
+    official={logoOfficial}
+/&gt;
+&lt;Logo
+    official={logoOfficial}
+    easing={bounceOut}
+/&gt;
+</code></pre>
+</button>
+<div align="center" class="mb-15 opacity-65 font-gravitas-one">↑ Hover Me ↑</div>
+
+<h4>核心代码：</h4>
+<pre><code class="language-typescript">// Derive interpolated path coordinates
+let interpolatedPaths: Shape[] = $derived(
+	paths.map(path =&gt;
+		path.initial.map((start, i) =&gt; {
+			const end = path.target[i];
+			const x = start[0] + (end[0] - start[0]) * path.tween.current;
+			const y = start[1] + (end[1] - start[1]) * path.tween.current;
+			return [x, y];
+		})
+	)
+);
+
+// Derive SVG path d attributes
+let dValues: string[] = $derived(
+	interpolatedPaths.map(points =&gt;
+		`M${points.map((point) =&gt; point.join(&#39; &#39;)).join(&#39;L&#39;)}Z`
+	)
+);
+</code></pre>
+<h3>Header 的背景噪声图</h3>
+<p>具体实现是使用一张噪声纹理图</p>
+<center>
+<img src="/noise-texture.png" alt="noise-texture"/>
+<div class="text-xs opacity-65">噪声纹理图</div>
+</center>
+
+<h5>但由于不同屏幕尺寸可能会导致纹理图发糊。因此我做了这些工作：</h5>
+<ul>
+<li>添加属性 <code>image-rendering: pixelated;</code>，具体属性说明参见<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/image-rendering">MDN</a></li>
+<li>动态计算图片展示大小，使得图片可以1:1像素展示在显示器上：</li>
+</ul>
+<pre><code class="language-typescript">function calcNoiseSize() {
+	const dpr = window.devicePixelRatio || 1;
+	noiseTextureSize = NOISE_TEXTURE_SIZE / dpr;
+}
+
+if (browser) {
+	calcNoiseSize();
+}
+
+onMount(() =&gt; {
+	window.addEventListener(&#39;resize&#39;, calcNoiseSize);
+
+	return () =&gt; window.removeEventListener(&#39;resize&#39;, calcNoiseSize);
+});
+</code></pre>
+<h3>Marquee</h3>
+<p>页面内所有的跑马灯效果均使用 <a href="https://github.com/selemondev/svelte-marquee"><code>svelte-marquee</code></a> 组件实现</p>
+<h3>Markdown 渲染</h3>
+<p>使用 <a href="https://mdsvex.pngwn.io/">MDsvex</a> 实现对 md 的渲染</p>
+<h2>部署和性能</h2>
+<p>项目使用 <code>@sveltejs/adapter-static</code> 生成静态网站，通过 GitHub Pages 进行部署。得益于 Svelte 的优秀性能和静态站点生成的特性，网站具有：</p>
+<ul>
+<li>快速的首屏加载</li>
+<li>优秀的 SEO 表现</li>
+<li>简单可靠的部署流程</li>
+</ul>
+<h5>如果你对这个项目感兴趣，可以在 <a href="https://github.com/QuarkPixel/QuarkPixel.github.io">GitHub</a> 上查看源代码，项目代码采用 GPLv3 许可证开源。</h5>
+]]></content>
+        <author>
+            <name>Xuancong Meng</name>
+            <email>xuancongmeng@gmail.com</email>
+            <uri>https://quarkpixel.github.io</uri>
+        </author>
+        <category label="[ 'Web'"/>
+        <category label="'Develop Diary' ]"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[我从未将 Rust 视作一门「安全」的语言]]></title>
+        <id>https://quarkpixel.github.io/p/250523-never-regarded-rust-as-safety</id>
+        <link href="https://quarkpixel.github.io/p/250523-never-regarded-rust-as-safety"/>
+        <updated>2025-05-23T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[安全只是它的 Side Effects]]></summary>
+        <content type="html"><![CDATA[<p>每每在社交平台上看到有关 Rust 的内容，「内存安全」和「类型安全」总是如影随形，仿佛这是 Rust 的全部定义。Rust 似乎被贴上了一个光鲜的标签：安全语言。它的官网宣称「丰富的类型系统和所有权模型保证内存安全和线程安全」，社区也乐此不疲地传颂它的可靠性。然而，我从未将 Rust 视为一门「安全」的语言。安全，只是 Rust 独特设计带来的副作用，而非它的核心目标。Rust 的真正魅力，远不止于此。</p>
+<p>在这篇文章中，我将从 Rust 的设计哲学出发，剖析安全特性如何作为副作用自然浮现；探讨为何「安全」标签被官方和社区共同放大；并揭示 Rust 在性能、表达力和灵活性上的多面价值。我希望你能放下对「安全」的刻板印象，重新审视这门语言。</p>
+<h2>安全从何而来？</h2>
+<p>Rust 诞生于 Mozilla，旨在解决 C++ 在系统编程中的痛点：手动内存管理复杂、并发问题难以调试、错误排查耗时。它的核心设计——所有权模型、借用检查器和生命周期——并非为了追求「安全」，而是为了让开发者能够编写可靠、高效的系统级代码。这些机制的细节可以在 <a href="https://doc.rust-lang.org/book/">Rust 官方书籍</a> 中找到，但其核心思想很简单：通过编译时规则，确保内存和并发行为的正确性。</p>
+<p>所有权模型规定，每个值有且仅有一个所有者，值在作用域结束时自动销毁。这消除了 C++ 中手动释放内存的负担，同时避免了悬垂指针和双重释放。借用检查器进一步通过引用规则（不可变借用与可变借用互斥）约束内存访问，防止数据竞争。生命周期则确保引用的有效性，避免引用失效。这些机制共同构成了 Rust 的编译时保障体系，杜绝了空指针、缓冲区溢出等常见错误。</p>
+<p>但这些规则的初衷是什么？不是为了让开发者炫耀「我的代码内存安全」，而是为了解放我们，让我们专注于程序逻辑而非调试内存泄漏或线程死锁。安全，只是这些设计的副作用就。像健康饮食可能带来体重控制，Rust 的设计目标是可靠性和性能，安全是实现这些目标的自然结果。官方虽然强调「内存安全和线程安全」，但更突出「赋予每个人构建可靠且高效软件」的愿景。<strong>安全是手段，而非目的。</strong></p>
+<h2>Unsafe：语法层面的注释</h2>
+<p>如果 Rust 的安全特性是其设计的全部，为何它还提供了 <code>unsafe</code> 关键字？其实这个问题很好回答。毕竟作为一个系统级的编程语言，对底层的可操控性和 Python 一样、或者语法像 C++ 一样灵活好像都不那么合适。因此引入了这样一个「乍看奇怪，实则合理」的产物。</p>
+<p>我对 <code>unsafe</code> 的理解是，它是一种降低开发者心智负担的工具。在非 <code>unsafe</code> 代码中，Rust 的所有权模型和借用检查器充当守门人，自动防止内存泄漏、数据竞争或空指针错误。开发者无需时刻担心变量生命周期或指针合法性，编译器会在错误发生前报错。这种「默认安全」让开发者专注于逻辑而非内存管理。然而，当需要与硬件交互或优化性能时，unsafe 就像一个路标，提醒开发者：「这里要小心。」它要求明确声明责任，划定安全与非安全的边界。</p>
+<p>与 C++ 不同，C++ 要求开发者时刻保持警惕，而 Rust 的 unsafe 将高风险操作隔离到特定代码块，让开发者在大多数时候可以「偷懒」，仅在必要时全神贯注。这种设计平衡了安全与灵活性，体现了 Rust 的实用主义：通过编译时约束最大化可靠性，同时保留系统编程的控制力。unsafe 不是对安全的妥协，而是对开发者的信任，提醒他们在自由与责任间选择。安全，仍是 Rust 优化心智负担的副作用，而非绝对目标。</p>
+<h2>再谈为何「安全」被放大</h2>
+<p>「安全」成为 Rust 的代名词，源于官方的宣传以及社交媒体上越发趋于给一个事物打“标签”。现在的编程语言市场已经趋于饱和，对于新兴语言来说，极力需要一个“卖点”来推销自己。对于官方来说，「安全」就是那个卖点。而对于社交媒体来说，没有一个词可以比「安全」这样一个简洁有力的词来概括一门语言了。因此社交媒体上的这种做法，是极其不负责任的。</p>
+<p>但“安全”标签带来了认知偏差，让 Rust 被简化为“防御性”语言，掩盖其性能和表达力的优势。借用检查器的严格性让新手望而却步，凸显安全并非免费。作为程序员，我们应跳出“安全”这个人云亦云的概念，更加客观、更加全面的去了解一件事物。</p>
+<h2>安全之外</h2>
+<p>如果安全只是副作用，Rust 的真正价值是什么？答案在于它的多面性：性能、表达力和灵活性的完美平衡。</p>
+<p>首先，Rust 的性能接近 C++，得益于其零成本抽象（Zero-Cost Abstractions）。它没有运行时或垃圾回收器，编译器通过优化（如内联、循环展开）确保代码高效运行。这使得 Rust 在高性能场景（如 <a href="https://developer.mozilla.org/en-US/docs/WebAssembly/Rust_to_wasm">WebAssembly</a>、嵌入式系统）中大放异彩。</p>
+<p>其次，Rust 的类型系统和宏系统提供了强大的表达力。枚举和模式匹配让复杂逻辑更加简洁优雅；<a href="https://doc.rust-lang.org/book/ch20-05-macros.html">声明式宏</a>（<code>macro_rules!</code>）和过程宏支持元编程，极大地减少样板代码。这些特性让 Rust 代码不仅可靠，还充满美感，吸引了追求代码艺术的开发者。</p>
+<p>最后，Rust 的灵活性使其超越了传统系统编程语言的范畴。它支持多种编程范式（函数式、面向对象），适用于从区块链到 AI 的广泛领域。例如，Discord 使用 Rust 优化后端，AWS 的 Firecracker 虚拟化技术也依赖 Rust 的高性能和可靠性。这些案例虽非重点，但足以证明 Rust 的通用性。</p>
+<p>安全只是 Rust 的敲门砖。它的真正魅力在于，它让开发者在性能、可靠性和表达力之间找到平衡。你可以编写接近硬件的低级代码，也可以构建抽象层次高、逻辑清晰的高级系统，而不必被内存管理或并发问题拖累。Rust 不是“安全的 C++”，而是一门重新定义系统编程的语言。</p>
+<h2>重新定义 Rust 的价值</h2>
+<p>Rust 的魅力远不止「安全」二字。它以所有权模型和编译时检查为开发者卸下内存管理的重担，却从不以安全为唯一目标。性能、表达力与灵活性的融合，让 Rust 成为系统编程的新标杆。放下「安全语言」的刻板标签，我们应重新审视 Rust 的初心：赋予开发者自由与掌控力，构建可靠而高效的未来。无论是优化性能的极致追求，还是优雅代码的艺术表达，Rust 都以其独特的设计，邀请我们探索系统编程的无限可能。</p>
+]]></content>
+        <author>
+            <name>Xuancong Meng</name>
+            <email>xuancongmeng@gmail.com</email>
+            <uri>https://quarkpixel.github.io</uri>
+        </author>
+        <category label="[ 'Rust' ]"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Markdown语法测试文档]]></title>
+        <id>https://quarkpixel.github.io/p/000000-markdown-test</id>
+        <link href="https://quarkpixel.github.io/p/000000-markdown-test"/>
+        <updated>1970-01-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[这是一个包含所有Markdown语法特性的测试文档]]></summary>
+        <content type="html"><![CDATA[<h1>标题测试</h1>
+<h2>二级标题测试</h2>
+<h3>三级标题测试</h3>
+<h4>四级标题测试</h4>
+<h5>五级标题测试</h5>
+<h6>六级标题测试</h6>
+<h2>文本格式测试</h2>
+<p>这是<strong>加粗文本</strong>测试</p>
+<p>这是<em>斜体文本</em>测试</p>
+<p>这是<em><strong>加粗斜体</strong></em>测试</p>
+<p>这是<del>删除线</del>测试</p>
+<p>这是<code>inline code</code>测试</p>
+<h2>smartypants 测试</h2>
+<p>&quot;They said it was free...&quot;</p>
+<h2>引用测试</h2>
+<blockquote>
+<p>这是引用文本测试</p>
+<blockquote>
+<p>这是嵌套引用测试</p>
+<blockquote>
+<p>这是多层嵌套引用测试</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<h2>列表测试</h2>
+<h3>无序列表测试</h3>
+<ul>
+<li>无序列表项1<ul>
+<li>嵌套无序列表项<ul>
+<li>多层嵌套列表项</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>无序列表项2</li>
+<li>无序列表项3</li>
+</ul>
+<h3>有序列表测试</h3>
+<ol>
+<li>有序列表项1<ol>
+<li>嵌套有序列表项<ol>
+<li>多层嵌套列表项</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>有序列表项2</li>
+<li>有序列表项3</li>
+</ol>
+<h3>任务列表测试</h3>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 已完成任务测试</li>
+<li><input disabled="" type="checkbox"> 未完成任务测试</li>
+<li><input checked="" disabled="" type="checkbox"> 另一个已完成任务测试</li>
+</ul>
+<h2>代码块测试</h2>
+<pre><code class="language-python">def test_function():
+    print(&quot;这是Python代码块测试&quot;)
+</code></pre>
+<h2>表格测试</h2>
+<table>
+<thead>
+<tr>
+<th>表头1</th>
+<th>表头2</th>
+<th>表头3</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>单元格1</td>
+<td>单元格2</td>
+<td>单元格3</td>
+</tr>
+<tr>
+<td>测试1</td>
+<td>测试2</td>
+<td>测试3</td>
+</tr>
+</tbody></table>
+<h2>链接测试</h2>
+<p><a href="https://example.com" title="链接标题测试">链接文本测试</a></p>
+<h2>图片测试</h2>
+<p><img src="https://picsum.photos/200/300" alt="图片替代文本测试" title="图片标题测试"></p>
+<h2>水平线测试</h2>
+<hr>
+<h2>转义字符测试</h2>
+<p>* 这是转义星号测试 *
+` 这是转义反引号测试 `
+[ 这是转义方括号测试 ]</p>
+<h2>HTML标签测试</h2>
+<div align="center">这是居中文本测试</div>
+
+<h2>数学公式测试</h2>
+<p>行内公式测试：$E = mc^2$</p>
+<h2>目录测试</h2>
+<p>[TOC]</p>
+<h2>高亮测试</h2>
+<p>==这是高亮文本测试==</p>
+<h2>上标和下标测试</h2>
+<p>上标测试：X^2^
+下标测试：H<del>2</del>O</p>
+<h2>定义列表测试</h2>
+<p>定义术语测试
+: 这是定义描述测试</p>
+<h2>缩写测试</h2>
+<p>*[HTML]: Hyper Text Markup Language
+HTML 是一种标记语言测试</p>
+<h2>自定义容器测试</h2>
+<p>::: warning
+这是警告容器测试
+:::</p>
+<p>::: tip
+这是提示容器测试
+:::</p>
+<h2>结语</h2>
+<p>以上就是所有Markdown语法特性的测试内容。</p>
+]]></content>
+        <author>
+            <name>Xuancong Meng</name>
+            <email>xuancongmeng@gmail.com</email>
+            <uri>https://quarkpixel.github.io</uri>
+        </author>
+        <category label="['Markdown'"/>
+        <category label="'Test']"/>
+    </entry>
+</feed>
