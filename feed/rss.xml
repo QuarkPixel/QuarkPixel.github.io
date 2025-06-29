@@ -3,8 +3,8 @@
     <channel>
         <title>Hsuan's Space</title>
         <link>https://quarkpixel.github.io</link>
-        <description>feedId:162066355307731968+userId:113495226804955136</description>
-        <lastBuildDate>Sun, 29 Jun 2025 08:35:53 GMT</lastBuildDate>
+        <description>Hsuan's personal blog about tech, life, and thoughts</description>
+        <lastBuildDate>Sun, 29 Jun 2025 08:49:06 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js</generator>
         <language>zh-CN</language>
@@ -384,8 +384,4 @@ HTML 是一种标记语言测试</p>
             <category>'Test']</category>
         </item>
     </channel>
-<follow_challenge>
-    <feedId>162066355307731968</feedId>
-    <userId>113495226804955136</userId>
-</follow_challenge>
 </rss>
