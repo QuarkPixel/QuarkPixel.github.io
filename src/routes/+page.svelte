@@ -30,7 +30,7 @@
 
 <Landing class="my-15" />
 
-<div class="auto-width px-20 mt-5 mb-40 group">
+<div class="auto-width px-20 mt-5 group">
 	{#await loadedPostsPromise then loadedPosts}
 		{#each loadedPosts as { path, metadata }, i (path)}
 			<ListItem {path} {metadata} />
@@ -39,6 +39,14 @@
 			{/if}
 		{/each}
 	{/await}
+</div>
+<div class="h-60 flex items-center justify-center gap-8">
+	<div class="h-[1px] w-20 bg-surface-100-900"></div>
+	<div class="ml-3">
+		<div class="text-3xl font-caveat">Stay hungry. Stay foolish.</div>
+		<div class="text-sm font-noto-sans text-surface-400-600 ml-35">— Whole Earth Catalog</div>
+	</div>
+	<div class="h-[1px] w-20 bg-surface-100-900"></div>
 </div>
 
 <svelte:head>
