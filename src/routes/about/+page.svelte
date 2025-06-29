@@ -6,7 +6,7 @@
 	import FriendLinks from './FriendLinks.svelte';
 </script>
 
-<div class="mx-5 *:text-center *:font-gravitas-one relative">
+<div class="mx-5 my-20 *:text-center *:font-gravitas-one relative">
 	<div class="h1 underline decoration-primary-500 decoration-6">
 		<span class="text-nowrap">I'm Xuancong Meng</span>.
 	</div>
@@ -24,7 +24,7 @@
 		</span>
 	</div>
 </div>
-<div class="absolute bottom-16 left-0 right-0 flex flex-col gap-4">
+<div class="flex flex-col gap-4">
 	<SocialLinks />
 	<FriendLinks />
 </div>

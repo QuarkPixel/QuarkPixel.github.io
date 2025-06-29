@@ -30,14 +30,13 @@
 </script>
 
 <div
-	class="bg-surface-800-200 text-surface-50-950 bottom-0 z-0 snap-end overflow-hidden relative"
+	class="bg-surface-800-200 text-surface-50-950 bottom-0 z-0 overflow-hidden relative"
 	style:height={HEIGHT + 'px'}
 	style:filter={`brightness(${footerDisplayArea})`}
 >
 	<div style:top={footerOffset + 'px'} class="relative">
 		<Marquee
-			pauseOnHover={true}
-			class="font-gravitas-one motion-reduce:overflow-auto relative"
+			class="font-gravitas-one motion-reduce:overflow-auto relative select-none"
 			numberOfCopies={2}
 		>
 			<div>All content copyright by Xuancong Meng, unless otherwise noted.</div>
