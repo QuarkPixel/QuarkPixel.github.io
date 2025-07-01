@@ -6,7 +6,7 @@
 	const { children, title, description, date, tags, author, copyright = true } = $props();
 </script>
 
-<article class="prose lg:prose-xl mb-4">
+<article class="prose lg:prose-xl my-4">
 	<header class="mb-10">
 		<h1 class="mb-2">{title}</h1>
 		<div class="font-noto-sans text-sm lg:text-base opacity-70">{description}</div>
