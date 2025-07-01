@@ -14,7 +14,7 @@
 		<div class="font-bold">{metadata.title}</div>
 		<div class="font-noto-sans font-light text-sm">{metadata.description}</div>
 	</div>
-	<div class="flex flex-col items-end gap-1 ml-1">
+	<div class="flex flex-col items-end justify-between gap-1 ml-1">
 		<div class="font-[Georgia] oldstyle-nums opacity-65 text-base">
 			{new Date(metadata.date).toLocaleDateString()}
 		</div>

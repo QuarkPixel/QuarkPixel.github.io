@@ -1,5 +1,7 @@
 /* Tailwind CSS */
 @import 'tailwindcss';
+@plugin "@tailwindcss/typography";
+@config "./lib/styles/tailwind.config.js";
 /* Skeleton UI */
 @import "$lib/styles/skeleton.css";
 /*Marquee*/
@@ -20,7 +22,7 @@ body {
     overflow: hidden;
 }
 
-body > div {
+body>div {
     height: 100vh;
     overflow-y: auto;
     scroll-snap-type: y mandatory;
