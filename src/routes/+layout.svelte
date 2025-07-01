@@ -2,11 +2,12 @@
 	import '../app.css';
 	import '$lib/components/logo/logoIcon';
 	import '$lib/styles/fonts';
-
+	import { dev } from '$app/environment';
 	import Header from '$lib/components/Header.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 	import FooterBar from '$lib/components/FooterBar.svelte';
 	import UmamiAnalytics from '$lib/components/UmamiAnalytics.svelte';
+	import { afterNavigate, beforeNavigate } from '$app/navigation';
 
 	const { data, children } = $props();
 
@@ -14,11 +15,68 @@
 		{ label: 'Blog Space', href: '/' },
 		{ label: 'About Me', href: '/about' }
 	];
-	import { dev } from '$app/environment';
 
 	if (dev) {
 		links.push({ label: 'Test', href: '/test' });
 	}
+
+	// 滚动状态管理
+	let scrollContainer: Element | null;
+	let currentPath: string | null = $state.raw(null);
+
+	// 获取滚动容器
+	function getScrollContainer() {
+		if (!scrollContainer) {
+			scrollContainer = document.querySelector('body > div');
+		}
+		return scrollContainer;
+	}
+
+	// 保存滚动位置
+	function saveScrollPosition(path: string) {
+		const container = getScrollContainer();
+		if (container) {
+			sessionStorage.setItem(`scroll_${path}`, container.scrollTop.toString());
+		}
+	}
+
+	// 恢复滚动位置
+	function restoreScrollPosition(path: string) {
+		const container = getScrollContainer();
+		if (!container) return;
+
+		const savedScroll = sessionStorage.getItem(`scroll_${path}`);
+		if (savedScroll) {
+			container.scrollTop = parseInt(savedScroll);
+		}
+	}
+
+	// 重置滚动位置
+	function resetScroll() {
+		const container = getScrollContainer();
+		if (container) {
+			container.scrollTop = 0;
+		}
+	}
+
+	// 导航前：保存当前页面的滚动位置
+	beforeNavigate(() => {
+		if (currentPath) {
+			saveScrollPosition(currentPath);
+		}
+	});
+
+	// 导航后：更新路径并重置滚动位置
+	afterNavigate(() => {
+		currentPath = location.pathname;
+		resetScroll();
+	});
+
+	// 初始化：设置当前路径并尝试恢复滚动位置
+	$effect(() => {
+		currentPath = location.pathname;
+		restoreScrollPosition(currentPath);
+	});
 </script>
 
 <div class="main min-h-[100vh] bg-surface-50-950 flex flex-col relative snap-end">
@@ -29,7 +87,6 @@
 </div>
 <Footer />
 <FooterBar />
-
 <UmamiAnalytics />
 
 <svelte:head>

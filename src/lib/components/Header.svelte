@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { browser } from '$app/environment';
 	import { page } from '$app/state';
 	import ThemeSwitch from '$lib/components/ThemeSwitch.svelte';
 	import { H6 } from '$lib/components/typography/index.js';
@@ -7,30 +6,34 @@
 	import { blur } from 'svelte/transition';
 	import Logo from '$lib/components/Logo.svelte';
 	import { usePixelPerfectedNoise } from '../utils/pixelPerfectedNoise.js';
-  import { getColorful } from '../utils/colorful.js';
+	import { getColorful } from '../utils/colorful.js';
 
 	const { titleInfo, links } = $props();
-  
+
 	const noiseTextureSize = usePixelPerfectedNoise();
 
-	let displayTitle: boolean = $state.raw(browser
-		&& titleInfo.scrollThreshold != 0
-		&& window.scrollY > titleInfo.scrollThreshold);
-
-	const scrollHandler: () => void = () => {
-		displayTitle = window.scrollY > titleInfo.scrollThreshold;
-	};
+	let scrollContainer: Element | null = null;
+	let displayTitle = $state.raw(false);
 
 	$effect(() => {
-		if (browser && titleInfo.scrollThreshold) {
-			window.addEventListener('scroll', scrollHandler);
-
-			return () => {
-				window.removeEventListener('scroll', scrollHandler);
-			};
-		} else {
+		if (!titleInfo.scrollThreshold) {
 			displayTitle = false;
+			return;
 		}
+
+		scrollContainer = document.querySelector('body > div');
+		if (!scrollContainer) return;
+
+		function updateScrollInfo() {
+			displayTitle = scrollContainer!.scrollTop > titleInfo.scrollThreshold;
+		}
+
+		updateScrollInfo();
+		scrollContainer.addEventListener('scroll', updateScrollInfo);
+
+		return () => {
+			scrollContainer?.removeEventListener('scroll', updateScrollInfo);
+		};
 	});
 
 	let logoOfficial = $state.raw(true);
