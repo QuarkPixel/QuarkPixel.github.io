@@ -14,11 +14,14 @@
 		{ label: 'Blog Space', href: '/' },
 		{ label: 'About Me', href: '/about' }
 	];
+	import { dev } from '$app/environment';
+
+	if (dev) {
+		links.push({ label: 'Test', href: '/test' });
+	}
 </script>
 
-<div
-	class="main min-h-[100vh] bg-surface-50-950 flex flex-col relative snap-end"
->
+<div class="main min-h-[100vh] bg-surface-50-950 flex flex-col relative snap-end">
 	<Header titleInfo={data} {links} />
 	<div class="flex-1 flex flex-col items-center justify-center py-5">
 		{@render children()}
@@ -43,9 +46,24 @@
 		content="A collection of thoughts, experiences, and creative works by Xuancong Meng."
 	/>
 	<meta property="og:type" content="website" />
-	<link rel="alternate" type="application/rss+xml" title="RSS Feed for Hsuan's Space" href="/feed/rss.xml" />
-	<link rel="alternate" type="application/atom+xml" title="Atom Feed for Hsuan's Space" href="/feed/atom.xml" />
-	<link rel="alternate" type="application/json" title="JSON Feed for Hsuan's Space" href="/feed/feed.json" />
+	<link
+		rel="alternate"
+		type="application/rss+xml"
+		title="RSS Feed for Hsuan's Space"
+		href="/feed/rss.xml"
+	/>
+	<link
+		rel="alternate"
+		type="application/atom+xml"
+		title="Atom Feed for Hsuan's Space"
+		href="/feed/atom.xml"
+	/>
+	<link
+		rel="alternate"
+		type="application/json"
+		title="JSON Feed for Hsuan's Space"
+		href="/feed/feed.json"
+	/>
 </svelte:head>
 
 <style lang="scss">

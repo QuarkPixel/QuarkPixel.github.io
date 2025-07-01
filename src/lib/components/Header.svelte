@@ -10,13 +10,7 @@
   import { getColorful } from '../utils/colorful.js';
 
 	const { titleInfo, links } = $props();
-
-	// const COLOR_SCHEME = [
-	// 	'hover:text-primary-700-300',
-	// 	'hover:text-secondary-700-300',
-	// 	'hover:text-tertiary-700-300'
-	// ];
-
+  
 	const noiseTextureSize = usePixelPerfectedNoise();
 
 	let displayTitle: boolean = $state.raw(browser
