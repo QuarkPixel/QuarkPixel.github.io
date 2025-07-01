@@ -3,8 +3,8 @@
 @theme {
     --ease-jelly: cubic-bezier(.26, 1.48, .36, 1);
 
-    --font-noto-serif: 'Noto Serif SC Variable', serif;
-    --font-noto-sans: 'Noto Sans SC Variable', sans-serif;
+    --font-noto-serif: 'Noto Serif SC Variable', 'Noto Serif', serif;
+    --font-noto-sans: 'Noto Sans SC Variable', 'Noto Sans', sans-serif;
     --font-caveat: 'Caveat Variable', cursive, system-ui;
     --font-gravitas-one: 'Gravitas One', serif;
     --font-lxgw-wenkai: 'LXGW WenKai', serif;
@@ -23,8 +23,8 @@
 
 .noise-texture {
     background-color: color-mix(in oklch,
-            light-dark(var(--color-surface-50), var(--color-surface-900)) 80%,
-            transparent);
+    light-dark(var(--color-surface-50), var(--color-surface-900)) 80%,
+    transparent);
     background-image: url(/noise-texture.png);
     background-size: var(--noise-size, 50px);
     image-rendering: pixelated;
