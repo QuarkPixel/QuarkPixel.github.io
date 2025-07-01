@@ -9,8 +9,8 @@ layout: blog
 
 关于「我要做一个关于自己的网页」这个 Flag 我已经立了若干年了，最近这段时间终于有动力来完成它。尝试了没有接触过的技术，花了近半个月的时间，完成了网页的搭建。
 
-<img alt="Wakatime badage" src="https://wakatime.com/badge/user/018b19a3-343c-48f6-8ba9-5713e3a014cc/project/e4f1a103-1fe2-4a7b-afe8-35b4df2164b6.svg?style=flat-square"/>
-<div class="text-xs opacity-65">Time in this web project over all time</div>
+![Wakatime badage](https://wakatime.com/badge/user/018b19a3-343c-48f6-8ba9-5713e3a014cc/project/e4f1a103-1fe2-4a7b-afe8-35b4df2164b6.svg?style=flat-square)
+*Time in this web project over all time*
 
 本站采用了现代化的 Web 开发技术栈，主要包括：SvelteKit、TailwindCSS、MDsveX 和 Skeleton UI.
 
@@ -31,8 +31,7 @@ layout: blog
 
 ### 可变字体动画
 
-使用自己做的另外一款组件[`svelte-text-animation`](https://github.com/QuarkPixel/svelte-text-animation)
-，这款组件的开发是在网页的开发过程中想到的灵感，就花了差不多一个下午的时间来实现。整体效果还是很惊艳的，用在了首页 Landing
+使用自己做的另外一款组件[`svelte-text-animation`](https://github.com/QuarkPixel/svelte-text-animation)，这款组件的开发是在网页的开发过程中想到的灵感，就花了差不多一个下午的时间来实现。整体效果还是很惊艳的，用在了首页 Landing
 的部分 😆。
 
 具体实现的细节其实很是很简单的，使用一个高斯函数叠加上一个边缘递减函数，就可以实现一个平滑的动画效果。
@@ -95,8 +94,10 @@ let dValues: string[] = $derived(
 具体实现是使用一张噪声纹理图
 
 <center>
-<img src="/noise-texture.png" alt="noise-texture"/>
-<div class="text-xs opacity-65">噪声纹理图</div>
+<p>
+    <img src="/noise-texture.png" alt>
+    <em>噪声纹理图</em>
+</p>
 </center>
 
 ##### 但由于不同屏幕尺寸可能会导致纹理图发糊。因此我做了这些工作：

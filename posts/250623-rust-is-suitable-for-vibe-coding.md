@@ -1,5 +1,5 @@
 ---
-title: Rust 是一门非常适合 Vibe Coding 的语言
+title: Rust 是一门适合 Vibe Coding 的语言
 description: 从安全特性、错误提示和自动化验证的角度，探讨为什么 Rust 可能是最适合 AI 编程的语言
 date: 2025-06-23
 author: Xuancong Meng
