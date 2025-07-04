@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://quarkpixel.github.io/sitemap.xml
