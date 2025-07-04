@@ -7,7 +7,7 @@
     "dev": "npm run generate-posts && vite dev",
     "build": "npm run generate-posts && vite build && npm run prepack && npm run postbuild",
     "generate-posts": "node tools/generate-posts.js",
-    "postbuild": "node tools/sitemap.ts",
+    "postbuild": "node tools/sitemap.js",
     "preview": "vite preview",
     "prepare": "svelte-kit sync || echo ''",
     "prepack": "svelte-kit sync && svelte-package && publint",
