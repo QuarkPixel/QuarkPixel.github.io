@@ -1,5 +1,5 @@
 ---
-title: 夏日的云，也想慵懒
+title: 夏长，云懒。
 description: 记录平时拍摄的云
 date: 2025-07-12T15:15:00+08:00
 author: Xuancong Meng
@@ -7,7 +7,7 @@ tags: [ 'Photography' ]
 layout: blog
 ---
 
-**夏长，云懒。**
+**夏日的云，也想慵懒。**
 
 平时喜欢去天台散心：没有喧嚣，只有自己。夏日的云和其它时候都不一样。从专业术语的角度出发，我爱看夏天的[积云](https://zh.wikipedia.org/wiki/%E7%A7%AF%E4%BA%91)。记这些年来拍到的夏日云：
 
