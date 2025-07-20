@@ -32,3 +32,11 @@
 	{/if}
 	<Comment class="my-15" />
 </article>
+
+<style global>
+
+    .prose > details > summary {
+        font-size: smaller;
+        opacity: .8;
+    }
+</style>
