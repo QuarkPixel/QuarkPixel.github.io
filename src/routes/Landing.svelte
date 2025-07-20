@@ -72,7 +72,7 @@
 </script>
 
 <div
-	class="relative cursor-default"
+	class="relative cursor-default pl-[4%] pr-[8%] ml-[2%]"
 	onmousemove={handleMouseMove}
 	onmouseenter={handleMouseEnter}
 	onmouseleave={handleMouseLeave}
