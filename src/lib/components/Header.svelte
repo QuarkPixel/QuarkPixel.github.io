@@ -7,6 +7,7 @@
 	import Logo from '$lib/components/Logo.svelte';
 	import { usePixelPerfectedNoise } from '../utils/pixelPerfectedNoise.js';
 	import { getColorful } from '../utils/colorful.js';
+	import Travelling from '$lib/components/Travelling.svelte';
 
 	const { titleInfo, links } = $props();
 
@@ -79,7 +80,12 @@
 				</div>
 			{/if}
 		</div>
-		<ThemeSwitch />
+		<div class="flex gap-4">
+			{#if !displayTitle}
+				<Travelling />
+			{/if}
+			<ThemeSwitch />
+		</div>
 	</div>
 </div>
 
@@ -134,7 +140,7 @@
       width: 0;
       border-radius: var(--radius-base);
       scale: 1 .4;
-			filter: blur(3px);
+      filter: blur(3px);
     }
 
     &:hover > button {
@@ -142,7 +148,7 @@
       width: 28px;
       padding: 2px;
       scale: 1;
-			filter: unset;
+      filter: unset;
     }
 
   }
