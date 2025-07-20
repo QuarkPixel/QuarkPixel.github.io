@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://quarkpixel.github.io</id>
     <title>Hsuan's Space</title>
-    <updated>2025-07-12T12:35:26.997Z</updated>
+    <updated>2025-07-20T11:41:15.472Z</updated>
     <generator>Feed for Node.js</generator>
     <author>
         <name>Xuancong Meng</name>
@@ -16,6 +16,89 @@
     <icon>https://quarkpixel.github.io/favicon.ico</icon>
     <rights>All rights reserved 2025, Xuancong Meng</rights>
     <entry>
+        <title type="html"><![CDATA[HDR 在被滥用吗]]></title>
+        <id>https://quarkpixel.github.io/p/250720-is-hdr-being-overused</id>
+        <link href="https://quarkpixel.github.io/p/250720-is-hdr-being-overused"/>
+        <updated>2025-07-20T11:24:30.000Z</updated>
+        <summary type="html"><![CDATA[谈谈现今 HDR 的一些问题]]></summary>
+        <content type="html"><![CDATA[<script>
+import BiliPlayer from '$lib/components/BiliPlayer.svelte';
+</script>
+
+<p><strong>这是一篇讨论帖，由于本人没有实际上手过新的操作系统，故所有内容均来自网络，内容可能有误。欢迎发表自己的看法～</strong></p>
+<h2>引言</h2>
+<p>起因来自一条视频，展示了 Apple 在新系统的画笔中支持选择 <a href="https://en.wikipedia.org/wiki/High_dynamic_range">HDR</a> 颜色。</p>
+<BiliPlayer bv="BV1TW33zdE2T" />
+
+<p>给我的第一感受就是：<strong>怪</strong>。</p>
+<p>我其实能理解为什么 Apple 会允许选择 HDR 颜色，让系统整体对 HDR 有更深度的融合。但我不禁要问：这样的 HDR 真的合理吗？设计生态真的准备好了吗？</p>
+<p>我的担心是：HDR 技术为 UI 带来了更丰富的视觉表现力，但在缺乏统一设计语言和生态支持的前提下，Apple 等厂商的 &quot;开放式 HDR
+策略&quot; 反而可能破坏用户界面的一致性，增加设计负担。</p>
+<h2>HDR 的潜力</h2>
+<p>HDR 如果处理得好的话，UI 确实可以美到飞起。</p>
+<p>HDR 不只是让画面更亮、更艳，更重要的是它为界面设计引入了“亮度空间”这一新的表达维度。从传统的颜色/对比度控制，拓展到了真实光强的建构。得益于此，HDR
+可作为界面结构化、分层与焦点引导的新工具。例如：</p>
+<ul>
+<li><p>通过局部高亮引导用户注意力，而非依赖颜色或动画；</p>
+</li>
+<li><p>模拟真实光源制造视觉层次感，从而增强沉浸体验；</p>
+</li>
+<li><p>赋予 UI 元素不同的“光学存在感”，区分主次关系。</p>
+</li>
+</ul>
+<p>这些观点指向一个共识：<strong>HDR 是视觉强化的强力工具，但前提是“设计得好”，且配合统一的设计语言与生态标准。</strong> 否则，它也可能成为破坏体验的利器。</p>
+<h2>问题在于 HDR 没有统一标准</h2>
+<p>但现实情况是，我们的 HDR UI 体验远没有达到理想状态。</p>
+<h3>系统层面的设计不一致</h3>
+<p>最明显的问题是视觉连贯性的缺失。我们经常能看到 HDR 视频在普通 UI 界面上播放，导致整体界面看起来发灰、不协调。这种 &quot;接缝感&quot;
+破坏了用户界面应有的统一性。</p>
+<p>还有 Reddit
+用户提到 <a href="https://www.reddit.com/r/appletv/comments/x2al6l/youtube_adverts_causing_huge_delay_because_tv/">YouTube 广告因 HDR 切换导致画面延迟和色彩跳变</a>
+，严重影响观看体验。</p>
+<p>这些问题的根源在于：<strong>HDR 在系统 UI 中的体验不连贯，打断了用户的视觉流，这是设计上的失败。</strong></p>
+<h3>缺乏设计指导下的 &quot;自由发挥&quot;</h3>
+<p>当技术门槛降低，HDR 变得人人可用时，缺乏设计规范的约束就会带来问题。</p>
+<p>我们确实看到了一些令人担忧的现象：抖音上有用户开始使用带有HDR高亮的表情包进行恶搞，这些内容因为比平常的图片更亮而获得关注。</p>
+<details>
+  <summary>[视频] 这年头，表情包都自带HDR了？</summary>
+  <BiliPlayer bv="BV1HkTuzcE7V" />
+</details>
+
+<p>类似的情况还出现在广告投放中，HDR被用作粗暴的注意力抓取工具，而不是精心设计的视觉体验。这些现象本身不是核心问题，而是设计缺位的副作用。</p>
+<details>
+  <summary>[视频] 野生的网页 HDR 广告</summary>
+  <BiliPlayer bv="BV1sw4m1d7L1" />
+</details>
+
+
+<p><strong>HDR UI 当前的问题不是 HDR 本身，而是没有明确的 &quot;设计语言&quot; 和规范来驾驭它。</strong></p>
+<h3>生态支持的不成熟</h3>
+<p>更深层的问题在于，我们的数字生态还没有准备好迎接 &quot;全面HDR化&quot;。</p>
+<p>第三方应用、浏览器、视频播放器对 HDR 的支持参差不齐，导致用户在不同场景下体验到的 HDR 效果千差万别。有时候 HDR
+让界面更加精致，有时候又让整体显得突兀。这种不可预测性正是设计大忌。</p>
+<p>Steam 社区论坛上有用户抱怨 <a href="https://steamcommunity.com/discussions/forum/11/7074686901648727412/">HDR 显示器效果的糟糕</a>
+，虽然不知道具体的原因，但我们可以明确的是现在的 HDR 领域无比混乱。</p>
+<h2>结语</h2>
+<p>回到开头的问题：Apple 开放 HDR 究竟是好事还是坏事？</p>
+<p>我的观点是：<strong>HDR是好工具，但应该被认真对待。</strong></p>
+<p>我们需要的不是 HDR 的全面开放，而是有设计指导的 HDR 应用。Apple 等厂商在推广 HDR 技术时，应该投入更多精力建立统一的设计规范和使用标准；软件厂商在对接
+HDR 技术时，也更应该谨慎对待。</p>
+<h2>参考文章</h2>
+<ul>
+<li><a href="https://medium.com/design-bootcamp/what-hdr-in-ui-tells-us-about-the-future-of-digital-perception-bb3d9133d1f6">HDR in UI: Designing Perception Through
+Brightness</a></li>
+<li><a href="https://medium.com/design-bootcamp/the-rise-of-hdr-ui-not-a-visual-gimmick-but-a-paradigm-shift-in-perceptual-logic-8062247f72dd">HDR UI and EDR: Rethinking Brightness in Interface Design</a></li>
+<li><a href="https://medium.com/design-bootcamp/is-your-ui-design-file-still-representing-the-final-output-in-the-hdr-ui-era-4bd4fb1f4b9d">Is Your UI Design File Still Representing the Final Output in the HDR UI Era?</a></li>
+</ul>
+]]></content>
+        <author>
+            <name>Xuancong Meng</name>
+            <email>xuancongmeng@gmail.com</email>
+            <uri>https://quarkpixel.github.io</uri>
+        </author>
+        <category label="[ 'Thinking' ]"/>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[夏长，云懒。]]></title>
         <id>https://quarkpixel.github.io/p/250712-summer-clouds</id>
         <link href="https://quarkpixel.github.io/p/250712-summer-clouds"/>
@@ -25,35 +108,35 @@
 <p>平时喜欢去天台散心：没有喧嚣，只有自己。夏日的云和其它时候都不一样。从专业术语的角度出发，我爱看夏天的<a href="https://zh.wikipedia.org/wiki/%E7%A7%AF%E4%BA%91">积云</a>。记这些年来拍到的夏日云：</p>
 <div class="bg-surface-100-900 outline-9 rounded-xl my-2 outline-surface-100-900 grid grid-cols-3 grid-rows-6 gap-2 [&_img]:w-full [&_img]:h-full [&_img]:object-cover [&_img]:m-0 *>rounded-xl *>shadow-lg *>overflow-hidden *>bg-gray-200">
   <div class="col-start-1 col-span-2 row-start-1 row-span-2">
-    <img src="https://images.unsplash.com/photo-1696332223628-62631dabb337"/>
+    <img alt="clouds" src="https://images.unsplash.com/photo-1696332223628-62631dabb337"/>
   </div>
   
   <div class="col-start-3 col-span-1 row-start-1 row-span-3">
-    <img src="https://images.unsplash.com/photo-1696332223533-993114881882"/>
+    <img alt="clouds" src="https://images.unsplash.com/photo-1696332223533-993114881882"/>
   </div>
   
   <div class="col-start-1 col-span-1 row-start-3 row-span-3">
-    <img src="https://images.unsplash.com/photo-1696332223583-0d94cb2911f7"/>
+    <img alt="clouds" src="https://images.unsplash.com/photo-1696332223583-0d94cb2911f7"/>
   </div>
   
   <div class="col-start-2 col-span-2 row-start-4 row-span-1">
-    <img src="https://images.unsplash.com/photo-1695450148576-675cab2c9215"/>
+    <img alt="clouds" src="https://images.unsplash.com/photo-1695450148576-675cab2c9215"/>
   </div>
   
   <div class="col-start-2 col-span-1 row-start-3 row-span-1">
-    <img src="https://images.unsplash.com/photo-1696332223520-1278796028f5"/>
+    <img alt="clouds" src="https://images.unsplash.com/photo-1696332223520-1278796028f5"/>
   </div>
   
   <div class="col-start-3 col-span-1 row-start-5 row-span-2">
-    <img src="https://images.unsplash.com/photo-1696332222129-6e44eb7e3f29"/>
+    <img alt="clouds" src="https://images.unsplash.com/photo-1696332222129-6e44eb7e3f29"/>
   </div>
   
   <div class="col-start-2 col-span-1 row-start-5 row-span-2">
-    <img src="https://images.unsplash.com/photo-1727843062665-040b10410226"/>
+    <img alt="clouds" src="https://images.unsplash.com/photo-1727843062665-040b10410226"/>
   </div>
   
   <div class="col-start-1 col-span-1 row-start-6 row-span-1">
-    <img src="https://images.unsplash.com/photo-1696332223050-253b7b199a68"/>
+    <img alt="clouds" src="https://images.unsplash.com/photo-1696332223050-253b7b199a68"/>
   </div>
 </div>
 <div class="-mt-1"><a class="text-surface-400-600 font-noto-sans text-sm" href="https://unsplash.com/@quarkpixel">Unsplash @quarkpixel</a></div>
