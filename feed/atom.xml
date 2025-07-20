@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://quarkpixel.github.io</id>
     <title>Hsuan's Space</title>
-    <updated>2025-07-20T11:41:15.472Z</updated>
+    <updated>2025-07-20T11:47:47.760Z</updated>
     <generator>Feed for Node.js</generator>
     <author>
         <name>Xuancong Meng</name>
@@ -36,7 +36,7 @@ import BiliPlayer from '$lib/components/BiliPlayer.svelte';
 策略&quot; 反而可能破坏用户界面的一致性，增加设计负担。</p>
 <h2>HDR 的潜力</h2>
 <p>HDR 如果处理得好的话，UI 确实可以美到飞起。</p>
-<p>HDR 不只是让画面更亮、更艳，更重要的是它为界面设计引入了“亮度空间”这一新的表达维度。从传统的颜色/对比度控制，拓展到了真实光强的建构。得益于此，HDR
+<p>HDR 不只是让画面更亮、更艳，更重要的是它为界面设计引入了 &quot;亮度空间&quot; 这一新的表达维度。从传统的颜色/对比度控制，拓展到了真实光强的建构。得益于此，HDR
 可作为界面结构化、分层与焦点引导的新工具。例如：</p>
 <ul>
 <li><p>通过局部高亮引导用户注意力，而非依赖颜色或动画；</p>
@@ -46,7 +46,7 @@ import BiliPlayer from '$lib/components/BiliPlayer.svelte';
 <li><p>赋予 UI 元素不同的“光学存在感”，区分主次关系。</p>
 </li>
 </ul>
-<p>这些观点指向一个共识：<strong>HDR 是视觉强化的强力工具，但前提是“设计得好”，且配合统一的设计语言与生态标准。</strong> 否则，它也可能成为破坏体验的利器。</p>
+<p>这些观点指向一个共识：<strong>HDR 是视觉强化的强力工具，但前提是 &quot;设计得好&quot; ，且配合统一的设计语言与生态标准。</strong> 否则，它也可能成为破坏体验的利器。</p>
 <h2>问题在于 HDR 没有统一标准</h2>
 <p>但现实情况是，我们的 HDR UI 体验远没有达到理想状态。</p>
 <h3>系统层面的设计不一致</h3>
