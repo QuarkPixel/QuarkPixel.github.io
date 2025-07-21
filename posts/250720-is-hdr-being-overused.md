@@ -3,7 +3,7 @@ title: HDR 在被滥用吗
 description: 谈谈现今 HDR 的一些问题
 date: 2025-07-20T19:24:30+08:00
 author: Xuancong Meng
-tags: [ 'Thinking' ]
+tags: [ 'Thinking', 'Visual' ]
 layout: blog
 ---
 
