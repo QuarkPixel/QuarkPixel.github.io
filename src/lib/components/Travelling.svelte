@@ -18,7 +18,7 @@
 			<Icon icon="mdi:arrow-top-right-thick" />
 		</div>
 	</div>
-	<span class="desc-wrapper">
+	<span class="desc-wrapper pointer-events-none">
 		<div class="desc">Travelling</div>
 	</span>
 </a>
