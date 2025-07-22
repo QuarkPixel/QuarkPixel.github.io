@@ -17,8 +17,8 @@
 }
 
 html {
-	height: -webkit-fill-available;
 	height: 100vh;
+	height: -webkit-fill-available;
 	overflow-x: hidden;
 }
 
