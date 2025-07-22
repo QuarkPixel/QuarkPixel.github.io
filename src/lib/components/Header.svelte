@@ -95,7 +95,7 @@
   .header {
     @extend .noise-texture;
     min-width: 100%;
-    padding: 0 10px;
+    padding: 0 20px;
     position: sticky;
     top: 0;
     z-index: 2;
@@ -118,7 +118,7 @@
       align-items: center;
       gap: 1rem;
 
-      width: var(--auto-width);
+      width: calc(var(--auto-width) - 40px);
       margin: 0 auto;
       /*padding: 0 5%;*/
     }

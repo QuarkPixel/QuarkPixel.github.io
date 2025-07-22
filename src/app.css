@@ -3,9 +3,9 @@
 @plugin "@tailwindcss/typography";
 @config "./lib/styles/tailwind.config.js";
 /* Skeleton UI */
-@import "$lib/styles/skeleton.css";
+@import '$lib/styles/skeleton.css';
 /*Marquee*/
-@import "$lib/styles/marquee.css";
+@import '$lib/styles/marquee.css';
 
 /* Custom styles */
 @import '$lib/styles/variable.css';
@@ -13,17 +13,33 @@
 @custom-variant dark (&:where([data-mode="dark"], [data-mode="dark"] *));
 
 * {
-    font-synthesis: none;
+	font-synthesis: none;
+}
+
+html {
+	height: -webkit-fill-available;
+	height: 100vh;
+	overflow-x: hidden;
 }
 
 body {
-    min-width: 665px;
-    height: 100vh;
-    overflow: hidden;
+	height: 100%;
+	overflow: hidden;
+	overflow-x: auto;
+
+	scrollbar-width: none;
 }
 
-body>div {
-    height: 100vh;
-    overflow-y: auto;
-    scroll-snap-type: y mandatory;
+body::-webkit-scrollbar {
+	display: none;
+}
+
+body > div {
+	height: 100%;
+	min-width: 665px;
+	overflow-y: auto;
+	overflow-x: hidden;
+
+	scrollbar-width: thin;
+	scroll-snap-type: y mandatory;
 }

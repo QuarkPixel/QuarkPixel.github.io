@@ -14,6 +14,7 @@
 		const scrollHeight = scrollContainer!.scrollHeight - scrollContainer!.clientHeight;
 		const currentScroll = scrollContainer!.scrollTop;
 		let offset = scrollHeight - currentScroll;
+		if (offset < 0) offset = 0;
 		if (offset <= HEIGHT) scroll = offset;
 	}
 
