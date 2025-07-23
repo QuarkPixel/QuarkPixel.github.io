@@ -1,7 +1,10 @@
+import { browser } from '$app/environment';
+import { isFirefox } from '$lib/utils/isFirefox.js';
 import { error } from '@sveltejs/kit';
 export const prerender = true;
 
 export const load = async ({ params, url }: { params: Record<string, string>; url: URL }) => {
+  if(browser && isFirefox()) document.documentElement.classList.add('firefox');
 	// 根据路径返回不同的配置
 	switch (true) {
 		case url.pathname.startsWith('/p/'): {

@@ -44,3 +44,7 @@ body > div {
 	scrollbar-width: thin;
 	scroll-snap-type: y mandatory;
 }
+
+.firefox body > div {
+	scroll-snap-type: none;
+}
