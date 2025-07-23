@@ -77,7 +77,6 @@
 	let fontLoaded = $state.raw(false);
 	if (browser && 'fonts' in document) {
 		document.fonts.load('12px "Caveat Variable"').then(() => {
-			console.log('123123123123');
 			fontLoaded = true;
 		});
 	}
