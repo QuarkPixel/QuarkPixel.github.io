@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { Spring, Tween } from 'svelte/motion';
 	import { map, TextAnimation } from 'svelte-text-animation';
-
-	const { class: className = '' } = $props();
+	import { browser } from '$app/environment';
+	import { blur } from 'svelte/transition';
 
 	const State = {
 		hovering: {
@@ -37,6 +37,9 @@
 			})
 			.then(() => {
 				if (!hovering) animate();
+			})
+			.catch(() => {
+				//Ignore error
 			});
 	}
 
@@ -46,7 +49,8 @@
 		const target = event.currentTarget as HTMLElement;
 		const rect = target.getBoundingClientRect();
 		const x = event.clientX - rect.left;
-		progress.target = x / rect.width;
+		// progress.target = x / rect.width;
+		progress.set(x / rect.width);
 	}
 
 	function handleMouseEnter() {
@@ -69,26 +73,37 @@
 			color: color-mix(in oklch, var(--color-primary-700-300), var(--color-tertiary-600-400) calc(${map(i, 0, 0.8)} * var(--brightness) * 100%));
 	`
 	);
+
+	let fontLoaded = $state.raw(false);
+	if (browser && 'fonts' in document) {
+		document.fonts.load('12px "Caveat Variable"').then(() => {
+			console.log('123123123123');
+			fontLoaded = true;
+		});
+	}
 </script>
 
-<div
-	class="relative cursor-default pl-[4%] pr-[8%] ml-[2%]"
-	onmousemove={handleMouseMove}
-	onmouseenter={handleMouseEnter}
-	onmouseleave={handleMouseLeave}
-	role="slider"
-	tabindex="0"
-	aria-valuenow={progress.current}
-	aria-valuemin={0}
-	aria-valuemax={1}
-	style="overflow-anchor: none;"
->
-	<TextAnimation
-		text="Hsuan's Space"
-		class="{className} h-[clamp(72pt,15vw,256pt)] font-caveat text-primary-700-300 transition-all duration-300"
-		style="--brightness: {focusMask.current}"
-		innerClassName="leading-none"
-		progress={progress.current}
-		{styleCallback}
-	/>
-</div>
+{#if fontLoaded}
+	<div
+		transition:blur
+		class="relative cursor-default pl-[4%] pr-[8%] ml-[2%] h-[clamp(72pt,15vw,256pt)] my-15"
+		onmousemove={handleMouseMove}
+		onmouseenter={handleMouseEnter}
+		onmouseleave={handleMouseLeave}
+		role="slider"
+		tabindex="0"
+		aria-valuenow={progress.current}
+		aria-valuemin={0}
+		aria-valuemax={1}
+		style="overflow-anchor: none;"
+	>
+		<TextAnimation
+			text="Hsuan's Space"
+			class="font-caveat text-primary-700-300 transition-all duration-300 whitespace-nowrap"
+			style="--brightness: {focusMask.current}"
+			innerClassName="leading-none"
+			progress={progress.current}
+			{styleCallback}
+		/>
+	</div>
+{/if}

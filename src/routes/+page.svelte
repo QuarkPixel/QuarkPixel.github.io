@@ -28,7 +28,7 @@
 	);
 </script>
 
-<Landing class="my-15" />
+<Landing />
 
 <div class="auto-width px-20 mt-5 group">
 	{#await loadedPostsPromise then loadedPosts}
