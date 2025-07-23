@@ -18,15 +18,18 @@
 
 html {
 	height: 100vh;
+	height: calc(-webkit-fill-available);
+	overflow: hidden;
+}
+
+html.not-safari {
 	height: -webkit-fill-available;
-	overflow-x: hidden;
 }
 
 body {
 	height: 100%;
 	overflow: hidden;
 	overflow-x: auto;
-
 	scrollbar-width: none;
 }
 
