@@ -15,6 +15,12 @@ export const themeMode = writable<ThemeMode>(
 
 export const isDarkMode = derived(themeMode, ($themeMode) => $themeMode === 'dark');
 export const isLightMode = derived(themeMode, ($themeMode) => $themeMode === 'light');
+export const lightDark = <T>(light: T, dark: T) => {
+	return derived(isLightMode, ($isLightMode) => {
+		console.log(isLightMode);
+		return $isLightMode ? light : dark;
+	});
+};
 
 // 设置主题并持久化
 export function setThemeMode(mode: ThemeMode) {
