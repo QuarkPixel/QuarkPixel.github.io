@@ -3,6 +3,7 @@
 	import { map, TextAnimation } from 'svelte-text-animation';
 	import { browser } from '$app/environment';
 	import { blur } from 'svelte/transition';
+	import { isDarkMode } from '$lib/stores/theme.js';
 
 	const State = {
 		hovering: {
@@ -100,7 +101,9 @@
 			text="Hsuan's Space"
 			class="font-caveat text-primary-700-300 transition-all duration-300 whitespace-nowrap"
 			style="--brightness: {focusMask.current}"
-			innerClassName="leading-none"
+			innerClassName="leading-none text-shadow-surface-950 {$isDarkMode
+				? 'text-shadow-[0_15px_35px]'
+				: ''}"
 			progress={progress.current}
 			{styleCallback}
 		/>
