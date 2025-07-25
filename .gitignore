@@ -1,5 +1,6 @@
 node_modules
 .idea
+.obsidian
 
 src/lib/font_source/*/*/index.html
 src/lib/font_source/*/*/preview.svg
