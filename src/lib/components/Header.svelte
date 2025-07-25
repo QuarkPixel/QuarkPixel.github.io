@@ -100,7 +100,7 @@
     top: 0;
     z-index: 2;
 
-    backdrop-filter: blur(10px) saturate(80%);
+    backdrop-filter: blur(12px) saturate(200%);
 
     &::after {
       content: '';

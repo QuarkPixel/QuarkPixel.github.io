@@ -11,8 +11,8 @@
 	class="list flex justify-between p-3 rounded group/item hover:bg-secondary-50-950 hover:px-8 hover:text-secondary-950-50"
 >
 	<div class="flex flex-col">
-		<div class="font-bold">{metadata.title}</div>
-		<div class="font-noto-sans font-light text-sm">{metadata.description}</div>
+		<div class="font-noto-serif font-bold">{metadata.title}</div>
+		<div class="font-lxgw-wenkai font-light text-sm">{metadata.description}</div>
 	</div>
 	<div class="flex flex-col items-end justify-between gap-1 ml-1">
 		<div class="font-[Georgia] oldstyle-nums opacity-65 text-base">
