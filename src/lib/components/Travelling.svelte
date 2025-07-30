@@ -1,14 +1,17 @@
 <script lang="ts">
 	import Icon from '@iconify/svelte';
-	import { blur } from 'svelte/transition';
+	// import { blur } from 'svelte/transition';
 
-
+	const { class: className = '', ...rest } = $props();
 </script>
 
-<a class="group chip preset-filled-surface-50-950 rounded-full"
-	 href="https://www.travellings.cn/go.html" target="_blank"
-	 rel="noopener" title="开往-友链接力"
-	 transition:blur
+<a
+	class="group chip preset-filled-surface-50-950 rounded-full {className}"
+	href="https://www.travellings.cn/go.html"
+	target="_blank"
+	rel="noopener"
+	title="开往-友链接力"
+	{...rest}
 >
 	<div class="icons">
 		<div class="logo">
@@ -24,71 +27,73 @@
 </a>
 
 <style lang="scss">
-  a {
-    overflow: hidden;
-    gap: 0;
+	a {
+		overflow: hidden;
+		gap: 0;
 
-    .icons {
-      position: relative;
+		.icons {
+			position: relative;
 
+			.logo {
+				transition: 0.6s;
+			}
 
-      .logo {
-        transition: 0.6s;
-      }
+			.arrow {
+				transition:
+					opacity 0.4s,
+					transform 0s 0.4s;
+				position: absolute;
+				transform: translate(-100%, 100%);
+				top: 0;
+				left: 0;
+				opacity: 0;
+			}
+		}
 
-      .arrow {
-        transition: opacity 0.4s, transform 0s 0.4s;
-        position: absolute;
-        transform: translate(-100%, 100%);
-        top: 0;
-        left: 0;
-        opacity: 0;
-      }
-    }
+		.desc-wrapper {
+			display: grid;
+			grid-template-columns: 0fr;
+			transition:
+				grid-template-columns 0.4s,
+				opacity 0.3s ease;
+			opacity: 0;
 
-    .desc-wrapper {
-      display: grid;
-      grid-template-columns: 0fr;
-      transition: grid-template-columns 0.4s,
-      opacity 0.3s ease;
-      opacity: 0;
+			.desc {
+				transition: 0.8s var(--ease-jelly);
+				font-family: var(--font-gravitas-one);
+				grid-column: 1 / span 2;
+				transform: translateX(50%);
+			}
+		}
 
-      .desc {
-        transition: 0.8s var(--ease-jelly);
-        font-family: var(--font-gravitas-one);
-        grid-column: 1 / span 2;
-        transform: translateX(50%);
-      }
-    }
+		&:hover {
+			gap: 0.4rem;
 
-    &:hover {
-      gap: 0.4rem;
+			.icons {
+				& > * {
+					transition: 0.5s 0.2s;
+				}
 
-      .icons {
-        & > * {
-          transition: 0.5s 0.2s;
-        }
+				.logo {
+					opacity: 0;
+				}
 
-        .logo {
-          opacity: 0;
-        }
+				.arrow {
+					//left: 0;
+					//bottom: 0;
+					transform: unset;
+					opacity: 1;
+				}
+			}
 
-        .arrow {
-          //left: 0;
-          //bottom: 0;
-          transform: unset;
-          opacity: 1;
-        }
-      }
+			.desc-wrapper {
+				opacity: 1;
+				grid-template-columns: 1fr;
 
-      .desc-wrapper {
-        opacity: 1;
-        grid-template-columns: 1fr;
-
-        .desc {
-          transform: unset;
-        }
-      }
-    }
-  }
+				.desc {
+					transform: unset;
+				}
+			}
+		}
+	}
 </style>

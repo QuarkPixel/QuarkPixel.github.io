@@ -3,11 +3,12 @@
 	import ThemeSwitch from '$lib/components/ThemeSwitch.svelte';
 	import { H6 } from '$lib/components/typography/index.js';
 	import Icon from '@iconify/svelte';
-	import { blur } from 'svelte/transition';
+	import { blur, fly } from 'svelte/transition';
 	import Logo from '$lib/components/Logo.svelte';
 	import { usePixelPerfectedNoise } from '../utils/pixelPerfectedNoise.js';
 	import { getColorful } from '../utils/colorful.js';
 	import Travelling from '$lib/components/Travelling.svelte';
+	import { Popover } from '@skeletonlabs/skeleton-svelte';
 
 	const { titleInfo, links } = $props();
 
@@ -15,6 +16,7 @@
 
 	let scrollContainer: Element | null = null;
 	let displayTitle = $state.raw(false);
+	let mobileMenuOpen = $state.raw(false);
 
 	$effect(() => {
 		if (!titleInfo.scrollThreshold) {
@@ -22,7 +24,7 @@
 			return;
 		}
 
-		scrollContainer = document.querySelector('body > div');
+		scrollContainer = document.querySelector('.sveltekit-body');
 		if (!scrollContainer) return;
 
 		function updateScrollInfo() {
@@ -42,8 +44,8 @@
 
 <div class="header relative" style:--noise-size="{$noiseTextureSize}px">
 	<div>
-		<div class="grow flex gap-4">
-			<a href="/" class="logo self-baseline">
+		<div class="grow flex gap-1 md:gap-4 sm:-mt-2 md:mt-0">
+			<a href="/" class="logo self-baseline hidden sm:block origin-bottom-left scale-75 md:scale-100">
 				<Logo
 					official={logoOfficial}
 					class="h-[30px] w-[40px]"
@@ -53,18 +55,19 @@
 			</a>
 			{#if displayTitle}
 				<div
-					class="title absolute top-0 left-[10%] right-[10%] h-full flex items-center justify-center
+					class="title absolute top-0 w-2/3 left-1/2 -translate-x-1/2 h-full flex items-center justify-center
 					opacity-80"
 					transition:blur
 				>
 					<button
 						type="button"
-						class=" hover:preset-tonal-surface"
+						class="hover:preset-tonal-surface"
 						title="Back"
-						onclick={() => history.back()}>
+						onclick={() => history.back()}
+					>
 						<Icon icon="gravity-ui:chevron-left" />
 					</button>
-					<H6 class="font-noto-serif text-center py-2 px-3">{titleInfo.title}</H6>
+					<H6 class="font-noto-serif text-center py-2 px-3 truncate">{titleInfo.title}</H6>
 				</div>
 			{:else}
 				<div transition:blur class="self-baseline flex items-end gap-1">
@@ -80,11 +83,36 @@
 				</div>
 			{/if}
 		</div>
-		<div class="flex gap-4">
+		<div class="flex gap-4 sm:flex">
 			{#if !displayTitle}
-				<Travelling />
+				<div transition:blur>
+					<Travelling class="hidden sm:inline-flex" />
+				</div>
 			{/if}
-			<ThemeSwitch />
+			<ThemeSwitch class="hidden sm:inline-flex" />
+
+			<Popover
+				open={mobileMenuOpen}
+				onOpenChange={(e) => (mobileMenuOpen = e.open)}
+				positioning={{ placement: 'bottom-end', gutter: 30 }}
+				triggerBase="sm:hidden btn px-2 {mobileMenuOpen ? 'preset-filled-primary-500' : 'hover:preset-tonal'}"
+				contentBase="overflow-visible"
+				zIndex="3"
+			>
+				{#snippet trigger()}
+					<Icon icon="gravity-ui:bars" />
+				{/snippet}
+				{#snippet content()}
+					<div
+						class="flex flex-col items-end p-[2px] gap-3
+						*:shadow-[0_5px_15px_#0003] *:outline-1 *:outline-surface-50 dark:*:outline-surface-800!"
+						transition:fly={{y:-20}}
+					>
+						<Travelling />
+						<ThemeSwitch />
+					</div>
+				{/snippet}
+			</Popover>
 		</div>
 	</div>
 </div>
@@ -94,7 +122,8 @@
 
   .header {
     @extend .noise-texture;
-    min-width: 100%;
+    width: 100%;
+    height: 54px;
     padding: 0 20px;
     position: sticky;
     top: 0;
@@ -119,13 +148,14 @@
       gap: 1rem;
 
       width: calc(var(--auto-width) - 40px);
+      height: 100%;
+      max-width: 100%;
       margin: 0 auto;
-      /*padding: 0 5%;*/
     }
   }
 
   .logo {
-    margin: .8rem 0;
+    margin: 12px 0;
     font-size: 30px;
     @media (width >= 48rem) {
       font-size: 33.75px; /* 30px * 1.125 */

@@ -70,7 +70,8 @@ module.exports = {
 						},
 						'img + em': {
 							display: 'block',
-							marginTop: '-40px',
+							marginTop: '-1.75em',
+							marginBottom: '0.25em',
 							fontSize: '0.875rem',
 							opacity: '0.7',
 							fontFamily: 'var(--font-noto-sans)'

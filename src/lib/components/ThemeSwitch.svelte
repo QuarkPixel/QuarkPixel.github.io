@@ -5,6 +5,7 @@
 	import { type CheckedChangeDetails } from '@zag-js/switch';
 	import Icon from '@iconify/svelte';
 	import { setThemeMode, isDarkMode, type ThemeMode } from '$lib/stores/theme.js';
+	const { class: className = '', ...rest } = $props();
 
 	// Favicon 路径
 	const FAVICON_PATHS = {
@@ -85,7 +86,11 @@
 	</script>
 </svelte:head>
 
-<div class="flex items-center gap-2" style={!isInitialized ? 'opacity: 0' : 'opacity: 1; transition: opacity 0.2s'}>
+<div
+    class="flex items-center gap-2 rounded-full {className}"
+    style={!isInitialized ? 'opacity: 0' : 'opacity: 1; transition: opacity 0.2s'}
+    {...rest}
+>
 	<Switch
 		name="mode"
 		controlActive="bg-surface-300"

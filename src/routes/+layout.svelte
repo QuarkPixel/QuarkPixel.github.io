@@ -27,7 +27,7 @@
 	// 获取滚动容器
 	function getScrollContainer() {
 		if (!scrollContainer) {
-			scrollContainer = document.querySelector('body > div');
+			scrollContainer = document.querySelector('.sveltekit-body');
 		}
 		return scrollContainer;
 	}

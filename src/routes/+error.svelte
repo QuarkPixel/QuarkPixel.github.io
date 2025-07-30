@@ -6,7 +6,8 @@
 
 <div class="flex flex-col items-center justify-center gap-5 text-center">
 	<Marquee
-		class="h1 font-gravitas-one text-surface-700-300 w-80 h-20 motion-reduce:animate-none motion-reduce:first:hidden -mb-9"
+		class="h1 font-gravitas-one text-surface-700-300 w-80 h-20 motion-reduce:animate-none
+			motion-reduce:first:hidden -mb-9"
 		fade={true}
 		direction="up"
 	>
@@ -14,6 +15,10 @@
 			<span class="leading-[1.8rem]">{page.status}</span>
 		{/each}
 	</Marquee>
-	<div class="h1 font-caveat text-shadow-[0_-5px_5px_var(--color-surface-50-950)] z-1">{page.error?.message}</div>
-	<a href="/" class="btn btn-sm preset-filled-primary-500 font-noto-sans"><Icon icon="gravity-ui:arrow-uturn-ccw-left" /> Back to Home</a>
+	<div class="h1 font-caveat text-shadow-[0_-5px_5px_var(--color-surface-50-950)] z-1">
+		{page.error?.message}
+	</div>
+	<a href="/" class="btn btn-sm preset-filled-primary-500 font-noto-sans"
+		><Icon icon="gravity-ui:arrow-uturn-ccw-left" /> Back to Home</a
+	>
 </div>

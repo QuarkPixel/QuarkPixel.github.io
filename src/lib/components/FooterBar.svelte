@@ -19,7 +19,7 @@
 	}
 
 	onMount(() => {
-		scrollContainer = document.querySelector('body > div');
+		scrollContainer = document.querySelector('.sveltekit-body');
 
 		updateScrollInfo();
 		scrollContainer?.addEventListener('scroll', updateScrollInfo); // 监听滚动事件
