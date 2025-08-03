@@ -11,11 +11,11 @@
 	class="list flex justify-between p-3 rounded group/item hover:bg-secondary-50-950 lg:hover:px-8 hover:text-secondary-950-50"
 >
 	<div class="flex flex-col">
-		<div class="font-noto-serif font-bold">{metadata.title}</div>
-		<div class="font-lxgw-wenkai font-light text-sm">{metadata.description}</div>
+		<div class="font-noto-serif font-bold text-sm sm:text-xl md:text-2xl">{metadata.title}</div>
+		<div class="font-lxgw-wenkai font-light text-xs sm:text-sm">{metadata.description}</div>
 	</div>
 	<div class="flex flex-col items-end justify-between gap-1 ml-1">
-		<div class="font-[Georgia] oldstyle-nums opacity-65 text-base">
+		<div class="font-[Georgia] oldstyle-nums opacity-65 text-xs sm:text-base">
 			{new Date(metadata.date).toLocaleDateString()}
 		</div>
 		<Tags tags={metadata.tags} />

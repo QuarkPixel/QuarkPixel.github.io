@@ -70,7 +70,7 @@
 	let styleCallback = $state.raw(
 		(i: number) => `
 			font-weight: ${map(i, 400, 700)};
-			font-size: calc(clamp(72pt, 15vw, 256pt) * ${map(i, 1, 0.94)});
+			font-size: calc(clamp(48pt, 15vw, 256pt) * ${map(i, 1, 0.94)});
 			color: color-mix(in oklch, var(--color-primary-700-300), var(--color-tertiary-600-400) calc(${map(i, 0, 0.8)} * var(--brightness) * 100%));
 	`
 	);

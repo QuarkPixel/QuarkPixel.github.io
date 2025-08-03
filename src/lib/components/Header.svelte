@@ -83,7 +83,7 @@
 				</div>
 			{/if}
 		</div>
-		<div class="flex gap-4 sm:flex">
+		<div class="flex sm:gap-4 sm:flex">
 			{#if !displayTitle}
 				<div transition:blur>
 					<Travelling class="hidden sm:inline-flex" />
@@ -147,7 +147,7 @@
       align-items: center;
       gap: 1rem;
 
-      width: calc(var(--auto-width) - 40px);
+      width: var(--auto-width);
       height: 100%;
       max-width: 100%;
       margin: 0 auto;

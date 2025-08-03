@@ -37,7 +37,7 @@ body::-webkit-scrollbar {
 .sveltekit-body {
     height: 100vh;
 	height: -webkit-fill-available;
-	min-width: 500px;
+	min-width: 375px;
 	overflow-y: auto;
 	overflow-x: hidden;
 

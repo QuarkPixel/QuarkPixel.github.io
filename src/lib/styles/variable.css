@@ -11,7 +11,7 @@
 }
 
 :root {
-    --auto-width: clamp(665px, 90%, 2160px);
+    --auto-width: clamp(375px, 90%, 2160px);
 }
 
 @layer utilities {

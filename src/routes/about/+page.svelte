@@ -6,12 +6,14 @@
 	import FriendLinks from './FriendLinks.svelte';
 </script>
 
-<div class="mx-5 my-20 *:text-center *:font-gravitas-one relative">
-	<div class="h1 underline decoration-primary-500 decoration-6">
-		<span class="text-nowrap">I'm Xuancong Meng</span>.
+<div
+	class="mx-5 my-20 *:text-center *:font-gravitas-one relative max-w-[98vw] transition-transform duration-300"
+>
+	<div class="h2 md:h1 mb-2 md:mb-0 underline decoration-primary-500 decoration-6">
+		<span class="text-nowrap">I'm<wbr /> Xuancong Meng.</span>
 	</div>
 	<Portrait />
-	<div class="h2">
+	<div class="h3 md:h2">
 		<span
 			>Or just call me
 			<span class="text-nowrap">
