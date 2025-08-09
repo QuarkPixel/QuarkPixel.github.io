@@ -93,8 +93,9 @@
 >
 	<Switch
 		name="mode"
-		controlActive="bg-surface-300"
+		controlClasses="bg-surface-950/30"
 		checked={!$isDarkMode}
+		thumbClasses="bg-background"
 		onCheckedChange={handleThemeToggle}
 		label={$isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'}
 	>

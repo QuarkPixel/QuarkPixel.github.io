@@ -1,31 +1,37 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
-    --ease-jelly: cubic-bezier(.26, 1.48, .36, 1);
+	--ease-jelly: cubic-bezier(0.26, 1.48, 0.36, 1);
+	--color-background: light-dark(var(--body-background-color), var(--body-background-color-dark));
+	--color-background-invert: light-dark(
+		var(--body-background-color-dark),
+		var(--body-background-color)
+	);
 
-    --font-noto-serif: 'Noto Serif SC Variable', 'Noto Serif', serif;
-    --font-noto-sans: 'Noto Sans SC Variable', 'Noto Sans', sans-serif;
-    --font-caveat: 'Caveat Variable', cursive, system-ui;
-    --font-gravitas-one: 'Gravitas One', serif;
-    --font-lxgw-wenkai: 'LXGW WenKai', serif;
+	--font-noto-serif: 'Noto Serif SC Variable', 'Noto Serif', serif;
+	--font-noto-sans: 'Noto Sans SC Variable', 'Noto Sans', sans-serif;
+	--font-caveat: 'Caveat Variable', cursive, system-ui;
+	--font-gravitas-one: 'Gravitas One', serif;
+	--font-lxgw-wenkai: 'LXGW WenKai', serif;
 }
 
 :root {
-    --auto-width: clamp(375px, 90%, 2160px);
+	--auto-width: clamp(375px, 90%, 2160px);
 }
 
 @layer utilities {
-    .auto-width {
-        width: var(--auto-width);
-    }
-
+	.auto-width {
+		width: var(--auto-width);
+	}
 }
 
 .noise-texture {
-    background-color: color-mix(in oklch,
-    light-dark(var(--color-surface-50), var(--color-surface-900)) 80%,
-    transparent);
-    background-image: url(/noise-texture.png);
-    background-size: var(--noise-size, 50px);
-    image-rendering: pixelated;
+	background-color: color-mix(
+		in oklch,
+		light-dark(var(--body-background-color), var(--color-surface-900)) 80%,
+		transparent
+	);
+	background-image: url(/noise-texture.png);
+	background-size: var(--noise-size, 50px);
+	image-rendering: pixelated;
 }

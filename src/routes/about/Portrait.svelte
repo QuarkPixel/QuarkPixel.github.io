@@ -15,7 +15,7 @@
 	<div class="marquees absolute w-full h-full top-0 left-0">
 		{#each [{ direction: 'top', rotate: 180 }, { direction: 'bottom', rotate: 0 }] as strip, i (i)}
 			<div
-				class="text-surface-50-950 whitespace-nowrap overflow-hidden absolute heading-font-family"
+				class="text-background whitespace-nowrap overflow-hidden absolute heading-font-family"
 				style="
 					height: var(--border-width);
 					width: 100%;

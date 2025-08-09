@@ -1,12 +1,11 @@
 <script lang="ts">
 	import Icon from '@iconify/svelte';
-	// import { blur } from 'svelte/transition';
 
 	const { class: className = '', ...rest } = $props();
 </script>
 
 <a
-	class="group chip preset-filled-surface-50-950 rounded-full {className}"
+	class="group chip text-surface-contrast-50-950 bg-background h-full rounded-full {className}"
 	href="https://www.travellings.cn/go.html"
 	target="_blank"
 	rel="noopener"
