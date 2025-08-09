@@ -42,10 +42,10 @@
 	let logoOfficial = $state.raw(true);
 </script>
 
-<div class="header relative" style:--noise-size="{$noiseTextureSize}px">
+<div class="header relative px-[20px] py-0.5 sm:py-1.5 md:py-3" style:--noise-size="{$noiseTextureSize}px">
 	<div>
-		<div class="grow flex gap-1 md:gap-4 sm:-mt-2 md:mt-0">
-			<a href="/" class="logo self-baseline hidden sm:block origin-bottom-left scale-75 md:scale-100">
+		<div class="grow flex items-end gap-1 md:gap-4">
+			<a href="/" class="hidden sm:block scale-75 md:scale-100">
 				<Logo
 					official={logoOfficial}
 					class="h-[30px] w-[40px]"
@@ -70,11 +70,11 @@
 					<H6 class="font-noto-serif text-center py-2 px-3 truncate">{titleInfo.title}</H6>
 				</div>
 			{:else}
-				<div transition:blur class="self-baseline flex items-end gap-1">
+				<div transition:blur class="flex gap-1">
 					{#each links as { label, href }, i (i)}
 						<a
 							{href}
-							class="link h6
+							class="link h6 leading-4
 								{getColorful(i)}
 								{(page.url.pathname === href) ? 'selected' : ''}
 							"
@@ -83,9 +83,9 @@
 				</div>
 			{/if}
 		</div>
-		<div class="flex sm:gap-4 sm:flex">
+		<div class="flex h-[26.88px] items-center sm:gap-4 sm:flex">
 			{#if !displayTitle}
-				<div transition:blur>
+				<div class="flex" transition:blur>
 					<Travelling class="hidden sm:inline-flex" />
 				</div>
 			{/if}
@@ -94,8 +94,9 @@
 			<Popover
 				open={mobileMenuOpen}
 				onOpenChange={(e) => (mobileMenuOpen = e.open)}
-				positioning={{ placement: 'bottom-end', gutter: 30 }}
-				triggerBase="sm:hidden btn px-2 {mobileMenuOpen ? 'preset-filled-primary-500' : 'hover:preset-tonal'}"
+				positioning={{ placement: 'bottom-end', gutter: 20 }}
+				triggerBase="btn px-2 {mobileMenuOpen ? 'preset-filled-primary-500' : 'hover:preset-tonal'}"
+				classes="h-4/5 flex sm:hidden"
 				contentBase="overflow-visible"
 				zIndex="3"
 			>
@@ -123,14 +124,13 @@
   .header {
     @extend .noise-texture;
     width: 100%;
-    height: 54px;
-    padding: 0 20px;
     position: sticky;
     top: 0;
     z-index: 2;
 
     backdrop-filter: blur(12px) saturate(200%);
 
+    /* Highlight line */
     &::after {
       content: '';
       position: absolute;
@@ -154,16 +154,7 @@
     }
   }
 
-  .logo {
-    margin: 12px 0;
-    font-size: 30px;
-    @media (width >= 48rem) {
-      font-size: 33.75px; /* 30px * 1.125 */
-    }
-  }
-
   .title {
-
     > button {
       transition: .6s var(--ease-jelly) !important;
       opacity: 0;
@@ -180,7 +171,6 @@
       scale: 1;
       filter: unset;
     }
-
   }
 
   .link {
@@ -190,7 +180,7 @@
     opacity: .8;
     padding: 0 1rem;
     position: relative;
-    transition: 500ms var(--ease-jelly);
+    transition: color 500ms var(--ease-jelly);
     white-space: nowrap;
     font-family: var(--font-gravitas-one);
 
