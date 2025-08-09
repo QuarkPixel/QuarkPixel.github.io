@@ -8,7 +8,8 @@
 
 <a
 	href={path}
-	class="list flex justify-between p-3 rounded group/item hover:bg-secondary-50-950 lg:hover:px-8 hover:text-secondary-950-50"
+	class="list flex justify-between p-3 rounded group/item hover:bg-secondary-50-950 lg:hover:px-8
+		hover:text-secondary-950-50"
 >
 	<div class="flex flex-col">
 		<div class="font-noto-serif font-bold text-sm sm:text-xl md:text-2xl">{metadata.title}</div>

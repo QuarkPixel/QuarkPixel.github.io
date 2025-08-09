@@ -5,7 +5,7 @@
 	import { type CheckedChangeDetails } from '@zag-js/switch';
 	import Icon from '@iconify/svelte';
 	import { setThemeMode, isDarkMode, type ThemeMode } from '$lib/stores/theme.js';
-	const { class: className = '', ...rest } = $props();
+	const { class: className = '', island=false, ...rest } = $props();
 
 	// Favicon 路径
 	const FAVICON_PATHS = {
@@ -93,7 +93,7 @@
 >
 	<Switch
 		name="mode"
-		controlClasses="bg-surface-950/30"
+		controlClasses={island ? "bg-surface-200-800" : "bg-surface-950/30"}
 		checked={!$isDarkMode}
 		thumbClasses="bg-background"
 		onCheckedChange={handleThemeToggle}

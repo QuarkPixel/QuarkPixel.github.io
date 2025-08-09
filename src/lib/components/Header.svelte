@@ -42,7 +42,7 @@
 	let logoOfficial = $state.raw(true);
 </script>
 
-<div class="header relative px-[20px] py-0.5 sm:py-1.5 md:py-3" style:--noise-size="{$noiseTextureSize}px">
+<div class="header relative px-[20px] py-1.5 md:py-3" style:--noise-size="{$noiseTextureSize}px">
 	<div>
 		<div class="grow flex items-end gap-1 md:gap-4">
 			<a href="/" class="hidden sm:block scale-75 md:scale-100">
@@ -85,7 +85,7 @@
 		</div>
 		<div class="flex h-[26.88px] items-center sm:gap-4 sm:flex">
 			{#if !displayTitle}
-				<div class="flex" transition:blur>
+				<div class="flex h-full" transition:blur>
 					<Travelling class="hidden sm:inline-flex" />
 				</div>
 			{/if}
@@ -110,7 +110,7 @@
 						transition:fly={{y:-20}}
 					>
 						<Travelling />
-						<ThemeSwitch />
+						<ThemeSwitch island/>
 					</div>
 				{/snippet}
 			</Popover>
