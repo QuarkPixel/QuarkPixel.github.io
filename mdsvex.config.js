@@ -33,6 +33,7 @@ const config = defineConfig({
 	],
 	layout: {
 		blog: baseDir + 'blog.svelte',
+		test: baseDir + 'test.svelte',
 		_: baseDir + 'default.svelte'
 	}
 });
