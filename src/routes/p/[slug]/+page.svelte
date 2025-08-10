@@ -3,7 +3,7 @@
 	const Content = $derived(data.content);
 </script>
 
-<Content />
+<Content metadata={data.metadata} />
 
 <svelte:head>
 	<title>{data.title} - Hsuan's Blog</title>

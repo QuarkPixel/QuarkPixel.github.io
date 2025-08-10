@@ -5,11 +5,12 @@
 	import Tags from '$lib/components/Tags.svelte';
 	import Comment from '$lib/components/Comment.svelte';
 
-	interface Props extends Metadata {
+	interface Props {
 		children: Snippet;
+		metadata: Metadata;
 	}
 
-	const { children, ...metadata }: Props = $props();
+	const { children, metadata }: Props = $props();
 </script>
 
 <link
