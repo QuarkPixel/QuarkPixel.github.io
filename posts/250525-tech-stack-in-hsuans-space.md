@@ -3,14 +3,14 @@ title: Hsuan's Space 中用到的技术栈
 description: 谈谈本站的开发历程
 date: 2025-05-25
 author: Xuancong Meng
-tags: [ 'Web', 'Develop Diary' ]
+tags: ['Web', 'Develop Diary']
 layout: blog
 ---
 
 关于「我要做一个关于自己的网页」这个 Flag 我已经立了若干年了，最近这段时间终于有动力来完成它。尝试了没有接触过的技术，花了近半个月的时间，完成了网页的搭建。
 
 ![Wakatime badage](https://wakatime.com/badge/user/018b19a3-343c-48f6-8ba9-5713e3a014cc/project/e4f1a103-1fe2-4a7b-afe8-35b4df2164b6.svg?style=flat-square)
-*Time in this web project over all time*
+_Time in this web project over all time_
 
 本站采用了现代化的 Web 开发技术栈，主要包括：SvelteKit、TailwindCSS、MDsveX 和 Skeleton UI.
 
@@ -43,14 +43,14 @@ Svelte 大量的内置函数，使用起来体验很不错。
 
 <script>
     import Logo from '$lib/components/Logo.svelte';
-    import { bounceOut, elasticOut } from 'svelte/easing'; 
+    import { bounceOut, elasticOut } from 'svelte/easing';
 	let logoOfficial = true;
 </script>
 
-<button 
-    class="mt-20 mb-3 w-full flex justify-around gap-10 *:h-30 *:w-40"
-    onmouseenter={() => logoOfficial = false}
-    onmouseleave={() => logoOfficial = true}
+<button
+  class="mt-20 mb-3 w-full flex justify-around gap-10 _:h-30 _:w-40"
+  onmouseenter={() => logoOfficial = false}
+  onmouseleave={() => logoOfficial = true}
 >
     <Logo
         official={logoOfficial}
@@ -64,6 +64,7 @@ Svelte 大量的内置函数，使用起来体验很不错。
         easing={bounceOut}
     />
 </button>
+
 <div align="center" class="mb-15 opacity-65 font-gravitas-one">↑ Hover Me ↑</div>
 
 #### 核心代码：
@@ -71,7 +72,7 @@ Svelte 大量的内置函数，使用起来体验很不错。
 ```typescript
 // Derive interpolated path coordinates
 let interpolatedPaths: Shape[] = $derived(
-	paths.map(path =>
+	paths.map((path) =>
 		path.initial.map((start, i) => {
 			const end = path.target[i];
 			const x = start[0] + (end[0] - start[0]) * path.tween.current;
@@ -83,9 +84,7 @@ let interpolatedPaths: Shape[] = $derived(
 
 // Derive SVG path d attributes
 let dValues: string[] = $derived(
-	interpolatedPaths.map(points =>
-		`M${points.map((point) => point.join(' ')).join('L')}Z`
-	)
+	interpolatedPaths.map((points) => `M${points.map((point) => point.join(' ')).join('L')}Z`)
 );
 ```
 
@@ -104,6 +103,7 @@ let dValues: string[] = $derived(
 
 - 添加属性 `image-rendering: pixelated;`，具体属性说明参见[MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/image-rendering)
 - 动态计算图片展示大小，使得图片可以1:1像素展示在显示器上：
+
 ```typescript
 function calcNoiseSize() {
 	const dpr = window.devicePixelRatio || 1;
@@ -137,4 +137,4 @@ onMount(() => {
 - 优秀的 SEO 表现
 - 简单可靠的部署流程
 
-##### 如果你对这个项目感兴趣，可以在 [GitHub](https://github.com/QuarkPixel/QuarkPixel.github.io) 上查看源代码，项目代码采用 GPLv3 许可证开源。
+如果你对这个项目感兴趣，可以在 [GitHub](https://github.com/QuarkPixel/QuarkPixel.github.io) 上查看源代码，项目代码采用 GPLv3 许可证开源。
