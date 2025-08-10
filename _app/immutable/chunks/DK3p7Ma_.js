@@ -1,0 +1,1 @@
+import{l as i}from"./BoVWJXks.js";function r(t){const e=i();return{title:e.parse(t.title),description:e.parse(t.description),date:new Date(t.date),author:t.author,tags:t.tags,listSize:t.listSize!==void 0?t.listSize:"middle",cover:t.cover,reprint:t.reprint?{link:t.refLink,thought:t.reprintThought}:void 0,copyright:t.copyright!==void 0?t.copyright:!0}}export{r as p};

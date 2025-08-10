@@ -1,0 +1,1 @@
+.prose{word-break:auto-phrase}.prose>details>summary{font-size:smaller;opacity:.8}.prose .anchor-link{font:inherit;color:inherit;text-decoration:inherit;position:relative}.prose .anchor-link:before{content:"#";position:absolute;left:-1em;font-family:var(--font-caveat);opacity:0;transition:.2s;padding-right:1em;pointer-events:none}.prose .anchor-link:hover:before{opacity:.4}
