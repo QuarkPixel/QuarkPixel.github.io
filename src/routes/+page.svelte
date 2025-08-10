@@ -32,7 +32,7 @@
 <BlurryBackground />
 <Landing />
 
-<div class="auto-width px-5 md:px-20 mt-5 group">
+<div class="auto-width px-5 md:px-20 mt-5 group relative">
 	{#await loadedPostsPromise then loadedPosts}
 		{#each loadedPosts as { path, metadata }, i (path)}
 			<ListItem {path} {metadata} />

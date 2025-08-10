@@ -61,7 +61,7 @@
 				>
 					<button
 						type="button"
-						class="hover:preset-tonal-surface"
+						class="hover:bg-background"
 						title="Back"
 						onclick={() => history.back()}
 					>

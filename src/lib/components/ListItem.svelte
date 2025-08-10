@@ -8,7 +8,7 @@
 
 <a
 	href={path}
-	class="list flex justify-between p-3 rounded group/item hover:bg-secondary-50-950 lg:hover:px-8
+	class="list flex justify-between p-3 rounded group/item hover:bg-secondary-100-900/80 lg:hover:px-8
 		hover:text-secondary-950-50"
 >
 	<div class="flex flex-col">

@@ -3,193 +3,201 @@
  */
 
 main {
-    /* 深色模式基础样式
-    color: var(--color-surface-50);
-    background-color: var(--color-surface-950); */
+	/* Dark mode syntax highlighting */
+	--color-prettylights-syntax-comment: var(--color-surface-500);
+	/* lighter in dark mode */
+	--color-prettylights-syntax-constant: var(--color-primary-400);
+	/* lighter primary */
+	--color-prettylights-syntax-entity: var(--color-secondary-400);
+	/* lighter secondary */
+	--color-prettylights-syntax-storage-modifier-import: var(--color-surface-300);
+	/* lighter muted */
+	--color-prettylights-syntax-entity-tag: var(--color-success-400);
+	/* lighter success */
+	--color-prettylights-syntax-keyword: var(--color-error-400);
+	/* lighter error */
+	--color-prettylights-syntax-string: var(--color-tertiary-400);
+	/* lighter tertiary */
+	--color-prettylights-syntax-variable: var(--color-warning-400);
+	/* lighter warning */
+	--color-prettylights-syntax-brackethighlighter-unmatched: var(--color-error-400);
+	/* lighter error */
+	--color-prettylights-syntax-invalid-illegal-text: var(--color-surface-50);
+	/* light text */
+	--color-prettylights-syntax-invalid-illegal-bg: var(--color-error-600);
+	/* error bg */
+	--color-prettylights-syntax-carriage-return-text: var(--color-surface-50);
+	/* light text */
+	--color-prettylights-syntax-carriage-return-bg: var(--color-error-600);
+	/* error bg */
+	--color-prettylights-syntax-string-regexp: var(--color-tertiary-400);
+	/* tertiary for regex */
+	--color-prettylights-syntax-markup-list: var(--color-warning-400);
+	/* warning for lists */
+	--color-prettylights-syntax-markup-heading: var(--color-primary-400);
+	/* primary for headings */
+	--color-prettylights-syntax-markup-italic: var(--color-surface-300);
+	/* lighter muted */
+	--color-prettylights-syntax-markup-bold: var(--color-surface-300);
+	/* lighter muted */
+	--color-prettylights-syntax-markup-deleted-text: var(--color-error-400);
+	/* error red */
+	--color-prettylights-syntax-markup-deleted-bg: var(--color-error-800);
+	/* dark error bg */
+	--color-prettylights-syntax-markup-inserted-text: var(--color-success-400);
+	/* success green */
+	--color-prettylights-syntax-markup-inserted-bg: var(--color-success-800);
+	/* dark success bg */
+	--color-prettylights-syntax-markup-changed-text: var(--color-warning-400);
+	/* warning yellow */
+	--color-prettylights-syntax-markup-changed-bg: var(--color-warning-800);
+	/* dark warning bg */
+	--color-prettylights-syntax-markup-ignored-text: var(--color-surface-300);
+	/* muted */
+	--color-prettylights-syntax-markup-ignored-bg: var(--color-primary-400);
+	/* primary bg */
+	--color-prettylights-syntax-meta-diff-range: var(--color-secondary-400);
+	/* secondary */
+	--color-prettylights-syntax-brackethighlighter-angle: var(--color-surface-500);
+	/* muted */
+	--color-prettylights-syntax-sublimelinter-gutter-mark: var(--color-surface-800);
+	/* darker muted */
+	--color-prettylights-syntax-constant-other-reference-link: var(--color-primary-400);
+	/* primary */
 
-    /* Dark mode syntax highlighting */
-    --color-prettylights-syntax-comment: var(--color-surface-500);
-    /* lighter in dark mode */
-    --color-prettylights-syntax-constant: var(--color-primary-400);
-    /* lighter primary */
-    --color-prettylights-syntax-entity: var(--color-secondary-400);
-    /* lighter secondary */
-    --color-prettylights-syntax-storage-modifier-import: var(--color-surface-300);
-    /* lighter muted */
-    --color-prettylights-syntax-entity-tag: var(--color-success-400);
-    /* lighter success */
-    --color-prettylights-syntax-keyword: var(--color-error-400);
-    /* lighter error */
-    --color-prettylights-syntax-string: var(--color-tertiary-400);
-    /* lighter tertiary */
-    --color-prettylights-syntax-variable: var(--color-warning-400);
-    /* lighter warning */
-    --color-prettylights-syntax-brackethighlighter-unmatched: var(--color-error-400);
-    /* lighter error */
-    --color-prettylights-syntax-invalid-illegal-text: var(--color-surface-50);
-    /* light text */
-    --color-prettylights-syntax-invalid-illegal-bg: var(--color-error-600);
-    /* error bg */
-    --color-prettylights-syntax-carriage-return-text: var(--color-surface-50);
-    /* light text */
-    --color-prettylights-syntax-carriage-return-bg: var(--color-error-600);
-    /* error bg */
-    --color-prettylights-syntax-string-regexp: var(--color-success-400);
-    /* success for regex */
-    --color-prettylights-syntax-markup-list: var(--color-warning-400);
-    /* warning for lists */
-    --color-prettylights-syntax-markup-heading: var(--color-primary-400);
-    /* primary for headings */
-    --color-prettylights-syntax-markup-italic: var(--color-surface-300);
-    /* lighter muted */
-    --color-prettylights-syntax-markup-bold: var(--color-surface-300);
-    /* lighter muted */
-    --color-prettylights-syntax-markup-deleted-text: var(--color-surface-50);
-    /* light text */
-    --color-prettylights-syntax-markup-deleted-bg: var(--color-error-800);
-    /* dark error */
-    --color-prettylights-syntax-markup-inserted-text: var(--color-success-400);
-    /* success */
-    --color-prettylights-syntax-markup-inserted-bg: var(--color-success-800);
-    /* dark success */
-    --color-prettylights-syntax-markup-changed-text: var(--color-warning-400);
-    /* warning */
-    --color-prettylights-syntax-markup-changed-bg: var(--color-warning-800);
-    /* dark warning */
-    --color-prettylights-syntax-markup-ignored-text: var(--color-surface-300);
-    /* muted */
-    --color-prettylights-syntax-markup-ignored-bg: var(--color-primary-400);
-    /* primary bg */
-    --color-prettylights-syntax-meta-diff-range: var(--color-secondary-400);
-    /* secondary */
-    --color-prettylights-syntax-brackethighlighter-angle: var(--color-surface-500);
-    /* muted */
-    --color-prettylights-syntax-sublimelinter-gutter-mark: var(--color-surface-800);
-    /* darker muted */
-    --color-prettylights-syntax-constant-other-reference-link: var(--color-primary-400);
-    /* primary */
+	/* Dark mode button styles */
+	--color-btn-text: var(--color-surface-100);
+	/* light text */
+	--color-btn-bg: var(--color-surface-950);
+	/* dark background */
+	--color-btn-border: color-mix(in oklch, var(--color-surface-400) 30%, transparent);
+	/* surface-400 at 30% opacity */
+	--color-btn-shadow: 0 0 transparent;
+	--color-btn-inset-shadow: 0 0 transparent;
+	--color-btn-hover-bg: var(--color-surface-900);
+	/* lighter dark */
+	--color-btn-hover-border: var(--color-surface-500);
+	/* muted border */
+	--color-btn-active-bg: var(--color-surface-800);
+	/* active state */
+	--color-btn-active-border: var(--color-surface-700);
+	/* active border */
+	--color-btn-selected-bg: var(--color-surface-950);
+	/* selected */
 
-    /* Dark mode button styles */
-    --color-btn-text: var(--color-surface-100);
-    /* light text */
-    --color-btn-bg: var(--color-surface-950);
-    /* dark background */
-    --color-btn-border: rgb(251 250 252 / 10%);
-    /* surface-50 at 10% opacity */
-    --color-btn-shadow: 0 0 transparent;
-    --color-btn-inset-shadow: 0 0 transparent;
-    --color-btn-hover-bg: var(--color-surface-900);
-    /* lighter dark */
-    --color-btn-hover-border: var(--color-surface-500);
-    /* muted border */
-    --color-btn-active-bg: var(--color-surface-800);
-    /* active state */
-    --color-btn-active-border: var(--color-surface-700);
-    /* active border */
-    --color-btn-selected-bg: var(--color-surface-950);
-    /* selected */
+	/* Dark mode primary buttons */
+	--color-btn-primary-text: var(--color-primary-contrast-600);
+	/* contrast text */
+	--color-btn-primary-bg: var(--color-primary-500);
+	/* primary color */
+	--color-btn-primary-border: color-mix(in oklch, var(--color-surface-400) 30%, transparent);
+	/* surface-400 at 30% opacity */
+	--color-btn-primary-shadow: 0 0 transparent;
+	--color-btn-primary-inset-shadow: 0 0 transparent;
+	--color-btn-primary-hover-bg: var(--color-primary-400);
+	/* lighter primary */
+	--color-btn-primary-hover-border: color-mix(in oklch, var(--color-surface-400) 30%, transparent);
+	/* surface-400 at 30% opacity */
+	--color-btn-primary-selected-bg: var(--color-primary-500);
+	/* primary */
+	--color-btn-primary-selected-shadow: 0 0 transparent;
+	--color-btn-primary-disabled-text: color-mix(in oklch, var(--color-surface-50) 50%, transparent);
+	/* surface-50 at 50% opacity */
+	--color-btn-primary-disabled-bg: color-mix(in oklch, var(--color-primary-500) 60%, transparent);
+	/* primary-500 at 60% opacity */
+	--color-btn-primary-disabled-border: color-mix(
+		in oklch,
+		var(--color-surface-400) 30%,
+		transparent
+	);
+	/* surface-400 at 30% opacity */
 
-    /* Dark mode primary buttons */
-    --color-btn-primary-text: var(--color-primary-contrast-600);
-    /* contrast text */
-    --color-btn-primary-bg: var(--color-primary-500);
-    /* primary color */
-    --color-btn-primary-border: rgb(251 250 252 / 10%);
-    /* surface-50 at 10% opacity */
-    --color-btn-primary-shadow: 0 0 transparent;
-    --color-btn-primary-inset-shadow: 0 0 transparent;
-    --color-btn-primary-hover-bg: var(--color-primary-400);
-    /* lighter primary */
-    --color-btn-primary-hover-border: rgb(251 250 252 / 10%);
-    /* surface-50 at 10% opacity */
-    --color-btn-primary-selected-bg: var(--color-primary-500);
-    /* primary */
-    --color-btn-primary-selected-shadow: 0 0 transparent;
-    --color-btn-primary-disabled-text: rgb(251 250 252 / 50%);
-    /* surface-50 at 50% opacity */
-    --color-btn-primary-disabled-bg: rgb(146 125 69 / 60%);
-    /* primary-500 at 60% opacity */
-    --color-btn-primary-disabled-border: rgb(251 250 252 / 10%);
-    /* surface-50 at 10% opacity */
+	/* Dark mode controls */
+	--color-action-list-item-default-hover-bg: color-mix(
+		in oklch,
+		var(--color-surface-300) 12%,
+		transparent
+	);
+	/* surface-300 at 12% opacity */
+	--color-segmented-control-bg: color-mix(in oklch, var(--color-surface-600) 10%, transparent);
+	/* surface-600 at 10% opacity */
+	--color-segmented-control-button-bg: var(--color-surface-900);
+	/* dark button */
+	--color-segmented-control-button-selected-border: var(--color-surface-700);
+	/* border */
 
-    /* Dark mode controls */
-    --color-action-list-item-default-hover-bg: rgb(217 214 226 / 12%);
-    /* surface-300 at 12% opacity */
-    --color-segmented-control-bg: rgb(194 189 208 / 10%);
-    /* surface-600 at 10% opacity */
-    --color-segmented-control-button-bg: var(--color-surface-900);
-    /* dark button */
-    --color-segmented-control-button-selected-border: var(--color-surface-700);
-    /* border */
+	/* Dark mode foreground */
+	--color-fg-default: var(--color-surface-100);
+	/* main text */
+	--color-fg-muted: var(--color-surface-300);
+	/* muted text */
+	--color-fg-subtle: var(--color-surface-400);
+	/* subtle text */
 
-    /* Dark mode foreground */
-    --color-fg-default: var(--color-surface-100);
-    /* main text */
-    --color-fg-muted: var(--color-surface-300);
-    /* muted text */
-    --color-fg-subtle: var(--color-surface-400);
-    /* subtle text */
+	/* Dark mode canvas */
+	--color-canvas-default: var(--color-surface-950);
+	/* main background */
+	--color-canvas-overlay: var(--color-surface-900);
+	/* overlay background */
+	--color-canvas-inset: var(--color-surface-950);
+	/* inset background */
+	--color-canvas-subtle: var(--color-surface-900);
+	/* subtle background */
 
-    /* Dark mode canvas */
-    --color-canvas-default: var(--color-surface-950);
-    /* main background */
-    --color-canvas-overlay: var(--color-surface-900);
-    /* overlay background */
-    --color-canvas-inset: var(--color-surface-950);
-    /* inset background */
-    --color-canvas-subtle: var(--color-surface-900);
-    /* subtle background */
+	/* Dark mode borders */
+	--color-border-default: var(--color-surface-800);
+	/* default border */
+	--color-border-muted: var(--color-surface-950);
+	/* muted border */
+	--color-neutral-muted: color-mix(in oklch, var(--color-surface-600) 20%, transparent);
+	/* surface-600 at 20% opacity */
 
-    /* Dark mode borders */
-    --color-border-default: var(--color-surface-900);
-    /* default border */
-    --color-border-muted: var(--color-surface-950);
-    /* muted border */
-    --color-neutral-muted: rgb(194 189 208 / 20%);
-    /* surface-600 at 20% opacity */
+	/* Dark mode accents */
+	--color-accent-fg: var(--color-primary-300);
+	/* lighter accent */
+	--color-accent-emphasis: var(--color-primary-400);
+	/* accent emphasis */
+	--color-accent-muted: color-mix(in oklch, var(--color-primary-400) 40%, transparent);
+	/* primary-400 at 40% opacity */
+	--color-accent-subtle: color-mix(in oklch, var(--color-primary-400) 10%, transparent);
+	/* primary-400 at 10% opacity */
 
-    /* Dark mode accents */
-    --color-accent-fg: var(--color-primary-300);
-    /* lighter accent */
-    --color-accent-emphasis: var(--color-primary-400);
-    /* accent emphasis */
-    --color-accent-muted: rgb(156 135 78 / 40%);
-    /* primary-400 at 40% opacity */
-    --color-accent-subtle: rgb(156 135 78 / 10%);
-    /* primary-400 at 10% opacity */
+	/* Dark mode status colors */
+	--color-success-fg: var(--color-success-400);
+	/* success foreground */
+	--color-attention-fg: var(--color-warning-400);
+	/* warning foreground */
+	--color-attention-muted: color-mix(in oklch, var(--color-warning-400) 40%, transparent);
+	/* warning-400 at 40% opacity */
+	--color-attention-subtle: color-mix(in oklch, var(--color-warning-400) 15%, transparent);
+	/* warning-400 at 15% opacity */
+	--color-danger-fg: var(--color-error-400);
+	/* error foreground */
+	--color-danger-muted: color-mix(in oklch, var(--color-error-400) 40%, transparent);
+	/* error-400 at 40% opacity */
+	--color-danger-subtle: color-mix(in oklch, var(--color-error-400) 10%, transparent);
+	/* error-400 at 10% opacity */
 
-    /* Dark mode status colors */
-    --color-success-fg: var(--color-success-400);
-    /* success foreground */
-    --color-attention-fg: var(--color-warning-400);
-    /* warning foreground */
-    --color-attention-muted: rgb(130 110 44 / 40%);
-    /* warning-400 at 40% opacity */
-    --color-attention-subtle: rgb(130 110 44 / 15%);
-    /* warning-400 at 15% opacity */
-    --color-danger-fg: var(--color-error-400);
-    /* error foreground */
-    --color-danger-muted: rgb(130 82 150 / 40%);
-    /* error-400 at 40% opacity */
-    --color-danger-subtle: rgb(130 82 150 / 10%);
-    /* error-400 at 10% opacity */
+	/* Dark mode scales */
+	--color-primer-shadow-inset: 0 0 transparent;
+	--color-scale-gray-7: var(--color-surface-900);
+	/* scale gray */
+	--color-scale-blue-8: var(--color-primary-800);
+	/* dark primary */
 
-    /* Dark mode scales */
-    --color-primer-shadow-inset: 0 0 transparent;
-    --color-scale-gray-7: var(--color-surface-950);
-    /* scale gray */
-    --color-scale-blue-8: var(--color-primary-800);
-    /* dark primary */
-
-    /*! Extensions from @primer/css/alerts/flash.scss */
-    --color-social-reaction-bg-hover: var(--color-scale-gray-7);
-    --color-social-reaction-bg-reacted-hover: var(--color-scale-blue-8);
+	/*! Extensions from @primer/css/alerts/flash.scss */
+	--color-social-reaction-bg-hover: var(--color-scale-gray-7);
+	--color-social-reaction-bg-reacted-hover: var(--color-scale-blue-8);
 }
 
 main .pagination-loader-container {
-    background-image: url("https://github.com/images/modules/pulls/progressive-disclosure-line-dark.svg");
+	background-image: url('https://github.com/images/modules/pulls/progressive-disclosure-line-dark.svg');
 }
 
 main .gsc-loading-image {
-    background-image: url("https://github.githubassets.com/images/mona-loading-dark.gif");
+	background-image: url('https://github.githubassets.com/images/mona-loading-dark.gif');
+}
+
+body {
+	padding: 0 1px;
 }

@@ -23,7 +23,7 @@ html {
 }
 
 body {
-    height: 100vh;
+	height: 100vh;
 	height: -webkit-fill-available;
 	overflow: hidden;
 	overflow-x: auto;
@@ -34,8 +34,12 @@ body::-webkit-scrollbar {
 	display: none;
 }
 
+:target {
+	scroll-margin-top: 72px;
+}
+
 .sveltekit-body {
-    height: 100vh;
+	height: 100vh;
 	height: -webkit-fill-available;
 	min-width: 375px;
 	overflow-y: auto;

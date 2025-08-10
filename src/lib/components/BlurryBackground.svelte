@@ -65,6 +65,7 @@
 		justify-content: center;
 		height: 0;
 		width: var(--auto-width);
+		pointer-events: none;
 
 		> div {
 			position: absolute;
