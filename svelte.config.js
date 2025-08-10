@@ -17,6 +17,7 @@ const config = {
 		}),
 		prerender: {
 			entries: ['*', '/feed/rss.xml', '/feed/atom.xml', '/feed/feed.json'],
+			// eslint-disable-next-line @typescript-eslint/no-unused-vars
 			handleHttpError: ({ path, referrer, message }) => {
 				if (path.startsWith('/feed/')) {
 					return;

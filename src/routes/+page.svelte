@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Landing from './Landing.svelte';
 	import ListItem from '$lib/components/ListItem.svelte';
-	import type Metadata from '$lib/types/postMetadata.js';
+	import type Metadata from '$lib/types/postData.js';
 	import BlurryBackground from '$lib/components/BlurryBackground.svelte';
 
 	interface MarkdownModule {

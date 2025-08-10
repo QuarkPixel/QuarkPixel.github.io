@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Tags from '$lib/components/Tags.svelte';
-	import type Metadata from '$lib/types/postMetadata.js';
+	import type Metadata from '$lib/types/postData.js';
 
 	export let path: string;
 	export let metadata: Metadata;
