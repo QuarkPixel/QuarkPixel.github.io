@@ -42,13 +42,20 @@
 		{/each}
 	{/await}
 </div>
-<div class="h-60 flex items-center justify-center gap-8" style="overflow-anchor: none;">
-	<div class="h-[1px] w-20 bg-surface-100-900"></div>
-	<div class="ml-3 whitespace-nowrap">
-		<div class="text-3xl font-caveat text-surface-800-200">Stay hungry. Stay foolish.</div>
-		<div class="text-sm font-noto-sans text-surface-400-600 ml-35">— Whole Earth Catalog</div>
+<div
+	class="h-60 auto-width px-5 md:px-20 flex items-center justify-center gap-2 sm:gap-8"
+	style="overflow-anchor: none;"
+>
+	<div class="h-[1px] w-full bg-surface-100-900"></div>
+	<div class="ml-1 sm:ml-3 whitespace-nowrap">
+		<div class="text-xl sm:text-3xl font-caveat text-surface-800-200">
+			Stay hungry. Stay foolish.
+		</div>
+		<div class="text-xs sm:text-sm font-noto-sans text-surface-400-600 ml-20 sm:ml-35">
+			— Whole Earth Catalog
+		</div>
 	</div>
-	<div class="h-[1px] w-20 bg-surface-100-900"></div>
+	<div class="h-[1px] w-full bg-surface-100-900"></div>
 </div>
 
 <svelte:head>
