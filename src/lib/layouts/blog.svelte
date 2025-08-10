@@ -46,10 +46,31 @@
 	<Comment class="my-15" />
 </article>
 
-<style global>
+<style lang="scss" global>
+	.prose > details > summary {
+		font-size: smaller;
+		opacity: 0.8;
+	}
 
-    .prose > details > summary {
-        font-size: smaller;
-        opacity: .8;
-    }
+	.prose .anchor-link {
+		font: inherit;
+		color: inherit;
+		text-decoration: inherit;
+		position: relative;
+
+		&::before {
+			content: '#';
+			position: absolute;
+			left: -1em;
+			font-family: var(--font-caveat);
+			opacity: 0;
+			transition: 0.2s;
+			padding-right: 1em;
+			pointer-events: none;
+		}
+
+		&:hover::before {
+			opacity: 0.4;
+		}
+	}
 </style>
