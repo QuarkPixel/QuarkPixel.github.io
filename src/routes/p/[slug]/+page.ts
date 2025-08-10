@@ -13,7 +13,6 @@ export async function load({
 }): Promise<{ content: ConstructorOfATypedSvelteComponent; metadata: Metadata }> {
 	try {
 		const post = await import(`../../../../posts/${params.slug}.md`);
-		console.log(processMetadata(post.metadata as MetadataRaw));
 		return {
 			content: post.default,
 			metadata: processMetadata(post.metadata as MetadataRaw)

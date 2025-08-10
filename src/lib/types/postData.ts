@@ -1,3 +1,5 @@
+import { loadDefaultSimplifiedChineseParser } from 'budoux';
+
 export interface MetadataRaw {
 	title: string;
 	description: string;
@@ -13,8 +15,8 @@ export interface MetadataRaw {
 }
 
 export interface Metadata {
-	title: string;
-	description: string;
+	title: string[];
+	description: string[];
 	date: Date;
 	author?: string;
 	tags: string[];
@@ -28,10 +30,11 @@ export interface Metadata {
 }
 
 export function processMetadata(raw: MetadataRaw): Metadata {
-	console.log(raw.copyright !== undefined ? raw.copyright : true);
+	const parser = loadDefaultSimplifiedChineseParser();
+
 	return {
-		title: raw.title,
-		description: raw.description,
+		title: parser.parse(raw.title),
+		description: parser.parse(raw.description),
 		date: new Date(raw.date),
 		author: raw.author,
 		tags: raw.tags,

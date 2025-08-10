@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Tags from '$lib/components/Tags.svelte';
-	import type Metadata from '$lib/types/postData.js';
+	import type { Metadata } from '$lib/types/postData.js';
+	import BudouX from '$lib/components/BudouX.svelte';
 
 	export let path: string;
 	export let metadata: Metadata;
@@ -12,10 +13,14 @@
 		hover:text-secondary-950-50"
 >
 	<div class="flex flex-col">
-		<div class="font-noto-serif font-bold text-sm sm:text-xl md:text-2xl">{metadata.title}</div>
-		<div class="font-lxgw-wenkai font-light text-xs sm:text-sm">{metadata.description}</div>
+		<div class="font-noto-serif font-bold mb-1 text-sm sm:text-xl md:text-2xl">
+			<BudouX text={metadata.title} />
+		</div>
+		<div class="font-lxgw-wenkai font-light text-xs sm:text-sm">
+			<BudouX text={metadata.description} />
+		</div>
 	</div>
-	<div class="flex flex-col items-end justify-between gap-1 ml-1">
+	<div class="flex flex-col items-end justify-between gap-1 ml-4">
 		<div class="font-[Georgia] oldstyle-nums opacity-65 text-xs sm:text-base">
 			{new Date(metadata.date).toLocaleDateString()}
 		</div>

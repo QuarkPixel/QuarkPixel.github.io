@@ -4,6 +4,7 @@
 	import type { Snippet } from 'svelte';
 	import Tags from '$lib/components/Tags.svelte';
 	import Comment from '$lib/components/Comment.svelte';
+	import BudouX from '$lib/components/BudouX.svelte';
 
 	interface Props {
 		children: Snippet;
@@ -22,8 +23,12 @@
 
 <article class="prose lg:prose-xl my-4 max-w-[80%]">
 	<header class="mb-10">
-		<h1 class="mb-2">{metadata.title}</h1>
-		<div class="font-noto-sans text-sm lg:text-base opacity-70">{metadata.description}</div>
+		<h1 class="mb-2">
+			<BudouX text={metadata.title} />
+		</h1>
+		<div class="font-noto-sans text-sm lg:text-base opacity-70">
+			<BudouX text={metadata.description} />
+		</div>
 		<div class="flex justify-between my-4">
 			<Tags tags={metadata.tags} />
 			<div class="flex gap-4 font-[Georgia] oldstyle-nums text-sm lg:text-base opacity-80">
@@ -48,30 +53,34 @@
 </article>
 
 <style lang="scss" global>
-	.prose > details > summary {
-		font-size: smaller;
-		opacity: 0.8;
-	}
+	.prose {
+		word-break: auto-phrase;
 
-	.prose .anchor-link {
-		font: inherit;
-		color: inherit;
-		text-decoration: inherit;
-		position: relative;
-
-		&::before {
-			content: '#';
-			position: absolute;
-			left: -1em;
-			font-family: var(--font-caveat);
-			opacity: 0;
-			transition: 0.2s;
-			padding-right: 1em;
-			pointer-events: none;
+		& > details > summary {
+			font-size: smaller;
+			opacity: 0.8;
 		}
 
-		&:hover::before {
-			opacity: 0.4;
+		.anchor-link {
+			font: inherit;
+			color: inherit;
+			text-decoration: inherit;
+			position: relative;
+
+			&::before {
+				content: '#';
+				position: absolute;
+				left: -1em;
+				font-family: var(--font-caveat);
+				opacity: 0;
+				transition: 0.2s;
+				padding-right: 1em;
+				pointer-events: none;
+			}
+
+			&:hover::before {
+				opacity: 0.4;
+			}
 		}
 	}
 </style>
