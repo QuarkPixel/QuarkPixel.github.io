@@ -86,7 +86,7 @@
 {#if fontLoaded}
 	<div
 		transition:blur
-		class="relative cursor-default pl-[4%] pr-[8%] ml-[2%] h-[clamp(72pt,15vw,256pt)] my-15"
+		class="relative cursor-default pl-[4%] pr-[8%] ml-[2%] h-[clamp(48pt,15vw,256pt)] my-5 sm:my-15"
 		onmousemove={handleMouseMove}
 		onmouseenter={handleMouseEnter}
 		onmouseleave={handleMouseLeave}
