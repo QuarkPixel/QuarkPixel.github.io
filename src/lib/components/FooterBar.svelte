@@ -9,6 +9,7 @@
 	let scroll = $state.raw(0);
 	let footerDisplayArea = $derived(1 - scroll / (HEIGHT * 1.2));
 	let footerOffset = $derived(-scroll / 2);
+	let sepia = $derived(scroll / HEIGHT);
 
 	function updateScrollInfo() {
 		const scrollHeight = scrollContainer!.scrollHeight - scrollContainer!.clientHeight;
@@ -33,7 +34,7 @@
 <div
 	class="bg-surface-800-200 text-surface-50-950 bottom-0 z-0 overflow-hidden relative"
 	style:height={HEIGHT + 'px'}
-	style:filter={`brightness(${footerDisplayArea})`}
+	style:filter={`brightness(${footerDisplayArea}) sepia(${sepia})`}
 >
 	<div style:top={footerOffset + 'px'} class="relative">
 		<Marquee
