@@ -61,7 +61,7 @@
 				>
 					<button
 						type="button"
-						class="hover:bg-background"
+						class="hover:bg-background scale-80 md:scale-100"
 						title="Back"
 						onclick={() => history.back()}
 					>
@@ -160,7 +160,7 @@
       opacity: 0;
       width: 0;
       border-radius: var(--radius-base);
-      scale: 1 .4;
+      transform: scale(1, 0.4);
       filter: blur(3px);
     }
 
@@ -168,7 +168,7 @@
       opacity: 1;
       width: 28px;
       padding: 2px;
-      scale: 1;
+      transform: scale(1);
       filter: unset;
     }
   }
