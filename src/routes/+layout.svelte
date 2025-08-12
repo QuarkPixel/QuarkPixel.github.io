@@ -2,7 +2,6 @@
 	import '../app.css';
 	import '$lib/components/logo/logoIcon';
 	import '$lib/styles/fonts';
-	// import { dev } from '$app/environment';
 	import Header from '$lib/components/Header.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 	import FooterBar from '$lib/components/FooterBar.svelte';
@@ -15,10 +14,6 @@
 		{ label: 'Blog Space', href: '/' },
 		{ label: 'About Me', href: '/about' }
 	];
-
-	// if (dev) {
-	// 	links.push({ label: 'Test', href: '/test' });
-	// }
 
 	// 滚动状态管理
 	let scrollContainer: Element | null;
@@ -69,13 +64,13 @@
 	// 导航后：更新路径并重置滚动位置
 	afterNavigate(() => {
 		currentPath = location.pathname;
-		resetScroll();
+		if (!location.hash) resetScroll();
 	});
 
 	// 初始化：设置当前路径并尝试恢复滚动位置
 	$effect(() => {
 		currentPath = location.pathname;
-		restoreScrollPosition(currentPath);
+		if (!location.hash) restoreScrollPosition(currentPath);
 	});
 </script>
 
