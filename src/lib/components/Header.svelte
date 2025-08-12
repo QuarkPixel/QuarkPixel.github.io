@@ -105,7 +105,7 @@
 				{/snippet}
 				{#snippet content()}
 					<div
-						class="flex flex-col items-end p-[2px] gap-3
+						class="flex flex-col items-end p-[2px] gap-3 sm:hidden
 						*:shadow-[0_5px_15px_#0003] *:outline-1 *:outline-surface-50 dark:*:outline-surface-800!"
 						transition:fly={{y:-20}}
 					>
