@@ -21,7 +21,7 @@
 	crossorigin="anonymous"
 />
 
-<article class="prose lg:prose-xl my-4 max-w-[80%]">
+<article class="prose lg:prose-xl my-4 w-[80%]">
 	<header class="mb-10">
 		<h1 class="mb-2">
 			<BudouX text={metadata.title} />
