@@ -98,6 +98,7 @@
 		content="A collection of thoughts, experiences, and creative works by Xuancong Meng."
 	/>
 	<meta property="og:type" content="website" />
+	<meta property="og:image" content="https://quarkpixel.github.io/og-image.png" />
 	<link
 		rel="alternate"
 		type="application/rss+xml"
