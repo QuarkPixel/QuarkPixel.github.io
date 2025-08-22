@@ -1,0 +1,1 @@
+.prose blockquote{position:relative}.prose blockquote>.quote-end{--scale: .4rem;position:absolute;height:min(24 * var(--scale),100% + 32px);width:calc(21 * var(--scale));z-index:-1;bottom:-32px;right:0;color:color-mix(in oklch,light-dark(var(--color-primary-200),var(--color-surface-400)) 15%,transparent)}.prose blockquote>p:before,.prose blockquote>p:after{content:unset}

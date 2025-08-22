@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://quarkpixel.github.io</id>
     <title>Hsuan's Space</title>
-    <updated>2025-08-12T11:47:29.806Z</updated>
+    <updated>2025-08-22T11:11:37.872Z</updated>
     <generator>Feed for Node.js</generator>
     <author>
         <name>Xuancong Meng</name>
@@ -454,26 +454,70 @@ Brightness</a></li>
         <link href="https://quarkpixel.github.io/p/250623-rust-is-suitable-for-vibe-coding"/>
         <updated>2025-06-23T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[从安全特性、错误提示和自动化验证的角度，探讨为什么 Rust 可能是最适合 AI 编程的语言]]></summary>
-        <content type="html"><![CDATA[<p><strong>以下内容纯属个人观点，权当暴论一则。</strong></p>
-<p><a href="https://en.wikipedia.org/wiki/Vibe_coding">Vibe Coding</a> 是一种依赖 AI 快速生成代码并通过直觉调整的编程范式，特别适合快速原型开发、黑客马拉松等需要快速验证想法的场景。在这样的编程模式下，我认为 Rust 是一门非常适合的编程语言。</p>
-<h2>Rust 与 AI 的完美契合</h2>
-<p>Rust 的安全特性恰好弥补了 AI 生成代码时的 “先天不足”。在 Vibe Coding 中，最大的风险就是 AI 可能生成包含不可预知 bug 的代码。而 Rust 的编译器能在编译阶段就捕获大多数潜在问题，不论是边界条件的忽略，还是其他隐藏的安全隐患。</p>
-<p>经常有人说 “Rust 是给编程菜鸟用的，只有菜鸟才需要这些规则来约束保证安全。高手都用 C 语言这样自由的语言。” 不论这个观点本身是否正确，但 “Rust 更适合容易出错的编程者” 这一点确实是客观存在的。而在 Vibe Coding 的场景下，AI 恰恰就是这样一个 “需要被约束的菜鸟”。</p>
-<h2>错误提示系统的革新价值</h2>
-<p>Rust 完善的错误提示系统，其最大的优势在于对 AI 的友好性。详细的错误信息使得 AI 能够更准确地理解问题所在，并进行精确的代码修正。这种特性让 AI 能够自主完成大部分代码优化工作，人类开发者只需要在最后环节进行把关。</p>
-<h2>自动化验证的突破</h2>
-<p>目前的 Vibe Coding 范式中，代码验证和检查主要依赖人工完成。这在软件工程的角度来看是不合理的——能交给机器完成的工作，就不应该依赖人工。Rust 的编译器恰好可以扮演这个自动化验证工具的角色，让我们真正实现&quot;机器生成，机器验证&quot;的理想状态。</p>
-<h2>当前的局限性</h2>
-<p>尽管 Rust 在理论上非常适合 Vibe Coding，但目前它还没有成为这一领域的主流选择。这主要是因为像 Python、JavaScript 这样的语言拥有更丰富的代码语料库、更多的教程资源和更完善的生态系统，这些都是训练 AI 模型所必需的基础设施。相比之下，Rust 生态虽然在快速发展，但在资源丰富程度上还有一定差距。不过，随着 Rust 社区的不断壮大和应用场景的拓展，这个差距正在逐步缩小。</p>
+        <content type="html"><![CDATA[<p><strong>文章标题有些暴论，李姐万岁。</strong></p>
+<p><a href="https://en.wikipedia.org/wiki/Vibe_coding">Vibe Coding</a> 是一种借助 AI 生成代码，并通过人机协作快速验证和迭代想法的开发方式。在这种模式下，开发效率高度依赖于两个关键环节：生成代码的初步质量，以及后续验证与修正的可靠性。而 Rust 的诸多语言特性，恰恰能够在这两个环节中提供显著支持。</p>
+<h2>语言特性的安全保障</h2>
+<p>AI 生成的代码往往存在潜在缺陷，尤其在内存管理、并发控制和边界条件处理等方面容易出现疏漏。考虑这样一个常见场景，生成如下的 C++ 代码：</p>
+<pre><code class="language-cpp">// 存在悬垂指针风险
+int* createInt() {
+    int value = 42; // 局部变量，函数结束时销毁
+    return &amp;value;  // 返回局部变量的地址
+}
+</code></pre>
+<p>这段代码在运行时可能导致未定义行为，而编译器往往只会给出警告，甚至完全不报错。但如果 AI 试图在 Rust 中生成类似的代码：</p>
+<pre><code class="language-rust">fn create_int() -&gt; &amp;i32 {
+    let value = 42; // 局部变量
+    &amp;value // 错误：返回局部变量的引用
+}
+</code></pre>
+<p>Rust 编译器会直接拒绝编译，并给出明确的生命周期错误提示：</p>
+<pre><code>error[E0106]: missing lifetime specifier
+ --&gt; src/main.rs:1:20
+  |
+1 | fn create_int() -&gt; &amp;i32 {
+  |                    ^ expected named lifetime parameter
+  |
+  = help: this function&#39;s return type contains a borrowed value, but there is no value for it to be borrowed from
+help: consider using the `&#39;static` lifetime, but this is uncommon unless you&#39;re returning a borrowed value from a `const` or a `static`
+  |
+1 | fn create_int() -&gt; &amp;&#39;static i32 {
+  |                     +++++++
+help: instead, you are more likely to want to return an owned value
+  |
+1 - fn create_int() -&gt; &amp;i32 {
+1 + fn create_int() -&gt; i32 {
+  |
+For more information about this error, try `rustc --explain E0106`.
+error: could not compile `demo_rust` (bin &quot;demo_rust&quot;) due to 1 previous error
+</code></pre>
+<p>Rust 的所有权系统、借用检查机制和严格的类型系统，能够在编译阶段拦截许多常见错误。这不仅显著降低了运行时崩溃的风险，也使得 AI 即使生成出不够完善的代码，仍能在编译器指导下逐步逼近正确实现。</p>
+<h2>人性化的错误提示</h2>
+<p>Rust 编译器所提供的错误信息一向以清晰、详尽而著称。它不只是告诉你「错了」，而是手把手教你「该怎么改」。就像上面的例子中，编译器不仅指出了生命周期问题，还直接建议了两种修复方案：使用 <code>&#39;static</code> 生命周期或返回拥有值。这种详细的错误信息，甚至包含了修复建议，让 AI 能够自主进行多轮修正。开发者则可以将精力集中于更高层的逻辑设计，而不必深入调试每一个低级错误。</p>
+<p>相比之下，C++ 的错误信息往往会让人摸不着头脑：</p>
+<pre><code>main.cpp:5:13: warning: address of stack memory associated with local variable &#39;value&#39; returned [-Wreturn-stack-address]
+    return &amp;value;  // 返回局部变量的地址
+            ^~~~~
+1 warning generated.
+</code></pre>
+<p>这样的错误信息对 AI 和开发者都不够友好，即使 AI 大部分时候可以像经验丰富的开发者一样知道问题出现的原因，但这种模糊的提示仍然增加了调试成本。</p>
+<h2>编译时检查作为自动化验证</h2>
+<p>传统 Vibe Coding 流程中，代码的正确性严重依赖人工测试与审查，这不仅效率低下，也容易引入主观偏差。而 Rust 的编译时检查机制（包括类型安全、生命周期验证、数据竞争检测等）构成了一套自动化、标准化的验证基础。它确保了生成的代码至少在内存安全、数据竞争等基础层面是可信的，从而为后续的功能测试和集成验证节省大量时间。</p>
+<p>举个例子，在多线程场景中，即使 AI 生成了可能存在数据竞争的代码，Rust 编译器也会在编译阶段就将其拦截，并引导向使用 <code>Arc&lt;Mutex&lt;T&gt;&gt;</code> 或其他合适的同步原语的正确方案。这种&quot;编译通过即基本安全&quot;的特性，在快速原型开发中尤为宝贵。</p>
+<h2>类型系统的引导作用</h2>
+<p>Rust 的类型系统还能够引导 AI 生成更加精确的代码。例如，当处理可能失败的操作时，Rust 的 <code>Result</code> 类型会强制处理错误情况，而不像某些动态语言那样可以随意忽略异常处理。这种「强制正确性」的设计哲学，与 AI 编程中「快速迭代但保证质量」的需求高度契合。</p>
+<h2>局限性和现状</h2>
+<p>目前，Python 和 JavaScript 在 Vibe Coding 中确实更加普及，主要原因在于它们的生态丰富度和语法简洁性。动态类型语言在原型开发阶段确实更加灵活，而且 AI 训练数据中这些语言的代码占比很大。相比之下，Rust 的学习资源和代码语料仍然相对有限，这在一定程度上限制了 AI 模型对 Rust 的支持深度。</p>
+<p>不过，随着 Rust 在系统编程、Web 开发和区块链等领域的快速发展，以及 Microsoft、Google 等大厂的推动，这一差距正在逐渐缩小。</p>
 <h2>结论</h2>
-<p>Rust 不仅仅是一个适合 Vibe Coding 的语言，它通过独特的安全特性、友好的错误提示和强大的编译器验证，从根本上解决了 AI 编程中的核心问题。尽管目前在资源上还有一定局限，但 Rust 在 Vibe Coding 领域展现出的潜力是不容忽视的。</p>
+<p>Rust 通过其内在的安全机制、友好的诊断信息以及强大的编译时验证，为 Vibe Coding 提供了一条兼具高可靠性和自动化程度的开发路径。虽然它可能不如 Python 那样&quot;即写即跑&quot;，但在需要高质量、可维护代码的场景中，Rust 的这些特性能够显著提升人机协作的效率和成果质量。</p>
+<p>随着 AI 编程工具的不断发展和 Rust 生态的日益成熟，我相信会有越来越多的开发者发现：让 AI 在 Rust 的约束下编写代码，往往能够得到更加可靠和优雅的解决方案。这种&quot;约束即自由&quot;的开发体验，也许正是未来 AI 辅助编程的理想形态。</p>
 ]]></content>
         <author>
             <name>Xuancong Meng</name>
             <email>xuancongmeng@gmail.com</email>
             <uri>https://quarkpixel.github.io</uri>
         </author>
-        <category label="[ 'Rust'"/>
+        <category label="['Rust'"/>
         <category label="'AI']"/>
     </entry>
     <entry>
@@ -500,36 +544,39 @@ Brightness</a></li>
         <updated>2025-06-09T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[聊聊阻止自杀与电车难题]]></summary>
         <content type="html"><![CDATA[<p>最近我在思考一个问题：电车难题的选择与阻止自杀的抉择是否有着相似的本质？</p>
+<h2>引子：一个假设性思想实验</h2>
 <p>最初的思考源于一个假设：</p>
 <blockquote>
-<p>假设世界有这样一条设定***（尽管价值观未必正确，但有助于讨论）<em><strong>：存在天堂，只有通过自杀</strong></em>（主观选择死亡）***的人因其“勇敢”而获得更好的待遇，而非自主死亡的人则命运平庸。<br>在此设定下，一个人选择自杀，另一人阻止他，是否正确？</p>
+<p>假设世界有这样一条设定**（尽管价值观未必正确，但有助于讨论）<strong>：存在天堂，只有通过自杀</strong>（主观选择死亡）**的人因其&quot;勇敢&quot;而获得更好的待遇，而非自主死亡的人则命运平庸。</p>
+<p>在此设定下，一个人选择自杀，另一人阻止他，是否正确？</p>
 </blockquote>
-<p>这看似荒谬，但换个角度：<strong>选择自杀的人往往因极度痛苦而寻求解脱</strong>。自杀对他们而言，如同进入“天堂”或摆脱苦难。从这点看，自杀的动机与“天堂假设”殊途同归：主体都追求更好的结果。但前提是，若自杀未遂，生活未改善，痛苦依旧。</p>
-<p>关键问题是：若救下自杀者却无法善待他，阻止自杀是否成了错误？</p>
-<hr>
-<h3>我们可以将此与<strong>电车难题</strong>类比：</h3>
+<p>这看似荒谬，但换个角度思考：<strong>选择自杀的人往往因极度痛苦而寻求解脱</strong>。自杀对他们而言，如同进入&quot;天堂&quot;或摆脱苦难。从这点看，自杀的动机与&quot;天堂假设&quot;殊途同归：主体都追求更好的结果。</p>
+<p>但前提是，若自杀未遂，生活未改善，痛苦依旧。关键问题是：<strong>若救下自杀者却无法善待他，阻止自杀是否成了错误？</strong></p>
+<h2>与电车难题的类比</h2>
+<p>我们可以将此与<strong>电车难题</strong>类比：</p>
 <ul>
-<li><em><em>一人</em>（自杀者）</em><strong>：若不拉杆</strong><em>（不阻止自杀）</em><strong>，他得以“解脱”</strong><em>（如同进入天堂或摆脱痛苦）</em>**。</li>
-<li><em><em>五人</em>（在意他的人）</em>**：泛指任何得知自杀后会伤心的人，如亲友。</li>
-<li><strong>抉择</strong>：拉杆***（阻止自杀）<em><strong>亦或 不拉杆</strong></em>（放任自杀）***。</li>
+<li><strong>一人（自杀者）</strong>：若不拉杆**（不阻止自杀）<strong>，他得以&quot;解脱&quot;</strong>（如同进入天堂或摆脱痛苦）**</li>
+<li><strong>五人（在意他的人）</strong>：泛指任何得知自杀后会伤心的人，如亲友</li>
+<li><strong>抉择</strong>：拉杆**（阻止自杀）<strong>亦或不拉杆</strong>（放任自杀）**</li>
 </ul>
-<h3>由此，问题转化为：</h3>
-<ul>
-<li><strong>不拉杆</strong>：自杀者解脱，但在意他的人因失去他而痛苦。</li>
-<li><strong>拉杆</strong>：自杀者被救下，若未被善待，则继续痛苦；在意他的人免于悲伤。</li>
-</ul>
-<p>阻止自杀的人做错了吗？我的答案是：没有。他只是做出了电车难题中的选择，权衡了个体解脱与他人的情感损失。同样，若有人选择不阻止自杀，也不应苛责，因为这也是基于个人价值观的决定。</p>
-<p>那么，对于电车难题中的拉杆抉择，我们是否早已在生活中做出了选择？在“被救者未被善待”的前提下，阻止自杀可能让痛苦延续，类似电车难题中牺牲一人救多数的道德困境。然而，若救下的人能被善待，痛苦得以缓解，这场抉择的意义便截然不同。</p>
-<h4>结尾</h4>
-<p>或许，电车难题与阻止自杀的共通之处在于：我们都在有限的信息与复杂的道德权重中挣扎。拉杆与否，没有绝对的正误，关键在于后续的善待能否实现。如果我们能确保救下的灵魂被温柔以待，电车难题的拉杆，或许早已有了答案。否则，我们的选择可能只是将痛苦从一方移到另一方，永远在伦理的灰色地带徘徊。</p>
+<h2>道德权衡的复杂性</h2>
+<p>由此，问题转化为：</p>
+<p><strong>不拉杆</strong>：自杀者解脱，但在意他的人因失去他而痛苦。</p>
+<p><strong>拉杆</strong>：自杀者被救下，若未被善待，则继续痛苦；在意他的人免于悲伤。</p>
+<p>阻止自杀的人做错了吗？我的答案是：<strong>没有</strong>。他只是做出了电车难题中的选择，权衡了个体解脱与他人的情感损失。同样，若有人选择不阻止自杀，也不应苛责，因为这也是基于个人价值观的决定。</p>
+<h2>我们早已做出的选择</h2>
+<p>那么，对于电车难题中的拉杆抉择，我们是否早已在生活中做出了选择？</p>
+<p>在&quot;被救者未被善待&quot;的前提下，阻止自杀可能让痛苦延续，类似电车难题中牺牲一人救多数的道德困境。然而，若救下的人能被善待，痛苦得以缓解，这场抉择的意义便截然不同。</p>
+<h2>结语</h2>
+<p>或许，电车难题与阻止自杀的共通之处在于：我们都在有限的信息与复杂的道德权重中挣扎。拉杆与否，没有绝对的正误，<strong>关键在于后续的善待能否实现</strong>。</p>
+<p>如果我们能确保救下的灵魂被温柔以待，电车难题的拉杆，或许早已有了答案。否则，我们的选择可能只是将痛苦从一方移到另一方，永远在伦理的灰色地带徘徊。</p>
 ]]></content>
         <author>
             <name>Xuancong Meng</name>
             <email>xuancongmeng@gmail.com</email>
             <uri>https://quarkpixel.github.io</uri>
         </author>
-        <category label="[ 'Thinking'"/>
-        <category label="]"/>
+        <category label="['Thinking']"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[Hsuan's Space 中用到的技术栈]]></title>
