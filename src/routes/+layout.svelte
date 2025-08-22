@@ -7,6 +7,7 @@
 	import FooterBar from '$lib/components/FooterBar.svelte';
 	import UmamiAnalytics from '$lib/components/UmamiAnalytics.svelte';
 	import { afterNavigate, beforeNavigate } from '$app/navigation';
+	import { page } from '$app/state';
 
 	const { data, children } = $props();
 
@@ -100,6 +101,8 @@
 	/>
 	<meta property="og:type" content="website" />
 	<meta property="og:image" content="https://quarkpixel.github.io/og-image.png" />
+	<meta property="og:url" content="{page.url.origin}{page.url.pathname}" />
+	<meta property="og:logo" content="https://quarkpixel.github.io/favicon/default.png" />
 	<link
 		rel="alternate"
 		type="application/rss+xml"
