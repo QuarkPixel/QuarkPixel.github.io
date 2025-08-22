@@ -6,12 +6,20 @@
 	import Comment from '$lib/components/Comment.svelte';
 	import BudouX from '$lib/components/BudouX.svelte';
 
+
 	interface Props {
 		children: Snippet;
 		metadata: Metadata;
 	}
 
 	const { children, metadata }: Props = $props();
+</script>
+
+<script lang="ts" module>
+	/* eslint-disable no-import-assign */
+	import Blockquote from '$lib/components/typography/Blockquote.svelte';
+
+	export { Blockquote as blockquote };
 </script>
 
 <link
@@ -53,34 +61,39 @@
 </article>
 
 <style lang="scss" global>
-	.prose {
-		word-break: auto-phrase;
+  .prose {
+    word-break: auto-phrase;
 
-		& > details > summary {
-			font-size: smaller;
-			opacity: 0.8;
-		}
+    code:not(pre code) {
+      font-size: smaller;
+    }
 
-		.anchor-link {
-			font: inherit;
-			color: inherit;
-			text-decoration: inherit;
-			position: relative;
+    & > details > summary {
+      font-size: smaller;
+      opacity: 0.8;
+    }
 
-			&::before {
-				content: '#';
-				position: absolute;
-				left: -1em;
-				font-family: var(--font-caveat);
-				opacity: 0;
-				transition: 0.2s;
-				padding-right: 1em;
-				pointer-events: none;
-			}
 
-			&:hover::before {
-				opacity: 0.4;
-			}
-		}
-	}
+    .anchor-link {
+      font: inherit;
+      color: inherit;
+      text-decoration: inherit;
+      position: relative;
+
+      &::before {
+        content: '#';
+        position: absolute;
+        left: -1em;
+        font-family: var(--font-caveat);
+        opacity: 0;
+        transition: 0.2s;
+        padding-right: 1em;
+        pointer-events: none;
+      }
+
+      &:hover::before {
+        opacity: 0.4;
+      }
+    }
+  }
 </style>
