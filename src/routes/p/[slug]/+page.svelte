@@ -7,9 +7,12 @@
 
 <svelte:head>
 	<title>{data.title} - Hsuan's Blog</title>
-	<meta name="description" content="{data.metadata.description} - {data.metadata.author}" />
+	<meta
+		name="description"
+		content="{data.metadata.description.join('')} - {data.metadata.author}"
+	/>
 	<meta name="author" content={data.metadata.author} />
-	<meta name="keywords" content={data.metadata.tags.join(', ')} />
+	<meta name="keywords" content={[...data.metadata.tags, "Hsuan's Space", "blog"].join(', ')} />
 	<meta property="og:title" content="{data.title} - Hsuan's Blog" />
 	<meta property="og:description" content={data.metadata.description.join('')} />
 	<meta property="og:type" content="article" />

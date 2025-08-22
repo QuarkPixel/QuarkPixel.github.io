@@ -90,6 +90,7 @@
 		name="description"
 		content="Welcome to Hsuan's personal space - A collection of thoughts, experiences, and creative works by Xuancong Meng."
 	/>
+	<meta name="keywords" content="Hsuan's Space, blog" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta name="robots" content="index, follow" />
 	<meta property="og:title" content="Hsuan's Space" />
