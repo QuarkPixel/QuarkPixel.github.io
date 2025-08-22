@@ -19,7 +19,7 @@
 			<span class="text-nowrap">
 				<Mark>Hsuan</Mark>&thinsp;<Icon
 					icon="bxs:cool"
-					class="text-surface-50 bg-surface-950 rounded-full not-dark:scale-90 ease-jelly duration-1000
+					class="text-[#fff] dark:text-surface-50! bg-surface-950 rounded-full not-dark:scale-90 ease-jelly duration-1000
 						hover:rotate-330 hover:scale-120 inline"
 				/>
 			</span>
