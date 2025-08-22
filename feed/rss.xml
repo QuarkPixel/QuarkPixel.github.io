@@ -4,7 +4,7 @@
         <title>Hsuan's Space</title>
         <link>https://quarkpixel.github.io</link>
         <description>Hsuan's personal blog about tech, life, and thoughts</description>
-        <lastBuildDate>Fri, 22 Aug 2025 11:11:37 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 22 Aug 2025 11:12:58 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js</generator>
         <language>zh-CN</language>
@@ -429,7 +429,7 @@ Brightness</a></li>
             <guid isPermaLink="false">https://quarkpixel.github.io/p/250623-rust-is-suitable-for-vibe-coding</guid>
             <pubDate>Mon, 23 Jun 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[从安全特性、错误提示和自动化验证的角度，探讨为什么 Rust 可能是最适合 AI 编程的语言]]></description>
-            <content:encoded><![CDATA[<p><strong>文章标题有些暴论，李姐万岁。</strong></p>
+            <content:encoded><![CDATA[<p><del>(文章标题有些暴论，李姐万岁)</del></p>
 <p><a href="https://en.wikipedia.org/wiki/Vibe_coding">Vibe Coding</a> 是一种借助 AI 生成代码，并通过人机协作快速验证和迭代想法的开发方式。在这种模式下，开发效率高度依赖于两个关键环节：生成代码的初步质量，以及后续验证与修正的可靠性。而 Rust 的诸多语言特性，恰恰能够在这两个环节中提供显著支持。</p>
 <h2>语言特性的安全保障</h2>
 <p>AI 生成的代码往往存在潜在缺陷，尤其在内存管理、并发控制和边界条件处理等方面容易出现疏漏。考虑这样一个常见场景，生成如下的 C++ 代码：</p>
