@@ -13,7 +13,7 @@
 </script>
 
 <footer class="py-6 text-xs sm:text-sm flex flex-col items-center gap-2 snap-end font-gravitas-one">
-	<div class="flex gap-4 text-surface-800-200 whitespace-nowrap">
+	<div class="flex gap-4 text-surface-800-200 whitespace-nowrap select-none">
 		{#each links as link, i (i)}
 			<a href={link.href} class={getColorful(i)} target={link.blank ? '_blank' : '_self'}
 				>{link.label}</a

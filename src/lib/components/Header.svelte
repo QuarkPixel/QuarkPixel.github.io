@@ -74,7 +74,7 @@
 					{#each links as { label, href }, i (i)}
 						<a
 							{href}
-							class="link h6 leading-4
+							class="link h6 leading-4 select-none
 								{getColorful(i)}
 								{(page.url.pathname === href) ? 'selected' : ''}
 							"
