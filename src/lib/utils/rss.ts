@@ -1,5 +1,5 @@
 import { Feed } from 'feed';
-import type Metadata from '../types/postData.js';
+import type { MetadataRaw } from '../types/postData.js';
 import fs from 'fs';
 import path from 'path';
 import { posts } from '../posts.js';
@@ -7,7 +7,7 @@ import { marked } from 'marked';
 
 interface Post {
 	path: string;
-	metadata: Metadata;
+	metadata: MetadataRaw;
 	content: string;
 }
 
@@ -72,7 +72,7 @@ export async function generateRssFeed() {
 							}
 						}
 						return acc;
-					}, {}) as Metadata;
+					}, {}) as MetadataRaw;
 
 					// Extract and convert content
 					const markdownContent = content.replace(/^---\n[\s\S]*?\n---\n/, '');
