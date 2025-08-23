@@ -10,7 +10,7 @@
 	import Travelling from '$lib/components/Travelling.svelte';
 	import { Popover } from '@skeletonlabs/skeleton-svelte';
 
-	const { titleInfo, links } = $props();
+	const { headerInfo, links } = $props();
 
 	const noiseTextureSize = usePixelPerfectedNoise();
 
@@ -19,7 +19,7 @@
 	let mobileMenuOpen = $state.raw(false);
 
 	$effect(() => {
-		if (!titleInfo.scrollThreshold) {
+		if (!headerInfo.scrollThreshold) {
 			displayTitle = false;
 			return;
 		}
@@ -28,7 +28,7 @@
 		if (!scrollContainer) return;
 
 		function updateScrollInfo() {
-			displayTitle = scrollContainer!.scrollTop > titleInfo.scrollThreshold;
+			displayTitle = scrollContainer!.scrollTop > headerInfo.scrollThreshold;
 		}
 
 		updateScrollInfo();
@@ -67,7 +67,7 @@
 					>
 						<Icon icon="gravity-ui:chevron-left" />
 					</button>
-					<H6 class="font-noto-serif text-center py-2 px-3 truncate">{titleInfo.title}</H6>
+					<H6 class="font-noto-serif text-center py-2 px-3 truncate">{headerInfo.title}</H6>
 				</div>
 			{:else}
 				<div transition:blur class="flex gap-1">

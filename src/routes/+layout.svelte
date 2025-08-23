@@ -8,8 +8,10 @@
 	import UmamiAnalytics from '$lib/components/UmamiAnalytics.svelte';
 	import { afterNavigate, beforeNavigate } from '$app/navigation';
 	import { page } from '$app/state';
-
+	import { MetaTags, deepMerge } from 'svelte-meta-tags';
 	const { data, children } = $props();
+
+	let metaTags = $derived(deepMerge(data.baseMetaTags, page.data.pageMetaTags));
 
 	const links = [
 		{ label: 'Blog Space', href: '/' },
@@ -75,8 +77,10 @@
 	});
 </script>
 
+<MetaTags {...metaTags} />
+
 <div class="main min-h-[100vh] flex flex-col relative snap-end">
-	<Header titleInfo={data} {links} />
+	<Header headerInfo={data.pageBehavior} {links} />
 	<div class="flex-1 flex flex-col items-center justify-center py-5">
 		{@render children()}
 	</div>
@@ -86,23 +90,25 @@
 <UmamiAnalytics />
 
 <svelte:head>
-	<title>Hsuan's Space</title>
+	<!-- <title>Hsuan's Space</title>
 	<meta
 		name="description"
 		content="Welcome to Hsuan's personal space - A collection of thoughts, experiences, and creative works by Xuancong Meng."
 	/>
-	<meta name="keywords" content="Hsuan's Space, blog" />
+	<meta name="keywords" content="Hsuan's Space, blog" /> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<meta name="robots" content="index, follow" />
+	<!-- <meta name="robots" content="index, follow" />
 	<meta property="og:title" content="Hsuan's Space" />
 	<meta
 		property="og:description"
 		content="A collection of thoughts, experiences, and creative works by Xuancong Meng."
 	/>
 	<meta property="og:type" content="website" />
-	<meta property="og:image" content="https://quarkpixel.github.io/og-image.png" />
+	<meta property="og:image" content="{BASE_URL}/meta/og-image.webp" />
 	<meta property="og:url" content="{page.url.origin}{page.url.pathname}" />
-	<meta property="og:logo" content="https://quarkpixel.github.io/favicon/default.png" />
+	<meta property="og:logo" content="{BASE_URL}/favicon/default.png" />
+	<meta property="twitter:image" content="{BASE_URL}/meta/twitter-image.webp" />
+	<meta property="twitter:card" content="summary" />
 	<link
 		rel="alternate"
 		type="application/rss+xml"
@@ -120,7 +126,7 @@
 		type="application/json"
 		title="JSON Feed for Hsuan's Space"
 		href="/feed/feed.json"
-	/>
+	/> -->
 </svelte:head>
 
 <style lang="scss">
