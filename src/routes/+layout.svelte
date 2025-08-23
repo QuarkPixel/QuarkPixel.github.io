@@ -90,43 +90,7 @@
 <UmamiAnalytics />
 
 <svelte:head>
-	<!-- <title>Hsuan's Space</title>
-	<meta
-		name="description"
-		content="Welcome to Hsuan's personal space - A collection of thoughts, experiences, and creative works by Xuancong Meng."
-	/>
-	<meta name="keywords" content="Hsuan's Space, blog" /> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<!-- <meta name="robots" content="index, follow" />
-	<meta property="og:title" content="Hsuan's Space" />
-	<meta
-		property="og:description"
-		content="A collection of thoughts, experiences, and creative works by Xuancong Meng."
-	/>
-	<meta property="og:type" content="website" />
-	<meta property="og:image" content="{BASE_URL}/meta/og-image.webp" />
-	<meta property="og:url" content="{page.url.origin}{page.url.pathname}" />
-	<meta property="og:logo" content="{BASE_URL}/favicon/default.png" />
-	<meta property="twitter:image" content="{BASE_URL}/meta/twitter-image.webp" />
-	<meta property="twitter:card" content="summary" />
-	<link
-		rel="alternate"
-		type="application/rss+xml"
-		title="RSS Feed for Hsuan's Space"
-		href="/feed/rss.xml"
-	/>
-	<link
-		rel="alternate"
-		type="application/atom+xml"
-		title="Atom Feed for Hsuan's Space"
-		href="/feed/atom.xml"
-	/>
-	<link
-		rel="alternate"
-		type="application/json"
-		title="JSON Feed for Hsuan's Space"
-		href="/feed/feed.json"
-	/> -->
 </svelte:head>
 
 <style lang="scss">
