@@ -8,17 +8,16 @@ export const prerender = true;
 
 export const load = async ({ params, url }: { params: Record<string, string>; url: URL }) => {
 	if (browser && isFirefox()) document.documentElement.classList.add('firefox');
-
 	const baseMetaTags = Object.freeze({
 		title: "Hsuan's Space",
 		keywords: ["Hsuan's Space", 'blog'],
 		description:
 			"Welcome to Hsuan's personal space - A collection of thoughts, experiences, and creative works by Xuancong Meng.",
-		canonical: new URL(url.pathname, url.origin).href,
+		canonical: new URL(url.pathname, BASE_URL).href,
 		robots: 'index, follow',
 		openGraph: {
 			type: 'website',
-			url: new URL(url.pathname, url.origin).href,
+			url: new URL(url.pathname, BASE_URL).href,
 			title: "Hsuan's Space",
 			description: 'A collection of thoughts, experiences, and creative works by Xuancong Meng.',
 			siteName: "Hsuan's Space",
