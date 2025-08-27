@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://quarkpixel.github.io</id>
     <title>Hsuan's Space</title>
-    <updated>2025-08-23T13:46:37.522Z</updated>
+    <updated>2025-08-27T06:46:31.263Z</updated>
     <generator>Feed for Node.js</generator>
     <author>
         <name>Xuancong Meng</name>
@@ -82,7 +82,7 @@
         <link href="https://quarkpixel.github.io/p/250721-details-in-text-animation"/>
         <updated>2025-07-21T12:44:11.000Z</updated>
         <summary type="html"><![CDATA[深入解析 svelte-text-animation 组件的技术实现与最新优化]]></summary>
-        <content type="html"><![CDATA[<p>在<a href="./250525-tech-stack-in-hsuans-space">之前的文章</a>中，我简单提到了自己开发的 <a href="https://github.com/QuarkPixel/svelte-text-animationplaceholder"><code>svelte-text-animation</code></a> 组件。这个组件最初是为了本站首页 Landing 部分的文字动画效果而设计的，后来觉得特别好用就抽象成了一个独立的组件。最近对组件进行了一些优化更新，借此机会来详细介绍一下这个库的实现细节。</p>
+        <content type="html"><![CDATA[<p>在<a href="./250525-tech-stack-in-hsuans-space">之前的文章</a>中，我简单提到了自己开发的 <a href="https://github.com/QuarkPixel/svelte-text-animation"><code>svelte-text-animation</code></a> 组件。这个组件最初是为了本站首页 Landing 部分的文字动画效果而设计的，后来觉得特别好用就抽象成了一个独立的组件。最近对组件进行了一些优化更新，借此机会来详细介绍一下这个库的实现细节。</p>
 <h2>核心设计思路</h2>
 <h3>基本原理</h3>
 <p>整个动画的核心思想非常简洁：<strong>使用高斯函数叠加边缘递减函数</strong>，为文本中的每个字符计算一个效果强度值，然后通过回调函数将这个强度转换为具体的样式。</p>
