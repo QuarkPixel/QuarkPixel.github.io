@@ -7,7 +7,7 @@ tags: ['Technique', 'Web']
 layout: blog
 ---
 
-在[之前的文章](./250525-tech-stack-in-hsuans-space)中，我简单提到了自己开发的 [`svelte-text-animation`](https://github.com/QuarkPixel/svelte-text-animationplaceholder) 组件。这个组件最初是为了本站首页 Landing 部分的文字动画效果而设计的，后来觉得特别好用就抽象成了一个独立的组件。最近对组件进行了一些优化更新，借此机会来详细介绍一下这个库的实现细节。
+在[之前的文章](./250525-tech-stack-in-hsuans-space)中，我简单提到了自己开发的 [`svelte-text-animation`](https://github.com/QuarkPixel/svelte-text-animation) 组件。这个组件最初是为了本站首页 Landing 部分的文字动画效果而设计的，后来觉得特别好用就抽象成了一个独立的组件。最近对组件进行了一些优化更新，借此机会来详细介绍一下这个库的实现细节。
 
 ## 核心设计思路
 
