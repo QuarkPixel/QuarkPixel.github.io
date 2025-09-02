@@ -7,14 +7,14 @@
 
 	const State = {
 		hovering: {
-			stiffness: 0.04,
-			damping: 0.2
+			stiffness: 0.05,
+			damping: 0.15
 		},
 		animating: {
 			stiffness: 0.02,
 			damping: 1
 		}
-	} as const;
+	};
 
 	type StateType = keyof typeof State;
 
@@ -26,6 +26,7 @@
 
 	function setProgressParams(state: StateType) {
 		const params = State[state];
+		// console.log(params);
 		progress.stiffness = params.stiffness;
 		progress.damping = params.damping;
 	}
@@ -37,6 +38,8 @@
 				if (!hovering) return progress.set(0, { instant: true });
 			})
 			.then(() => {
+				let randVal = (Math.random() - 0.75) * 0.01;
+				progress.stiffness = State.animating.stiffness + randVal;
 				if (!hovering) animate();
 			})
 			.catch(() => {
