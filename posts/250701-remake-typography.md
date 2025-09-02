@@ -10,11 +10,11 @@ layout: blog
 许久之前就无法忍受网页的排版。作为一个博客网站，文字的呈现效果是至关重要的。在之前介绍[网站使用的技术栈](./250525-tech-stack-in-hsuans-space)时就提到我使用了 Skeleton 作为 UI 框架。然而这个框架在排版方面的表现很不尽如人意。我趁着最近在大量升级网站的机会，将排版系统从 Skeleton + MDsveX 自定义样式转向了 Tailwind Typography + MDsveX 默认对接。
 
 <center>
-<img class="outline outline-[#808CA9] outline-4 rounded-[1px] mb-[44px]" src="/assets/20250701-0.webp" alt="" />
+<img class="outline outline-[#808CA9] outline-4 rounded-[1px] mb-[44px]" src="/img/20250701-0.webp" alt="" />
 <em>左图：新版｜右图：老版</em>
 </center>
 
-## 使用 Skeleton 所遇到的问题 
+## 使用 Skeleton 所遇到的问题
 
 [Skeleton](https://skeleton.dev/) 是一个非常优秀的 UI 框架，它为 SvelteKit 提供了美观且功能丰富的组件库。在构建网站的导航栏、按钮、卡片等常规 UI 组件时，Skeleton 的表现令人满意。
 
@@ -33,7 +33,7 @@ layout: blog
 而这在与 MDsveX 对接时就产生了问题：MDsveX 只生成纯 HTML 结构，这在与 Skeleton 的对接中就出现了问题。因此我不得不为每一个基本元素都写一个包装组件：
 
 ```bash
-➜ HsuansSpace/src/lib/components/typography master ✓ tree .     
+➜ HsuansSpace/src/lib/components/typography master ✓ tree .
 .
 ├── Anchor.svelte
 ├── BaseList.svelte

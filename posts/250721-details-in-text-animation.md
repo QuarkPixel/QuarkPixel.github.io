@@ -59,7 +59,7 @@ $$
 通过数学分析可以发现，当 $n = 1$ 时，新函数退化为原有的二次函数。而当 $n > 1$ 时，函数变为 $2n$ 次多项式，相当于在原有基础上增加了一个可调节的平缓度参数。
 
 <center>
-<img class="outline outline-[#26796D] outline-3 w-[50%]" src="/assets/20250721-0.gif" alt="edgeFactor 函数演示" />
+<img class="outline outline-[#26796D] outline-3 w-[50%]" src="/img/20250721-0.gif" alt="edgeFactor 函数演示" />
 <em>不同 flatness 值下的边缘递减函数对比</em>
 </center>
 
