@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://quarkpixel.github.io</id>
     <title>Hsuan's Space</title>
-    <updated>2025-08-27T06:46:31.263Z</updated>
+    <updated>2025-09-02T03:40:52.746Z</updated>
     <generator>Feed for Node.js</generator>
     <author>
         <name>Xuancong Meng</name>
@@ -116,7 +116,7 @@ $$</p>
 <h3>函数特性分析</h3>
 <p>通过数学分析可以发现，当 $n = 1$ 时，新函数退化为原有的二次函数。而当 $n &gt; 1$ 时，函数变为 $2n$ 次多项式，相当于在原有基础上增加了一个可调节的平缓度参数。</p>
 <center>
-<img class="outline outline-[#26796D] outline-3 w-[50%]" src="/assets/20250721-0.gif" alt="edgeFactor 函数演示" />
+<img class="outline outline-[#26796D] outline-3 w-[50%]" src="/img/20250721-0.gif" alt="edgeFactor 函数演示" />
 <em>不同 flatness 值下的边缘递减函数对比</em>
 </center>
 
@@ -345,7 +345,7 @@ Brightness</a></li>
         <summary type="html"><![CDATA[从 Skeleton 转向 Tailwind Typography]]></summary>
         <content type="html"><![CDATA[<p>许久之前就无法忍受网页的排版。作为一个博客网站，文字的呈现效果是至关重要的。在之前介绍<a href="./250525-tech-stack-in-hsuans-space">网站使用的技术栈</a>时就提到我使用了 Skeleton 作为 UI 框架。然而这个框架在排版方面的表现很不尽如人意。我趁着最近在大量升级网站的机会，将排版系统从 Skeleton + MDsveX 自定义样式转向了 Tailwind Typography + MDsveX 默认对接。</p>
 <center>
-<img class="outline outline-[#808CA9] outline-4 rounded-[1px] mb-[44px]" src="/assets/20250701-0.webp" alt="" />
+<img class="outline outline-[#808CA9] outline-4 rounded-[1px] mb-[44px]" src="/img/20250701-0.webp" alt="" />
 <em>左图：新版｜右图：老版</em>
 </center>
 
@@ -360,7 +360,7 @@ Brightness</a></li>
 &lt;h1 class=&quot;h1&quot;&gt;Hello World&lt;/h1&gt;
 </code></pre>
 <p>而这在与 MDsveX 对接时就产生了问题：MDsveX 只生成纯 HTML 结构，这在与 Skeleton 的对接中就出现了问题。因此我不得不为每一个基本元素都写一个包装组件：</p>
-<pre><code class="language-bash">➜ HsuansSpace/src/lib/components/typography master ✓ tree .     
+<pre><code class="language-bash">➜ HsuansSpace/src/lib/components/typography master ✓ tree .
 .
 ├── Anchor.svelte
 ├── BaseList.svelte
@@ -656,7 +656,7 @@ let dValues: string[] = $derived(
 <p>具体实现是使用一张噪声纹理图</p>
 <center>
 <p>
-    <img src="/noise-texture.png" alt>
+    <img src="/assets/noise-texture.png" alt>
     <em>噪声纹理图</em>
 </p>
 </center>
