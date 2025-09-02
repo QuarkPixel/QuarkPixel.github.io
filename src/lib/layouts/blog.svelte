@@ -73,6 +73,48 @@
       opacity: 0.8;
     }
 
+    :where(a):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
+      text-decoration: none;
+      position: relative;
+      color: var(--tw-prose-body);
+
+      $scale: .075;
+      $width: 8em * $scale;
+      $height: 5em * $scale;
+      $neg-width: -8em * $scale;
+      $bottom: -5em * $scale;
+
+      &::after {
+        content: '';
+				font-size: inherit;
+        position: absolute;
+        left: 0;
+        bottom: $bottom;
+        width: 100%;
+        height: $height;
+        mask-image: url('/assets/wave.svg');
+        mask-repeat: repeat-x;
+        mask-size: $width $height;
+        background-color: color-mix(in oklab, var(--tw-prose-body) 30%, transparent);
+        transition: background-color .1s ease-in-out;
+        animation: wavy .3s linear infinite;
+        animation-play-state: paused; /* 默认暂停 */
+      }
+
+      &:hover::after {
+        background-color: var(--color-secondary-500);
+        animation-play-state: running; /* 悬停时运行动画 */
+      }
+
+      @keyframes wavy {
+        0% {
+          mask-position: 0 0;
+        }
+        100% {
+          mask-position: $neg-width 0; /* 与 background-size 的宽度一致 */
+        }
+      }
+    }
 
     .anchor-link {
       font: inherit;

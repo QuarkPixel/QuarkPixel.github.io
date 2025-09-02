@@ -18,7 +18,7 @@ const config = defineConfig({
 			rehypeAutolinkHeadings,
 			{
 				behavior: 'wrap', // 将整个标题包裹在 <a> 标签中
-				properties: { className: ['anchor-link'] } // 为锚点链接添加类名
+				properties: { className: ['anchor-link', 'not-prose'] } // 为锚点链接添加类名
 			}
 		],
 		[

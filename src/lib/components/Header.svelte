@@ -30,7 +30,6 @@
 		function updateScrollInfo() {
 			displayTitle = scrollContainer!.scrollTop > headerInfo.scrollThreshold;
 		}
-
 		updateScrollInfo();
 		scrollContainer.addEventListener('scroll', updateScrollInfo);
 
