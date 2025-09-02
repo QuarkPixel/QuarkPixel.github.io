@@ -60,7 +60,9 @@
 </article>
 
 <style lang="scss" global>
-	.pro { word-break: auto-phrase;
+	.prose {
+		word-break: auto-phrase;
+
 		code:not(pre code) {
 			font-size: smaller;
 		}
@@ -74,7 +76,6 @@
 			text-decoration: none;
 			position: relative;
 			color: var(--tw-prose-body);
-			pointer-events: none;
 
 			$scale: 0.075;
 			$width: 8em * $scale;
@@ -89,6 +90,8 @@
 				bottom: $bottom;
 				width: 100%;
 				height: $height;
+				pointer-events: none;
+
 				mask-image: url('/assets/wave.svg');
 				mask-repeat: repeat-x;
 				mask-size: $width $height;
