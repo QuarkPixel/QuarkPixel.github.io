@@ -64,7 +64,7 @@
 				left: 0;
 				width: 100%;
 				height: 100%;
-				background: url('/cover.webp') center bottom;
+				background: url('/assets/portrait.webp') center bottom;
 				background-size: cover;
 			}
 		}

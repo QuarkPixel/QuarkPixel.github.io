@@ -94,7 +94,7 @@ let dValues: string[] = $derived(
 
 <center>
 <p>
-    <img src="/noise-texture.png" alt>
+    <img src="/assets/noise-texture.png" alt>
     <em>噪声纹理图</em>
 </p>
 </center>
