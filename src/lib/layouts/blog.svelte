@@ -6,8 +6,8 @@
 </script>
 
 <script lang="ts">
-	import '$lib/styles/code-highlight.css';
-	import type { Metadata } from '$lib/types/postData.js';
+    import '$lib/styles/article.scss';
+	import type { Metadata } from '$lib/types/postMetadata.js';
 	import type { Snippet } from 'svelte';
 	import Tags from '$lib/components/Tags.svelte';
 	import Comment from '$lib/components/Comment.svelte';
@@ -20,13 +20,6 @@
 
 	const { children, metadata }: Props = $props();
 </script>
-
-<link
-	rel="stylesheet"
-	href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
-	integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X"
-	crossorigin="anonymous"
-/>
 
 <article class="prose lg:prose-xl my-4 w-[80%]">
    	<header class="mb-10">
@@ -58,84 +51,3 @@
 	{/if}
 	<Comment class="my-15" />
 </article>
-
-<style lang="scss" global>
-	.prose {
-		word-break: auto-phrase;
-
-		code:not(pre code) {
-			font-size: smaller;
-		}
-
-		& > details > summary {
-			font-size: smaller;
-			opacity: 0.8;
-		}
-
-		:where(a):not(:where([class~='not-prose'], [class~='not-prose'] *)) {
-			text-decoration: none;
-			position: relative;
-			color: var(--tw-prose-body);
-
-			$scale: 0.075;
-			$width: 8em * $scale;
-			$height: 5em * $scale;
-			$neg-width: -8em * $scale;
-			$bottom: -5em * $scale;
-
-			&::after {
-				content: '';
-				position: absolute;
-				left: 0;
-				bottom: $bottom;
-				width: 100%;
-				height: $height;
-				pointer-events: none;
-
-				mask-image: url('/assets/wave.svg');
-				mask-repeat: repeat-x;
-				mask-size: $width $height;
-				background-color: color-mix(in oklab, var(--tw-prose-body) 30%, transparent);
-				transition: background-color 0.1s ease-in-out;
-				animation: wavy 0.3s linear infinite;
-				animation-play-state: paused; /* 默认暂停 */
-			}
-
-			&:hover::after {
-				background-color: var(--color-secondary-500);
-				animation-play-state: running; /* 悬停时运行动画 */
-			}
-
-			@keyframes wavy {
-				0% {
-					mask-position: 0 0;
-				}
-				100% {
-					mask-position: $neg-width 0; /* 与 background-size 的宽度一致 */
-				}
-			}
-		}
-
-		.anchor-link {
-			font: inherit;
-			color: inherit;
-			text-decoration: inherit;
-			position: relative;
-
-			&::before {
-				content: '#';
-				position: absolute;
-				left: -1em;
-				font-family: var(--font-caveat);
-				opacity: 0;
-				transition: 0.2s;
-				padding-right: 1em;
-				pointer-events: none;
-			}
-
-			&:hover::before {
-				opacity: 0.4;
-			}
-		}
-	}
-</style>
