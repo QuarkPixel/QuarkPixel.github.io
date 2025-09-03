@@ -2,7 +2,7 @@ import { Feed } from 'feed';
 import type { MetadataRaw } from '../types/postMetadata.js';
 import fs from 'fs';
 import path from 'path';
-import { posts } from '../posts.js';
+import { paths } from '../posts.js';
 import { marked } from 'marked';
 
 interface Post {
@@ -42,10 +42,10 @@ export async function generateRssFeed() {
 
 	try {
 		// Load and parse all posts
-		const allPosts = posts
+		const allPosts = paths
 			.map((slug: string) => {
 				try {
-					const filePath = path.join(process.cwd(), 'posts', `${slug}.md`);
+					const filePath = path.join(process.cwd(), `${slug}.md`);
 					const content = fs.readFileSync(filePath, 'utf-8');
 
 					// Extract metadata from frontmatter

@@ -4,9 +4,9 @@
   "homepage": "https://QuarkPixel.github.io",
   "license": "LGPL-3.0-or-later",
   "scripts": {
-    "dev": "npm run generate-posts && vite dev",
-    "build": "npm run generate-posts && vite build && npm run prepack && npm run postbuild",
-    "generate-posts": "node tools/generate-posts.js",
+    "dev": "npm run generate-path && vite dev",
+    "build": "npm run generate-path && vite build && npm run prepack && npm run postbuild",
+    "generate-path": "node tools/generate-path.js",
     "postbuild": "node tools/sitemap.js",
     "preview": "vite preview",
     "prepare": "svelte-kit sync || echo ''",
