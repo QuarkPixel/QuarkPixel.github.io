@@ -1,6 +1,6 @@
 import { error } from '@sveltejs/kit';
 import { posts } from '$lib/posts.js';
-import { type MetadataRaw, type Metadata, processMetadata } from '$lib/types/postData.js';
+import { type MetadataRaw, type Metadata, processMetadata } from '$lib/types/postMetadata.js';
 import type { MetaTagsProps } from 'svelte-meta-tags';
 
 export const entries = () => posts.map((slug) => ({ slug }));

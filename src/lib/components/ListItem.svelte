@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Tags from '$lib/components/Tags.svelte';
-	import type { Metadata } from '$lib/types/postData.js';
+	import type { Metadata } from '$lib/types/postMetadata.js';
 	import BudouX from '$lib/components/BudouX.svelte';
 
 	export let path: string;

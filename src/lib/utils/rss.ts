@@ -1,5 +1,5 @@
 import { Feed } from 'feed';
-import type { MetadataRaw } from '../types/postData.js';
+import type { MetadataRaw } from '../types/postMetadata.js';
 import fs from 'fs';
 import path from 'path';
 import { posts } from '../posts.js';
