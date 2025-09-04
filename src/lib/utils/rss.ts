@@ -1,15 +1,7 @@
 import { Feed } from 'feed';
-import type { MetadataRaw } from '../types/postMetadata.js';
 import fs from 'fs';
 import path from 'path';
-import { paths } from '../posts.js';
-import { marked } from 'marked';
-
-interface Post {
-	path: string;
-	metadata: MetadataRaw;
-	content: string;
-}
+import { getAllContent, type ContentItem } from './contentProcessor.js';
 
 export async function generateRssFeed() {
 	const siteURL = 'https://quarkpixel.github.io';
@@ -41,74 +33,48 @@ export async function generateRssFeed() {
 	});
 
 	try {
-		// Load and parse all posts
-		const allPosts = paths
-			.map((slug: string) => {
-				try {
-					const filePath = path.join(process.cwd(), `${slug}.md`);
-					const content = fs.readFileSync(filePath, 'utf-8');
+		// 获取所有内容
+		const allContent = await getAllContent();
 
-					// Extract metadata from frontmatter
-					const metadataMatch = content.match(/^---\n([\s\S]*?)\n---/);
-					if (!metadataMatch) {
-						console.warn(`No frontmatter found in ${slug}.md, skipping...`);
-						return null;
-					}
-
-					const frontMatter = metadataMatch[1];
-					// eslint-disable-next-line @typescript-eslint/no-explicit-any
-					const metadata = frontMatter.split('\n').reduce((acc: any, line: string) => {
-						const [key, ...values] = line.split(':').map((s) => s.trim());
-						if (key && values.length) {
-							acc[key] = values.join(':');
-							if (key === 'tags') {
-								acc[key] = values
-									.join(':')
-									.split(',')
-									.map((tag) => tag.trim());
-							}
-							if (key === 'date') {
-								acc[key] = new Date(values.join(':'));
-							}
-						}
-						return acc;
-					}, {}) as MetadataRaw;
-
-					// Extract and convert content
-					const markdownContent = content.replace(/^---\n[\s\S]*?\n---\n/, '');
-					const htmlContent = marked(markdownContent);
-
-					return {
-						path: `/p/${slug}`,
-						metadata,
-						content: htmlContent
-					} as Post;
-				} catch (error) {
-					console.error(`Error processing post ${slug}:`, error);
-					return null;
-				}
-			})
-			.filter(Boolean) as Post[];
-
-		// Sort posts by date in descending order
-		allPosts.sort((a: Post, b: Post) => {
-			return new Date(b.metadata.date).getTime() - new Date(a.metadata.date).getTime();
+		// 按日期排序
+		allContent.sort((a: ContentItem, b: ContentItem) => {
+			const aDate = 'date' in a.metadata ? new Date(a.metadata.date) : new Date();
+			const bDate = 'date' in b.metadata ? new Date(b.metadata.date) : new Date();
+			return bDate.getTime() - aDate.getTime();
 		});
 
-		// Add posts to feed
-		allPosts.forEach((post: Post) => {
-			const url = `${siteURL}${post.path}`;
-			feed.addItem({
-				title: post.metadata.title,
-				id: url,
-				link: url,
-				description: post.metadata.description,
-				content: post.content,
-				author: [author],
-				date: new Date(post.metadata.date),
-				image: post.metadata.cover ? `${siteURL}${post.metadata.cover}` : undefined,
-				category: post.metadata.tags?.map((tag) => ({ name: tag })) || []
-			});
+		// 添加到RSS feed
+		allContent.forEach((item: ContentItem) => {
+			const url = `${siteURL}${item.urlPath}`;
+			const metadata = item.metadata;
+
+			if (item.type === 'post') {
+				const postMeta = metadata as any;
+				feed.addItem({
+					title: postMeta.title,
+					id: url,
+					link: url,
+					description: postMeta.description,
+					content: item.content,
+					author: [author],
+					date: new Date(postMeta.date),
+					image: postMeta.cover ? `${siteURL}${postMeta.cover}` : undefined,
+					category: postMeta.tags?.map((tag: string) => ({ name: tag })) || []
+				});
+			} else if (item.type === 'log') {
+				const logMeta = metadata as any;
+				const logId = '0x' + logMeta.weekNumber.toString(16).toUpperCase();
+				feed.addItem({
+					title: 'Logs::' + logId,
+					id: url,
+					link: url,
+					description: logMeta.description,
+					content: item.content,
+					author: [author],
+					date: new Date(logMeta.date),
+					category: logMeta.tags?.map((tag: string) => ({ name: tag })) || []
+				});
+			}
 		});
 
 		// Write files to both static and build directories
