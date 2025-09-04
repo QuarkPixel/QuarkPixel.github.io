@@ -34,6 +34,7 @@ const config = defineConfig({
 	layout: {
 		blog: baseDir + 'blog.svelte',
 		test: baseDir + 'test.svelte',
+		logs: baseDir + 'logs.svelte',
 		_: baseDir + 'default.svelte'
 	}
 });
