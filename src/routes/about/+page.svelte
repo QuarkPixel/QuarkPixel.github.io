@@ -9,7 +9,7 @@
 <div
 	class="mx-5 my-20 *:text-center *:font-gravitas-one relative max-w-[98vw] transition-transform duration-300"
 >
-	<div class="h2 md:h1 mb-2 md:mb-0 underline decoration-primary-500 decoration-6">
+	<div class="h2 md:h1 mb-2 underline decoration-primary-500 decoration-6">
 		<span class="text-nowrap">I'm<wbr /> Xuancong Meng.</span>
 	</div>
 	<Portrait />
