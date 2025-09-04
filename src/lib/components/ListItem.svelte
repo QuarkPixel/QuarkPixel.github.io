@@ -21,7 +21,7 @@
 		</div>
 	</div>
 	<div class="flex flex-col items-end justify-between gap-1 ml-4">
-		<div class="font-[Georgia] oldstyle-nums opacity-65 text-xs sm:text-base">
+		<div class="font-calluna oldstyle-nums opacity-65 text-xs sm:text-base">
 			{new Date(metadata.date).toLocaleDateString()}
 		</div>
 		<Tags tags={metadata.tags} />

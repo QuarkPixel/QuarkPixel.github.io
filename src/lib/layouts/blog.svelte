@@ -31,7 +31,7 @@
 		</div>
 		<div class="flex justify-between my-4">
 			<Tags tags={metadata.tags} />
-			<div class="flex gap-4 font-[Georgia] oldstyle-nums text-sm lg:text-base opacity-80">
+			<div class="flex gap-4 font-calluna oldstyle-nums text-sm lg:text-base opacity-80">
 				{metadata.author}
 				<time class="" datetime={metadata.date as unknown as string}>
 					{new Date(metadata.date).toLocaleDateString()}
@@ -44,7 +44,7 @@
 		{@render children()}
 	</div>
 	{#if metadata.copyright}
-		<div class="text-end text-sm font-noto-serif opacity-50">
+		<div class="text-end text-sm font-calluna opacity-50">
 			© {metadata.date.getFullYear()}
 			{metadata.author}
 		</div>

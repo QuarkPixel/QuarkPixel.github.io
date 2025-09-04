@@ -15,3 +15,6 @@ import '@fontsource/gravitas-one';
 
 // 霞鹜文楷
 import '$lib/font_source/lxgw-wenkai/index.css';
+
+// Supports weights 400 700
+import '$lib/font_source/calluna-sans/index.css';
