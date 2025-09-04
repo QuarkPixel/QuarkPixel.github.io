@@ -1,0 +1,32 @@
+/* Calluna Sans 字体声明 */
+@font-face {
+	font-family: 'Calluna Sans';
+	src: url('CallunaSans-Regular.otf') format('opentype');
+	font-weight: 400; /* 常规字重 */
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Calluna Sans';
+	src: url('CallunaSans-Italic.otf') format('opentype');
+	font-weight: 400; /* 常规字重 */
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Calluna Sans';
+	src: url('CallunaSans-Bold.otf') format('opentype');
+	font-weight: 700; /* 粗体字重 */
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Calluna Sans';
+	src: url('CallunaSansBoldItalic.otf') format('opentype');
+	font-weight: 700; /* 粗体字重 */
+	font-style: italic;
+	font-display: swap;
+}
