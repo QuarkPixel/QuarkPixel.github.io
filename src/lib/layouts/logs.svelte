@@ -37,7 +37,7 @@
 			<BudouX text={metadata.description} />
 		</div>
 		<div class="flex justify-between mt-4 mb-1">
-			<Tags tags={metadata.tags} color="bg-tertiary-500/40" />
+			<Tags tags={metadata.tags} bgColor="bg-tertiary-500/40" color="text-tertiary-950-50" />
 		</div>
 		<div class="flex gap-4 font-calluna text-sm lg:text-base opacity-80">
 			<time class="" datetime={metadata.date as unknown as string}>
