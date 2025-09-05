@@ -1,0 +1,1 @@
+import{l as r}from"./BoVWJXks.js";function a(e){const t=r();return{weekNumber:e.weekNumber,id:"0x"+e.weekNumber.toString(16).toUpperCase(),description:t.parse(e.description),date:new Date(e.date),author:e.author,tags:e.tags}}export{a as p};
