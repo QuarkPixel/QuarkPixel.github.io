@@ -74,7 +74,8 @@ module.exports = {
 							marginBottom: '0.25em',
 							fontSize: '0.875rem',
 							opacity: '0.7',
-							fontFamily: 'var(--font-noto-sans)'
+							fontFamily: 'var(--font-noto-sans)',
+							fontStyle: 'normal'
 						},
 						'strong > em': {
 							// Rewrite as smaller inline

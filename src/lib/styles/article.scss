@@ -57,6 +57,16 @@
 		}
 	}
 
+	em {
+		font-family: var(--font-noto-sans);
+		font-size: smaller;
+		&::after {
+			content: '';
+			display: inline-block;
+			width: 0.2rem;
+		}
+	}
+
 	.anchor-link {
 		font: inherit;
 		color: inherit;
