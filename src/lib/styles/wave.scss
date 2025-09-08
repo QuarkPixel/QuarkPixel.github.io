@@ -1,0 +1,196 @@
+@use '$lib/styles/config.scss' as *;
+
+// =============================================================================
+// 🎨 核心函数：URL 编码
+// =============================================================================
+
+/// URL 编码函数 - 处理 SVG 中的特殊字符
+/// @param {String} $string - 需要编码的字符串
+/// @return {String} - 编码后的字符串
+@function url-encode($string) {
+	$map: (
+		'%': '%25',
+		'<': '%3C',
+		'>': '%3E',
+		' ': '%20',
+		'!': '%21',
+		'*': '%2A',
+		"'": '%27',
+		'"': '%22',
+		'(': '%28',
+		')': '%29',
+		';': '%3B',
+		':': '%3A',
+		'@': '%40',
+		'&': '%26',
+		'=': '%3D',
+		'+': '%2B',
+		'$': '%24',
+		',': '%2C',
+		'/': '%2F',
+		'?': '%3F',
+		'#': '%23',
+		'[': '%5B',
+		']': '%5D'
+	);
+
+	$result: $string;
+	@each $search, $replace in $map {
+		$result: str-replace($result, $search, $replace);
+	}
+	@return $result;
+}
+
+/// 字符串替换辅助函数
+/// @param {String} $string - 原字符串
+/// @param {String} $search - 要搜索的字符串
+/// @param {String} $replace - 替换的字符串
+/// @return {String} - 替换后的字符串
+@function str-replace($string, $search, $replace: '') {
+	$index: str-index($string, $search);
+
+	@if $index {
+		@return str-slice($string, 1, $index - 1) + $replace +
+			str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+	}
+
+	@return $string;
+}
+
+// =============================================================================
+// 🎯 核心函数：生成 SVG Data URI
+// =============================================================================
+
+/// 生成波浪 SVG Data URI
+/// @param {Color} $stroke - 描边颜色
+/// @param {Number} $opacity - 透明度 (0-1)
+/// @param {String} $stroke-width - 描边宽度 (可选)
+/// @return {String} - 完整的 Data URI
+@function generate-wave-svg($stroke, $opacity: 1, $stroke-width: null) {
+	$width: map-get($wave-config, 'width');
+	$height: map-get($wave-config, 'height');
+	$viewBox: map-get($wave-config, 'viewBox');
+	$path: map-get($wave-config, 'path');
+	$default-stroke-width: map-get($wave-config, 'stroke-width');
+
+	// 使用传入的 stroke-width 或默认值
+	$final-stroke-width: if($stroke-width, $stroke-width, $default-stroke-width);
+
+	// 构建 SVG 字符串
+	$svg: '<svg width="#{$width}" height="#{$height}" viewBox="#{$viewBox}" xmlns="http://www.w3.org/2000/svg">';
+	$svg: $svg +
+		'<path d="#{$path}" stroke="#{$stroke}" stroke-width="#{$final-stroke-width}" fill="none"';
+
+	// 添加透明度（如果不是 1）
+	@if $opacity != 1 {
+		$svg: $svg + ' opacity="#{$opacity}"';
+	}
+
+	$svg: $svg + '/></svg>';
+
+	// URL 编码并返回完整的 Data URI
+	@return 'url("data:image/svg+xml;utf8,#{url-encode($svg)}")';
+}
+
+// =============================================================================
+// 🎨 主题相关函数
+// =============================================================================
+
+/// 获取主题颜色
+/// @param {String} $theme - 主题名称
+/// @param {String} $state - 状态 (normal/hover)
+/// @param {String} $property - 属性 (normal/normal-opacity/hover/hover-opacity/bg-hover)
+/// @return {*} - 对应的值
+@function get-theme-value($theme, $property) {
+	$themes: map-get($wave-config, 'themes');
+	$theme-config: map-get($themes, $theme);
+	@return map-get($theme-config, $property);
+}
+
+/// 生成主题的 SVG Data URI
+/// @param {String} $theme - 主题名称
+/// @param {String} $state - 状态 (normal/hover)
+/// @return {String} - SVG Data URI
+@function get-theme-svg($theme, $state) {
+	@if $state == 'normal' {
+		$color: get-theme-value($theme, 'normal');
+		$opacity: get-theme-value($theme, 'normal-opacity');
+		@return generate-wave-svg($color, $opacity);
+	} @else if $state == 'hover' {
+		$color: get-theme-value($theme, 'hover');
+		$opacity: get-theme-value($theme, 'hover-opacity');
+		@return generate-wave-svg($color, $opacity);
+	}
+}
+
+// =============================================================================
+// 🧩 Mixin：波浪下划线生成器
+// =============================================================================
+
+/// 核心 Mixin：生成波浪下划线样式
+/// @param {String} $theme - 主题名称 (light/dark/custom)
+/// @param {Map} $custom-config - 自定义配置 (可选)
+@mixin underline($theme, $custom-config: ()) {
+	// 合并自定义配置
+	$config: map-merge($wave-config, $custom-config);
+
+	// 计算尺寸
+	$scale: map-get($config, 'scale');
+	$width: map-get($config, 'width') * $scale * 1em;
+	$height: map-get($config, 'height') * $scale * 1em;
+	$vertical-offset: map-get($config, 'vertical-offset');
+	$animation-duration: map-get($config, 'animation-duration');
+	$animation-timing: map-get($config, 'animation-timing');
+	$transition-duration: map-get($config, 'transition-duration');
+
+	// 基础样式
+	text-decoration: none;
+	background-repeat: repeat-x;
+	background-size: $width $height;
+	background-position: 0 100%;
+	padding-bottom: #{$height * $vertical-offset};
+	background-color: transparent;
+	transition: background-image $transition-duration ease;
+
+	// 动画（默认暂停）
+	animation: wave-move $animation-duration $animation-timing infinite paused;
+
+	// 设置默认 SVG
+	background-image: #{get-theme-svg($theme, 'normal')};
+
+	// Hover 状态
+	&:hover {
+		background-image: #{get-theme-svg($theme, 'hover')};
+		background-color: #{get-theme-value($theme, 'bg-hover')};
+		animation-play-state: running;
+	}
+
+	// 生成动画关键帧（避免重复定义）
+	@at-root {
+		@keyframes wave-move {
+			0% {
+				background-position-x: 0;
+			}
+			100% {
+				background-position-x: #{-$width};
+			}
+		}
+	}
+}
+
+@mixin auto-theme(
+	$theme-map: (
+		'': 'light',
+		'[data-mode="dark"]': 'dark'
+	)
+) {
+	@each $selector, $theme in $theme-map {
+		@if $selector == '' {
+			@include underline($theme);
+		} @else {
+			#{$selector} & {
+				@include underline($theme);
+			}
+		}
+	}
+}

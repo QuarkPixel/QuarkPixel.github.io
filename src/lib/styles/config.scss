@@ -1,0 +1,40 @@
+$wave-light: '9c9ea5';
+$wave-dark: '1c202f';
+$wave-hover: '4785ae';
+// 📦 配置变量
+$wave-config: (
+	// SVG 基本参数
+	'width': 8,
+	'height': 5,
+	'viewBox': '0 0 8 5',
+	'path': 'M0 3.5C2 3.5 2 1 4 1C6 1 6 3.5 8 3.5',
+	'stroke-width': 1.5,
+
+	// 缩放和定位
+	'scale': 0.075,
+	'vertical-offset': 1,
+
+	// 动画参数
+	'animation-duration': 0.3s,
+	'animation-timing': linear,
+	'transition-duration': 0.3s,
+
+	'themes': (
+		'light': (
+			// --color-surface-800
+			'normal': '#1c202f',
+			'normal-opacity': 0.3,
+			// --color-secondary-500
+			'hover': '#4785ae',
+			'hover-opacity': 1
+		),
+		'dark': (
+			// --color-surface-200
+			'normal': '#9c9ea5',
+			'normal-opacity': 0.3,
+			// --color-secondary-500
+			'hover': '#4785ae',
+			'hover-opacity': 1
+		)
+	)
+);
