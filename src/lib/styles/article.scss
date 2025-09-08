@@ -24,6 +24,7 @@
 	em {
 		font-family: var(--font-noto-sans);
 		font-size: smaller;
+		font-synthesis: style;
 		&::after {
 			content: '';
 			display: inline-block;

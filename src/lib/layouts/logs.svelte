@@ -48,7 +48,7 @@
 	<div class="mb-10">
 		{@render children()}
 	</div>
-	<div class="text-end text-sm font-noto-serif opacity-50">
+	<div class="text-end text-sm font-calluna opacity-50">
 		© {metadata.date.getFullYear()}
 		{metadata.author}
 	</div>
