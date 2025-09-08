@@ -1,9 +1,10 @@
 @use '$lib/styles/config.scss' as *;
+@use 'sass:map';
+@use 'sass:string';
 
 // =============================================================================
 // 🎨 核心函数：URL 编码
 // =============================================================================
-
 /// URL 编码函数 - 处理 SVG 中的特殊字符
 /// @param {String} $string - 需要编码的字符串
 /// @return {String} - 编码后的字符串
@@ -47,11 +48,11 @@
 /// @param {String} $replace - 替换的字符串
 /// @return {String} - 替换后的字符串
 @function str-replace($string, $search, $replace: '') {
-	$index: str-index($string, $search);
+	$index: string.index($string, $search);
 
 	@if $index {
-		@return str-slice($string, 1, $index - 1) + $replace +
-			str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+		@return string.slice($string, 1, $index - 1) + $replace +
+			str-replace(string.slice($string, $index + string.length($search)), $search, $replace);
 	}
 
 	@return $string;
@@ -67,11 +68,11 @@
 /// @param {String} $stroke-width - 描边宽度 (可选)
 /// @return {String} - 完整的 Data URI
 @function generate-wave-svg($stroke, $opacity: 1, $stroke-width: null) {
-	$width: map-get($wave-config, 'width');
-	$height: map-get($wave-config, 'height');
-	$viewBox: map-get($wave-config, 'viewBox');
-	$path: map-get($wave-config, 'path');
-	$default-stroke-width: map-get($wave-config, 'stroke-width');
+	$width: map.get($wave-config, 'width');
+	$height: map.get($wave-config, 'height');
+	$viewBox: map.get($wave-config, 'viewBox');
+	$path: map.get($wave-config, 'path');
+	$default-stroke-width: map.get($wave-config, 'stroke-width');
 
 	// 使用传入的 stroke-width 或默认值
 	$final-stroke-width: if($stroke-width, $stroke-width, $default-stroke-width);
@@ -102,9 +103,9 @@
 /// @param {String} $property - 属性 (normal/normal-opacity/hover/hover-opacity/bg-hover)
 /// @return {*} - 对应的值
 @function get-theme-value($theme, $property) {
-	$themes: map-get($wave-config, 'themes');
-	$theme-config: map-get($themes, $theme);
-	@return map-get($theme-config, $property);
+	$themes: map.get($wave-config, 'themes');
+	$theme-config: map.get($themes, $theme);
+	@return map.get($theme-config, $property);
 }
 
 /// 生成主题的 SVG Data URI
@@ -132,16 +133,16 @@
 /// @param {Map} $custom-config - 自定义配置 (可选)
 @mixin underline($theme, $custom-config: ()) {
 	// 合并自定义配置
-	$config: map-merge($wave-config, $custom-config);
+	$config: map.merge($wave-config, $custom-config);
 
 	// 计算尺寸
-	$scale: map-get($config, 'scale');
-	$width: map-get($config, 'width') * $scale * 1em;
-	$height: map-get($config, 'height') * $scale * 1em;
-	$vertical-offset: map-get($config, 'vertical-offset');
-	$animation-duration: map-get($config, 'animation-duration');
-	$animation-timing: map-get($config, 'animation-timing');
-	$transition-duration: map-get($config, 'transition-duration');
+	$scale: map.get($config, 'scale');
+	$width: map.get($config, 'width') * $scale * 1em;
+	$height: map.get($config, 'height') * $scale * 1em;
+	$vertical-offset: map.get($config, 'vertical-offset');
+	$animation-duration: map.get($config, 'animation-duration');
+	$animation-timing: map.get($config, 'animation-timing');
+	$transition-duration: map.get($config, 'transition-duration');
 
 	// 基础样式
 	text-decoration: none;
