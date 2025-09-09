@@ -17,16 +17,16 @@
 			<BudouX text={metadata.title} />
 		</div>
 		<div
-			class="text-tertiary-900-100 group-hover/item:text-secondary-700-300 font-lxgw-wenkai font-light text-xs
-				sm:text-sm"
+			class="text-tertiary-800-200 group-hover/item:text-secondary-700-300 font-lxgw-wenkai font-light text-xs
+				sm:text-sm duration-300"
 		>
 			<BudouX text={metadata.description} />
 		</div>
 	</div>
 	<div class="flex flex-col items-end justify-between gap-1 ml-4">
 		<div
-			class="font-calluna text-tertiary-900-100 group-hover/item:text-secondary-700-300 opacity-65 text-xs
-				sm:text-base"
+			class="font-calluna text-tertiary-800-200 group-hover/item:text-secondary-700-300 opacity-65 text-xs
+				sm:text-base duration-300"
 		>
 			{new Date(metadata.date).toLocaleDateString()}
 		</div>
