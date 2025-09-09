@@ -10,18 +10,24 @@
 <a
 	href={path}
 	class="list flex justify-between p-3 rounded hover:bg-secondary-100-900/80 lg:hover:px-8
-		hover:text-secondary-950-50"
+		hover:text-secondary-950-50 group/item"
 >
 	<div class="flex flex-col">
 		<div class="font-noto-serif font-bold mb-1 text-sm sm:text-xl md:text-2xl">
 			<BudouX text={metadata.title} />
 		</div>
-		<div class="font-lxgw-wenkai font-light text-xs sm:text-sm">
+		<div
+			class="text-tertiary-900-100 group-hover/item:text-secondary-700-300 font-lxgw-wenkai font-light text-xs
+				sm:text-sm"
+		>
 			<BudouX text={metadata.description} />
 		</div>
 	</div>
 	<div class="flex flex-col items-end justify-between gap-1 ml-4">
-		<div class="font-calluna opacity-65 text-xs sm:text-base">
+		<div
+			class="font-calluna text-tertiary-900-100 group-hover/item:text-secondary-700-300 opacity-65 text-xs
+				sm:text-base"
+		>
 			{new Date(metadata.date).toLocaleDateString()}
 		</div>
 		<Tags tags={metadata.tags} />

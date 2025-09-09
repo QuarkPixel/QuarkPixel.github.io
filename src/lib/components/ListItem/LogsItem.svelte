@@ -20,7 +20,7 @@
 		<Tags tags={metadata.tags} bgColor="bg-tertiary-500/50" color="text-tertiary-950-50"/>
 	</div>
 	<div class="flex items-center justify-between gap-1 ml-4">
-		<div class="font-calluna opacity-65 text-xs sm:text-base">
+		<div class="font-calluna text-tertiary-900-100 opacity-65 text-xs sm:text-base">
 			{new Date(metadata.date).toLocaleDateString()}
 		</div>
 	</div>
