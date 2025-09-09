@@ -1,7 +1,7 @@
 ---
 title: 完美主义是否也是一种「园丁妄想症」？
 description: 由 Eltrac 的文章《园丁妄想症》引发的思考。
-date: 2025-08-10T15:25:00
+date: 2025-08-10T15:25:00+08:00
 author: Xuancong Meng
 tags:
   - Thinking
