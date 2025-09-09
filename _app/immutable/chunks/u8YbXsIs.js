@@ -1,1 +1,0 @@
-import{p as r,s as t}from"./C-nJc_-N.js";const e={get data(){return r.data},get error(){return r.error},get status(){return r.status},get url(){return r.url}};t.updated.check;const s=e;export{s as p};
