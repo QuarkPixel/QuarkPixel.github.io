@@ -22,7 +22,7 @@ export async function load({ params }: { params: { slug: string } }): Promise<{
 			description: postMetadata.description.join(''),
 			openGraph: {
 				type: 'article',
-				title: `Logs::${postMetadata.weekNumber} - Hsuan's Blog`,
+				title: `Logs::${postMetadata.id} - Hsuan's Blog`,
 				description: postMetadata.description.join(''),
 				article: {
 					authors: [postMetadata.author],
