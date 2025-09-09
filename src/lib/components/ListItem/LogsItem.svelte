@@ -11,8 +11,8 @@
 	class="list flex justify-between px-3 py-2 rounded group/item hover:bg-tertiary-100/60 dark:hover:bg-tertiary-950/30 lg:hover:px-8
 		hover:text-tertiary-950-50"
 >
-	<div class="flex items-center gap-3">
-		<div class="relative font-calluna font-bold italic duration-300 *:duration-300 gra">
+	<div class="flex items-center gap-3 text-xl sm:text-2xl">
+		<div class="relative font-calluna font-bold italic duration-300 *:duration-300">
 			<span class="text-tertiary-900-100 group-hover/item:text-secondary-600-400">Logs</span><span
 				class="text-tertiary-200-800 group-hover/item:text-tertiary-500">::</span
 			><span class="text-tertiary-950-050 group-hover/item:text-primary-600-400">{metadata.id}</span>
