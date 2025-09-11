@@ -19,7 +19,7 @@ export async function generateRssFeed() {
 		id: siteURL,
 		link: siteURL,
 		language: 'zh-CN',
-		image: `${siteURL}/logos/large-black.svg`,
+		image: `${siteURL}/favicon/dark.svg`,
 		favicon: `${siteURL}/favicon.ico`,
 		copyright: `All rights reserved ${date.getFullYear()}, Xuancong Meng`,
 		updated: date,
