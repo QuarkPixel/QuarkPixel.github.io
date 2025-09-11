@@ -4,13 +4,13 @@
         <title>Hsuan's Space</title>
         <link>https://quarkpixel.github.io</link>
         <description>Hsuan's personal blog about tech, life, and thoughts</description>
-        <lastBuildDate>Tue, 09 Sep 2025 15:15:38 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 11 Sep 2025 02:38:31 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js</generator>
         <language>zh-CN</language>
         <image>
             <title>Hsuan's Space</title>
-            <url>https://quarkpixel.github.io/logos/large-black.svg</url>
+            <url>https://quarkpixel.github.io/favicon/dark.svg</url>
             <link>https://quarkpixel.github.io</link>
         </image>
         <copyright>All rights reserved 2025, Xuancong Meng</copyright>

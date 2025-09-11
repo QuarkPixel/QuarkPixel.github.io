@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://quarkpixel.github.io</id>
     <title>Hsuan's Space</title>
-    <updated>2025-09-09T15:15:38.123Z</updated>
+    <updated>2025-09-11T02:38:31.709Z</updated>
     <generator>Feed for Node.js</generator>
     <author>
         <name>Xuancong Meng</name>
@@ -12,7 +12,7 @@
     <link rel="alternate" href="https://quarkpixel.github.io"/>
     <link rel="self" href="https://quarkpixel.github.io/feed/atom.xml"/>
     <subtitle>Hsuan's personal blog about tech, life, and thoughts</subtitle>
-    <logo>https://quarkpixel.github.io/logos/large-black.svg</logo>
+    <logo>https://quarkpixel.github.io/favicon/dark.svg</logo>
     <icon>https://quarkpixel.github.io/favicon.ico</icon>
     <rights>All rights reserved 2025, Xuancong Meng</rights>
     <entry>
