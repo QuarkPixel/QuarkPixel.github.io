@@ -1,0 +1,1 @@
+import{p as r,s as t}from"./Df2ahsCQ.js";const e={get data(){return r.data},get error(){return r.error},get status(){return r.status},get url(){return r.url}};t.updated.check;const s=e;export{s as p};
