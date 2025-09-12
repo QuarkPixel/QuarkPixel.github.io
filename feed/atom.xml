@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://quarkpixel.github.io</id>
     <title>Hsuan's Space</title>
-    <updated>2025-09-12T14:09:28.351Z</updated>
+    <updated>2025-09-12T14:16:57.220Z</updated>
     <generator>Feed for Node.js</generator>
     <author>
         <name>Xuancong Meng</name>
@@ -16,7 +16,7 @@
     <icon>https://quarkpixel.github.io/favicon.ico</icon>
     <rights>All rights reserved 2025, Xuancong Meng</rights>
     <entry>
-        <title type="html"><![CDATA[Logs::0x2906]]></title>
+        <title type="html"><![CDATA[Logs::0xB5A]]></title>
         <id>https://quarkpixel.github.io/logs/0xB5A</id>
         <link href="https://quarkpixel.github.io/logs/0xB5A"/>
         <updated>2025-09-12T14:00:00.000Z</updated>
