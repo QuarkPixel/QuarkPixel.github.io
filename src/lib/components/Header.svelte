@@ -66,7 +66,7 @@
 					>
 						<Icon icon="gravity-ui:chevron-left" />
 					</button>
-					<H6 class="font-noto-serif text-center py-2 px-3 truncate">{headerInfo.title}</H6>
+					<H6 class="text-center py-2 px-3 truncate {headerInfo.titleClass}">{headerInfo.title}</H6>
 				</div>
 			{:else}
 				<div transition:blur class="flex gap-1">

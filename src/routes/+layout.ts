@@ -73,12 +73,21 @@ export const load = async ({ params, url }: { params: Record<string, string>; ur
 				const post = await import(`../../posts/${params.slug}.md`);
 				pageBehavior = {
 					scrollThreshold: 200,
-					title: post.metadata.title
+					title: post.metadata.title,
+					titleClass: 'font-noto-serif'
 				};
 				// eslint-disable-next-line @typescript-eslint/no-unused-vars
 			} catch (e) {
 				throw error(404, `Could not find ${params.slug}`);
 			}
+			break;
+		}
+		case url.pathname.startsWith('/logs/'): {
+			pageBehavior = {
+				scrollThreshold: 300,
+				title: 'Logs::' + params.slug,
+				titleClass: 'font-calluna'
+			};
 			break;
 		}
 		default: {
