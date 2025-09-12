@@ -1,5 +1,5 @@
 ---
-weekNumber: 2906
+weekNumber: 0xB5A
 description: 继上次 Log 糊了个副标题后，我仍不知道在这该写什么。
 date: 2025-09-12T22:00:00+08:00
 author: Xuancong Meng
