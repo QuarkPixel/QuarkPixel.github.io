@@ -41,7 +41,7 @@
 	let logoOfficial = $state.raw(true);
 </script>
 
-<div class="header relative px-[20px] py-1.5 md:py-3" style:--noise-size="{$noiseTextureSize}px">
+<div class="header relative px-[20px] py-[7px] md:py-[14px]" style:--noise-size="{$noiseTextureSize}px">
 	<div>
 		<div class="grow flex items-end gap-1 md:gap-4">
 			<a href="/" class="hidden sm:block scale-75 md:scale-100">
@@ -123,7 +123,7 @@
   .header {
     @extend .noise-texture;
     width: 100%;
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 2;
 

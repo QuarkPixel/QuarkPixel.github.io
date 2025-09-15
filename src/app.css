@@ -45,7 +45,7 @@ body::-webkit-scrollbar {
 	overflow-y: auto;
 	overflow-x: hidden;
 
-	scrollbar-width: thin;
+	scrollbar-width: none;
 	scroll-snap-type: y mandatory;
 }
 

@@ -79,7 +79,7 @@
 
 <MetaTags {...metaTags} />
 
-<div class="main min-h-[100vh] flex flex-col relative snap-end">
+<div class="main min-h-[100vh] pt-[44px] md:pt-[58px] flex flex-col relative snap-end">
 	<Header headerInfo={data.pageBehavior} {links} />
 	<div class="flex-1 flex flex-col items-center justify-center py-5">
 		{@render children()}
