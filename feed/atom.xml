@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://quarkpixel.github.io</id>
     <title>Hsuan's Space</title>
-    <updated>2025-09-12T14:16:57.220Z</updated>
+    <updated>2025-09-15T12:40:29.735Z</updated>
     <generator>Feed for Node.js</generator>
     <author>
         <name>Xuancong Meng</name>
@@ -15,6 +15,32 @@
     <logo>https://quarkpixel.github.io/favicon/dark.svg</logo>
     <icon>https://quarkpixel.github.io/favicon.ico</icon>
     <rights>All rights reserved 2025, Xuancong Meng</rights>
+    <entry>
+        <title type="html"><![CDATA[颤动]]></title>
+        <id>https://quarkpixel.github.io/p/250915-shake</id>
+        <link href="https://quarkpixel.github.io/p/250915-shake"/>
+        <updated>2025-09-15T04:02:45.000Z</updated>
+        <summary type="html"><![CDATA[短篇文，想试着记录下自己的感受]]></summary>
+        <content type="html"><![CDATA[<p>刷到了<a href="https://v.douyin.com/onmLtrYkhNA/">以前和前任去过的一家小书店</a>。</p>
+<p>那家书店很小，很美，很低调。以至于我已近乎将其忘却。</p>
+<p>但我刷到它时，我的心<strong>颤动</strong>。</p>
+<p>我无法再用更精准的词去形容自己的状态，这个感受太微妙：美好的回忆、痛苦的回忆以及当晚我和她在那散步的当下。<strong>像突然打开的淋浴一样冲刷着身体。</strong></p>
+<p>当时的我在想些什么呢？我已经有些记不清了。</p>
+<div class="flex w-full justify-between *:w-[48%] *:mb-0">
+    <img src="/img/250915-1.jpeg"/>
+    <img src="/img/250915-2.jpeg"/>
+</div>
+
+<p><img src="/img/250915-0.jpeg" alt="">
+<em>图片下方的一楼即为所述书店，当时的随手一拍。</em></p>
+]]></content>
+        <author>
+            <name>Xuancong Meng</name>
+            <email>xuancongmeng@gmail.com</email>
+            <uri>https://quarkpixel.github.io</uri>
+        </author>
+        <category label=""/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Logs::0xB5A]]></title>
         <id>https://quarkpixel.github.io/logs/0xB5A</id>
