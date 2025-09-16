@@ -46,7 +46,7 @@
 <BlurryBackground />
 <Landing />
 
-<div class="auto-width px-5 md:px-20 mt-5 group relative">
+<div class="auto-width px-5 md:px-20 mt-5 group relative" lang="zh-CN">
 	{#each loadedPosts as { type, path, metadata }, i (path)}
 		<ListItem {type} {path} {metadata} />
 		{#if i !== loadedPosts.length - 1}

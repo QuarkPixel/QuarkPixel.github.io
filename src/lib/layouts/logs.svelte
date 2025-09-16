@@ -33,7 +33,7 @@
 			class="text-tertiary-200-800">::</span><span
 			class="text-primary-600-400">{metadata.id}</span>
 		</div>
-		<div class="font-noto-sans font-bold text-sm lg:text-base opacity-40">
+		<div class="font-noto-sans text-center font-bold text-sm lg:text-base opacity-40" lang="zh-CN">
 			<BudouX text={metadata.description} />
 		</div>
 		<div class="flex justify-between mt-4 mb-1">
@@ -45,7 +45,7 @@
 			</time>
 		</div>
 	</header>
-	<div class="mb-10">
+	<div class="mb-10" lang="zh-CN">
 		{@render children()}
 	</div>
 	<div class="text-end text-sm font-calluna opacity-50">

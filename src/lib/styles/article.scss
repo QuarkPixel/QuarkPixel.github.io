@@ -3,7 +3,10 @@
 @import url('./code-highlight.css');
 
 .prose {
-	word-break: auto-phrase;
+	/* word-break: auto-phrase; */
+	text-align: justify;
+	quotes: '「' '」' '『' '』';
+	hanging-punctuation: first last;
 
 	code:not(pre code) {
 		font-size: smaller;

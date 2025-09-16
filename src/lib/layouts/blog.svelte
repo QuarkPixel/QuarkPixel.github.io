@@ -23,10 +23,10 @@
 
 <article class="prose lg:prose-xl my-4 w-[80%]">
    	<header class="mb-10">
-		<h1 class="mb-2">
+		<h1 class="mb-2 text-start" lang="zh-CN">
 			<BudouX text={metadata.title} />
 		</h1>
-		<div class="font-noto-sans text-sm lg:text-base opacity-70">
+		<div class="font-noto-sans text-sm lg:text-base opacity-70" lang="zh-CN">
 			<BudouX text={metadata.description} />
 		</div>
 		<div class="flex justify-between my-4">
@@ -40,7 +40,7 @@
 		</div>
 		<hr class="mt-4 mb-0" />
 	</header>
-	<div class="mb-10">
+	<div class="mb-10" lang="zh-CN">
 		{@render children()}
 	</div>
 	{#if metadata.copyright}
