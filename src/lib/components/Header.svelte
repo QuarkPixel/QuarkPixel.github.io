@@ -69,7 +69,7 @@
 					<H6 class="text-center py-2 px-3 truncate {headerInfo.titleClass}">{headerInfo.title}</H6>
 				</div>
 			{:else}
-				<div transition:blur class="flex gap-1">
+				<div transition:blur class="flex gap-1 ml-[-1rem] sm:ml-0">
 					{#each links as { label, href }, i (i)}
 						<a
 							{href}
