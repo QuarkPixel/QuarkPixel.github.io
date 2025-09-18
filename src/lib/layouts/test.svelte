@@ -1,9 +1,24 @@
+<script lang="ts" module>
+	/* eslint-disable no-import-assign */
+	import Blockquote from '$lib/components/typography/Blockquote.svelte';
+	import Image from '$lib/components/typography/Image.svelte';
+
+	export { Blockquote as blockquote };
+	export { Image as img };
+</script>
+
 <script lang="ts">
 	import '$lib/styles/code-highlight.css';
 	import Tags from '$lib/components/Tags.svelte';
 	import Comment from '$lib/components/Comment.svelte';
 	import BudouX from '$lib/components/BudouX.svelte';
 	import { loadDefaultSimplifiedChineseParser } from 'budoux';
+	import LightBox from '$lib/js/libra.min.js';
+	import { onMount } from 'svelte';
+
+	onMount(() => {
+		new LightBox();
+	});
 
 	const { children, title, description, date, tags } = $props();
 	const parser = loadDefaultSimplifiedChineseParser();

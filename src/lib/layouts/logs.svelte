@@ -1,8 +1,10 @@
 <script lang="ts" module>
 	/* eslint-disable no-import-assign */
 	import Blockquote from '$lib/components/typography/Blockquote.svelte';
+	import Image from '$lib/components/typography/Image.svelte';
 
 	export { Blockquote as blockquote };
+	export { Image as img };
 </script>
 
 <script lang="ts">
@@ -12,6 +14,12 @@
 	import '$lib/styles/article.scss';
 	import type { Metadata } from '$lib/types/logsMetadata.js';
 	import type { Snippet } from 'svelte';
+	import LightBox from '$lib/js/libra.min.js';
+	import { onMount } from 'svelte';
+
+	onMount(() => {
+		new LightBox();
+	});
 
 	interface Props {
 		children: Snippet;

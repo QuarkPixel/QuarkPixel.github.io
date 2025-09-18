@@ -5,5 +5,6 @@
 <img
 	{src}
 	{alt}
-	class="rounded-xs shadow-2xl my-4 mx-1{className}"
+	class="{className}"
+	data-libra=""
 	{...rest} />
