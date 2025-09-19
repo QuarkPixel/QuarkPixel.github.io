@@ -4,7 +4,7 @@
         <title>Hsuan's Space</title>
         <link>https://quarkpixel.github.io</link>
         <description>Hsuan's personal blog about tech, life, and thoughts</description>
-        <lastBuildDate>Thu, 18 Sep 2025 13:50:15 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 19 Sep 2025 01:13:11 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js</generator>
         <language>zh-CN</language>
@@ -91,11 +91,8 @@
 <p>但我刷到它时，我的心<strong>颤动</strong>。</p>
 <p>我无法再用更精准的词去形容自己的状态，这个感受太微妙：美好的回忆、痛苦的回忆以及当晚我和她在那散步的当下。<strong>像突然打开的淋浴一样冲刷着身体。</strong></p>
 <p>当时的我在想些什么呢？我已经有些记不清了。</p>
-<div class="flex w-full justify-between *:w-[48%] *:mb-0">
-    <img src="/img/250915-1.jpeg"/>
-    <img src="/img/250915-2.jpeg"/>
-</div>
-
+<p><img src="/img/250915-1.jpeg" alt=""></p>
+<p><img src="/img/250915-2.jpeg" alt=""></p>
 <p><img src="/img/250915-0.jpeg" alt="">
 <em>图片下方的一楼即为所述书店，当时的随手一拍。</em></p>
 ]]></content:encoded>
@@ -321,7 +318,7 @@ $$</p>
 <h3>函数特性分析</h3>
 <p>通过数学分析可以发现，当 $n = 1$ 时，新函数退化为原有的二次函数。而当 $n &gt; 1$ 时，函数变为 $2n$ 次多项式，相当于在原有基础上增加了一个可调节的平缓度参数。</p>
 <center>
-<img class="outline outline-[#26796D] outline-3 w-[50%]" src="/img/250721-0.gif" alt="edgeFactor 函数演示" />
+<img class="outline outline-[#26796D] outline-3 w-[50%]" src="/img/250721-0.gif" alt="edgeFactor 函数演示" data-libra />
 <em>不同 flatness 值下的边缘递减函数对比</em>
 </center>
 
@@ -492,40 +489,39 @@ Brightness</a></li>
             <content:encoded><![CDATA[<p><strong>夏日的云，也想慵懒。</strong></p>
 <p>平时喜欢去天台散心：没有喧嚣，只有自己。夏日的云和其它时候都不一样。从专业术语的角度出发，我爱看夏天的<a href="https://zh.wikipedia.org/wiki/%E7%A7%AF%E4%BA%91">积云</a>。记这些年来拍到的夏日云：</p>
 <div class="bg-surface-100-900 outline-9 rounded-xl my-2 outline-surface-100-900 grid grid-cols-3 grid-rows-6 gap-2 [&_img]:w-full [&_img]:h-full [&_img]:object-cover [&_img]:m-0 *>rounded-xl *>shadow-lg *>overflow-hidden *>bg-gray-200">
-  <div class="col-start-1 col-span-2 row-start-1 row-span-2">
+  <div data-libra class="col-start-1 col-span-2 row-start-1 row-span-2">
     <img alt="clouds" src="https://images.unsplash.com/photo-1696332223628-62631dabb337"/>
   </div>
-  
+
   <div class="col-start-3 col-span-1 row-start-1 row-span-3">
     <img alt="clouds" src="https://images.unsplash.com/photo-1696332223533-993114881882"/>
   </div>
-  
+
   <div class="col-start-1 col-span-1 row-start-3 row-span-3">
     <img alt="clouds" src="https://images.unsplash.com/photo-1696332223583-0d94cb2911f7"/>
   </div>
-  
+
   <div class="col-start-2 col-span-2 row-start-4 row-span-1">
     <img alt="clouds" src="https://images.unsplash.com/photo-1695450148576-675cab2c9215"/>
   </div>
-  
+
   <div class="col-start-2 col-span-1 row-start-3 row-span-1">
     <img alt="clouds" src="https://images.unsplash.com/photo-1696332223520-1278796028f5"/>
   </div>
-  
+
   <div class="col-start-3 col-span-1 row-start-5 row-span-2">
     <img alt="clouds" src="https://images.unsplash.com/photo-1696332222129-6e44eb7e3f29"/>
   </div>
-  
+
   <div class="col-start-2 col-span-1 row-start-5 row-span-2">
     <img alt="clouds" src="https://images.unsplash.com/photo-1727843062665-040b10410226"/>
   </div>
-  
+
   <div class="col-start-1 col-span-1 row-start-6 row-span-1">
     <img alt="clouds" src="https://images.unsplash.com/photo-1696332223050-253b7b199a68"/>
   </div>
 </div>
 <div class="-mt-1"><a class="text-surface-400-600 font-noto-sans text-sm" href="https://unsplash.com/@quarkpixel">Unsplash @quarkpixel</a></div>
-
 ]]></content:encoded>
             <author>xuancongmeng@gmail.com (Xuancong Meng)</author>
             <category>[ 'Photography' ]</category>
@@ -538,7 +534,7 @@ Brightness</a></li>
             <description><![CDATA[从 Skeleton 转向 Tailwind Typography]]></description>
             <content:encoded><![CDATA[<p>许久之前就无法忍受网页的排版。作为一个博客网站，文字的呈现效果是至关重要的。在之前介绍<a href="./250525-tech-stack-in-hsuans-space">网站使用的技术栈</a>时就提到我使用了 Skeleton 作为 UI 框架。然而这个框架在排版方面的表现很不尽如人意。我趁着最近在大量升级网站的机会，将排版系统从 Skeleton + MDsveX 自定义样式转向了 Tailwind Typography + MDsveX 默认对接。</p>
 <center>
-<img class="outline outline-[#808CA9] outline-4 rounded-[1px] mb-[44px]" src="/img/250701-0.webp" alt="" />
+<img class="outline outline-[#808CA9] outline-4 rounded-[1px] mb-[44px]" src="/img/250701-0.webp" alt="" data-libra/>
 <em>左图：新版｜右图：老版</em>
 </center>
 
