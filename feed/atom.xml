@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://quarkpixel.github.io</id>
     <title>Hsuan's Space</title>
-    <updated>2025-09-19T01:13:11.259Z</updated>
+    <updated>2025-09-20T12:31:19.032Z</updated>
     <generator>Feed for Node.js</generator>
     <author>
         <name>Xuancong Meng</name>
@@ -15,6 +15,52 @@
     <logo>https://quarkpixel.github.io/favicon/dark.svg</logo>
     <icon>https://quarkpixel.github.io/favicon.ico</icon>
     <rights>All rights reserved 2025, Xuancong Meng</rights>
+    <entry>
+        <title type="html"><![CDATA[Logs::0xB5B]]></title>
+        <id>https://quarkpixel.github.io/logs/0xB5B</id>
+        <link href="https://quarkpixel.github.io/logs/0xB5B"/>
+        <updated>2025-09-20T12:53:00.000Z</updated>
+        <summary type="html"><![CDATA[19 岁啦 🎉]]></summary>
+        <content type="html"><![CDATA[<p>最近发生了特别多事，感觉还挺奇怪的，说不上来的感觉。但是觉得一切都好起来了（？）</p>
+<h2>兼职</h2>
+<p>在老师的推荐下，我进入了一家教培机构做兼职，目前看来薪资还不错？主要的工作内容是带小孩子做一些乐高积木等科技类的益智项目。我所在的公司会承接类似学校的外包项目，负责为孩子们开设社团课程。现在我还在培训阶段，会以助教的身份跟着听课和协助上课，对象大多是二年级左右的孩子。</p>
+<h3>治愈</h3>
+<p>论最特殊的感受，还是治愈。尽管我经常吐槽自己讨厌小孩子，但真的回到「小学课堂」这个环境中，我觉得他们还是可爱的。<del>（也许是因为本校的老师比较凶吧，至少我们上课的时候训过不止一个孩子）</del></p>
+<p>我一直对小学的印象不太好，原因是我经常被霸凌。这点是我后来回想才意识到的。我在小学就是实打实的「怪小孩」，成绩又还垫底。在那样的环境下，连支笔都没人愿意借给我。</p>
+<p>但是再回到小学课堂上，身份成了「老师」，说不上来的感觉。</p>
+<h2>推荐库：Libra.js</h2>
+<p>来自 Eltrac 的库 <a href="https://github.com/BigCoke233/libra">Libra.js</a> 是一款极致轻量的灯箱插件，很极简。现已在本博客实装。</p>
+<p><img src="https://images.unsplash.com/photo-1755420482578-53e67d19e5ea" alt="">
+<em>用于演示灯箱插件，图片来自本人 <a href="https://unsplash.com/@quarkpixel">Unsplash</a>。</em></p>
+<p>我在关于 overlay 的设置上花了些小巧思，做出了很有质感的效果。我貌似很避讳单独使用 <code>backdrop-filter: blur()</code> 来实现效果，要么是像这里添加小点点、要么<a href="/p/250525-tech-stack-in-hsuans-space#header-%E7%9A%84%E8%83%8C%E6%99%AF%E5%99%AA%E5%A3%B0%E5%9B%BE">像 Header 部分那样添加噪点</a>来让模糊「没那么干净」。</p>
+<h2>Apple OS 26 series is sucked</h2>
+<p>Flag Time：我是绝对不会升级 26 系列的系统的，就算升我也只会等 27 🤓</p>
+<p><img src="https://pbs.twimg.com/media/G1J04s2XIAAnq-t?format=png" alt="">
+<em>图片来源：<a href="https://x.com/Zeko369/status/1968764524028186967">twitter@Zeko368</a></em></p>
+<h2>生日</h2>
+<p>昨天（9月19日）是我的 19 岁生日。
+<img src="/img/logs/0xb5b-0.jpg" alt="">
+于是我们当晚就真的出去了。</p>
+<p>不得不感叹，身边有那么些个靠谱的朋友，真的很幸福。我以前要么是和家长一起过的，要么大一些后就不过生日。所以昨天的生日真的很令我难忘。</p>
+<p>我们去了海底捞，吃得很开心。我们刚进去的时候，店员正在为别人庆祝生日，发生了以下对话：</p>
+<p>「蛮也给你搞一个」</p>
+<p>「不要不要不要，我谢谢你」</p>
+<p>「你就等着吧」</p>
+<p><del>（本来是全程南京话的，但是写出来就没有那种感觉，反正自己脑补那种语调情绪吧 😂）</del></p>
+<p>我本来以为就是开玩笑的，直到放音乐的那个推车推到我们桌前。在这之前我没起一点疑心，即使她之前还去找服务员沟通了一会（可能因为当时太累了，大脑转不动了。）</p>
+<p>清晰地记得，隔壁桌的兄弟也在为我唱生日歌，祝我生日快乐。</p>
+<p><img src="/img/logs/0xb5b-1.jpg" alt=""></p>
+<p>很难以言说的情绪。曾经 18 岁生日，因为还在与当时的女友的纠缠中，一点点仪式感都没有。我还记得那天我连一条朋友圈都没发，当天只收到了几个人的祝福。放学后回家就躺在床上，然后想了想「喔，我现在成年了。」。虽然当时有些许失落，但其实都还好，直到我看到了别人的 18 岁生日发的朋友圈，我觉得后悔。</p>
+<p>在今年年初刚分手的时候，我甚至连一个可以谈心的朋友都没有。我才意识到我为了那段 bullshit 的感情放弃了太多，她消耗了我太多。我当时为自己立的 Flag 就是，19 岁的生日一定要好好过。但是事实上，直到我昨天约朋友们出来前，我都打算自己随便过过算了。</p>
+<p><strong>真心感谢我的朋友们。</strong></p>
+]]></content>
+        <author>
+            <name>Xuancong Meng</name>
+            <email>xuancongmeng@gmail.com</email>
+            <uri>https://quarkpixel.github.io</uri>
+        </author>
+        <category label=""/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[网页排版碎碎念]]></title>
         <id>https://quarkpixel.github.io/p/250916-typography-thoughts</id>
