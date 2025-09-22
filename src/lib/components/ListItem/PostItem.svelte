@@ -20,7 +20,7 @@
 			class="text-tertiary-800-200 group-hover/item:text-secondary-700-300 font-lxgw-wenkai font-light text-xs
 				sm:text-sm duration-300"
 		>
-			<BudouX text={metadata.description} />
+			<BudouX class="font-article" text={metadata.description} />
 		</div>
 	</div>
 	<div class="flex flex-col items-end justify-between gap-1 ml-4">

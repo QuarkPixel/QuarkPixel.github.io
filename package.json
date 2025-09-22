@@ -85,6 +85,7 @@
     "@fontsource-variable/caveat": "^5.2.5",
     "@fontsource-variable/noto-sans-sc": "^5.2.5",
     "@fontsource-variable/noto-serif-sc": "^5.2.5",
+    "@fontsource-variable/ysabeau": "^5.2.8",
     "@fontsource/gravitas-one": "^5.2.5",
     "@selemondev/svelte-marquee": "^0.0.3",
     "@sveltejs/kit": "^2.20.8",

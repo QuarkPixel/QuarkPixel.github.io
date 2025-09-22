@@ -36,6 +36,10 @@
 		}
 	}
 
+	p {
+		font-feature-settings: 'lnum';
+	}
+
 	.anchor-link {
 		font: inherit;
 		color: inherit;

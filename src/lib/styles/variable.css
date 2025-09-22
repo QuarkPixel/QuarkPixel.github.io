@@ -10,10 +10,12 @@
 
 	--font-noto-serif: 'Noto Serif SC Variable', 'Noto Serif', serif;
 	--font-noto-sans: 'Noto Sans SC Variable', 'Noto Sans', sans-serif;
+	--font-ysabeau: 'Ysabeau Variable', sans-serif;
 	--font-caveat: 'Caveat Variable', cursive, system-ui;
 	--font-calluna: 'Calluna Sans', sans-serif;
 	--font-gravitas-one: 'Gravitas One', serif;
 	--font-lxgw-wenkai: 'LXGW WenKai', serif;
+	--font-article: 'Ysabeau Variable', 'LXGW WenKai', serif;
 }
 
 :root {

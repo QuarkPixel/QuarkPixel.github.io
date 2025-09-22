@@ -11,6 +11,9 @@ import '@fontsource-variable/noto-sans-sc';
 // Supports weights 400-700
 import '@fontsource-variable/caveat';
 
+// Supports weights 100-900
+import '@fontsource-variable/ysabeau';
+
 import '@fontsource/gravitas-one';
 
 // 霞鹜文楷
