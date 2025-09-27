@@ -36,8 +36,19 @@
 		}
 	}
 
+	del {
+		opacity: 0.5;
+	}
+
 	p {
 		font-feature-settings: 'lnum';
+	}
+
+	iframe {
+		width: 100%;
+		height: auto;
+		aspect-ratio: 16 / 9;
+		border-radius: 0.25rem;
 	}
 
 	.anchor-link {

@@ -3,13 +3,9 @@ title: HDR 在被滥用吗
 description: 谈谈现今 HDR 的一些问题
 date: 2025-07-20T19:24:30+08:00
 author: Xuancong Meng
-tags: [ 'Thinking', 'Visual' ]
+tags: ['Thinking', 'Visual']
 layout: blog
 ---
-
-<script>
-import BiliPlayer from '$lib/components/BiliPlayer.svelte';
-</script>
 
 **这是一篇讨论帖，由于本人没有实际上手过新的操作系统，故所有内容均来自网络，内容可能有误。欢迎发表自己的看法～**
 
@@ -17,7 +13,7 @@ import BiliPlayer from '$lib/components/BiliPlayer.svelte';
 
 起因来自一条视频，展示了 Apple 在新系统的画笔中支持选择 [HDR](https://en.wikipedia.org/wiki/High_dynamic_range) 颜色。
 
-<BiliPlayer bv="BV1TW33zdE2T" />
+<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=114789544101486&bvid=BV1TW33zdE2T&cid=30832918627&p=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
 
 给我的第一感受就是：**怪**。
 
@@ -64,16 +60,15 @@ HDR 不只是让画面更亮、更艳，更重要的是它为界面设计引入�
 
 <details>
   <summary>[视频] 这年头，表情包都自带HDR了？</summary>
-  <BiliPlayer bv="BV1HkTuzcE7V" />
+  <iframe src="//player.bilibili.com/player.html?isOutside=true&aid=114636049355816&bvid=BV1HkTuzcE7V&cid=30352540082&p=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
 </details>
 
 类似的情况还出现在广告投放中，HDR被用作粗暴的注意力抓取工具，而不是精心设计的视觉体验。这些现象本身不是核心问题，而是设计缺位的副作用。
 
 <details>
   <summary>[视频] 野生的网页 HDR 广告</summary>
-  <BiliPlayer bv="BV1sw4m1d7L1" />
+  <iframe src="//player.bilibili.com/player.html?isOutside=true&aid=1101573401&bvid=BV1sw4m1d7L1&cid=1463107028&p=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
 </details>
-
 
 **HDR UI 当前的问题不是 HDR 本身，而是没有明确的 "设计语言" 和规范来驾驭它。**
 
@@ -97,6 +92,7 @@ Steam 社区论坛上有用户抱怨 [HDR 显示器效果的糟糕](https://stea
 HDR 技术时，也更应该谨慎对待。
 
 ## 参考文章
+
 - [HDR in UI: Designing Perception Through
   Brightness](https://medium.com/design-bootcamp/what-hdr-in-ui-tells-us-about-the-future-of-digital-perception-bb3d9133d1f6)
 - [HDR UI and EDR: Rethinking Brightness in Interface Design](https://medium.com/design-bootcamp/the-rise-of-hdr-ui-not-a-visual-gimmick-but-a-paradigm-shift-in-perceptual-logic-8062247f72dd)
