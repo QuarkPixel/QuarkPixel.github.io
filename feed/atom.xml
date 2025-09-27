@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://quarkpixel.github.io</id>
     <title>Hsuan's Space</title>
-    <updated>2025-09-27T06:15:41.779Z</updated>
+    <updated>2025-09-27T06:16:43.488Z</updated>
     <generator>Feed for Node.js</generator>
     <author>
         <name>Xuancong Meng</name>
@@ -19,7 +19,7 @@
         <title type="html"><![CDATA[Logs::0xB5C]]></title>
         <id>https://quarkpixel.github.io/logs/0xB5C</id>
         <link href="https://quarkpixel.github.io/logs/0xB5C"/>
-        <updated>2025-09-27T14:00:00.000Z</updated>
+        <updated>2025-09-27T06:15:00.000Z</updated>
         <summary type="html"><![CDATA[又是忙碌的一周～]]></summary>
         <content type="html"><![CDATA[<p><a href="/logs/0xB5A">Malloc Lab 终于完成了</a> 🎉</p>
 <h2>人一忙起来就会忙起来</h2>
