@@ -9,6 +9,7 @@
 	import { getColorful } from '../utils/colorful.js';
 	import Travelling from '$lib/components/Travelling.svelte';
 	import { Popover } from '@skeletonlabs/skeleton-svelte';
+	import { navigationHistory } from '../utils/navigationHistory.js';
 
 	const { headerInfo, links } = $props();
 
@@ -19,6 +20,8 @@
 	let mobileMenuOpen = $state.raw(false);
 
 	$effect(() => {
+	navigationHistory.update(page.url);
+
 		if (!headerInfo.scrollThreshold) {
 			displayTitle = false;
 			return;
@@ -38,7 +41,10 @@
 		};
 	});
 
+
 	let logoOfficial = $state.raw(true);
+
+
 </script>
 
 <div class="header relative px-[20px] py-[7px] md:py-[14px]" style:--noise-size="{$noiseTextureSize}px">
@@ -62,7 +68,7 @@
 						type="button"
 						class="hover:bg-background scale-80 md:scale-100"
 						title="Back"
-						onclick={() => history.back()}
+						onclick={() => navigationHistory.goBack()}
 					>
 						<Icon icon="gravity-ui:chevron-left" />
 					</button>
