@@ -4,7 +4,8 @@ description: 又是忙碌的一周～
 date: 2025-09-27T14:15:00+08:00
 author: Xuancong Meng
 tags:
-  - Thinking
+  - Develop Diary
+  - Technique
 layout: logs
 ---
 
