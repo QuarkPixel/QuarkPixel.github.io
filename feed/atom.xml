@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://quarkpixel.github.io</id>
     <title>Hsuan's Space</title>
-    <updated>2025-10-03T05:35:02.102Z</updated>
+    <updated>2025-10-03T05:37:58.276Z</updated>
     <generator>Feed for Node.js</generator>
     <author>
         <name>Xuancong Meng</name>
@@ -23,7 +23,7 @@
         <summary type="html"><![CDATA[记一次折腾的过程]]></summary>
         <content type="html"><![CDATA[<p>昨天尝试使用 <a href="https://tauri.app/">Tauri</a> 将网页构建成本地应用，使用体验很丝滑，很爽。</p>
 <h2>“Rust 的定位其实是脚本语言”</h2>
-<p>标题的这句调侃出自于 <a href="https://x.com/tsoding/status/1969190491246731449">Тsфdiиg 在推特上的回复</a>：</p>
+<p>标题的这句调侃出自于 <a href="https://x.com/tsoding/status/1969190491246731449">Tsoding 在推特上的回复</a>：</p>
 <blockquote>
 <p>I always knew that the niche of Rust is a Scripting Language.</p>
 </blockquote>
