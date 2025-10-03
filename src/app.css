@@ -35,7 +35,7 @@ body::-webkit-scrollbar {
 }
 
 :target {
-	scroll-margin-top: 72px;
+	scroll-margin-top: 128px;
 }
 
 .sveltekit-body {
@@ -45,7 +45,7 @@ body::-webkit-scrollbar {
 	overflow-y: auto;
 	overflow-x: hidden;
 
-	scrollbar-width: none;
+	scrollbar-width: thin;
 	scroll-snap-type: y mandatory;
 }
 

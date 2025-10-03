@@ -128,7 +128,7 @@
 
   .header {
     @extend .noise-texture;
-    width: 100%;
+    width: calc(100% - 11px);
     position: fixed;
     top: 0;
     z-index: 2;
