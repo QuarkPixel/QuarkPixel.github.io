@@ -4,7 +4,7 @@
         <title>Hsuan's Space</title>
         <link>https://quarkpixel.github.io</link>
         <description>Hsuan's personal blog about tech, life, and thoughts</description>
-        <lastBuildDate>Fri, 03 Oct 2025 05:37:58 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 03 Oct 2025 10:26:48 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js</generator>
         <language>zh-CN</language>
@@ -14,6 +14,36 @@
             <link>https://quarkpixel.github.io</link>
         </image>
         <copyright>All rights reserved 2025, Xuancong Meng</copyright>
+        <item>
+            <title><![CDATA[Logs::0xB5D]]></title>
+            <link>https://quarkpixel.github.io/logs/0xB5D</link>
+            <guid isPermaLink="false">https://quarkpixel.github.io/logs/0xB5D</guid>
+            <pubDate>Fri, 03 Oct 2025 10:14:00 GMT</pubDate>
+            <description><![CDATA[全是音乐分享]]></description>
+            <content:encoded><![CDATA[<p>我现在会习惯把值得写的内容先记下来，每周末写周刊的时候参考着写。</p>
+<p>然后发现这周全是音乐相关的 😂</p>
+<h2>This Temporary Ensemble Vol. 2 - EP</h2>
+<p>这是来自 <a href="https://9m88.co/">9m88</a> 的一张很特殊的 EP。</p>
+<iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="450" style="overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/cn/album/this-temporary-ensemble-vol-2-ep/1836073610"></iframe>
+
+<p>这张 EP 中，88 邀请了不同的创作者，和他们一起重新演绎自己的旧作。这绝对不是炒冷饭，甚至从某种角度上来说，我更喜欢这次的翻版。它少了流行元素，取而代之的是爵士的感觉，很有 Artist 的味道。如果想了解更多信息，我推荐你可以收听来自 <em>Vibration 歪波音室</em> 的<a href="https://xyzfm.link/s/FVePAc">《9月新歌推荐》，标记时点【24:21】</a>。</p>
+<p><del>我超级喜欢 9m88 !!!!</del></p>
+<h2>Citypop 令人感动</h2>
+<p>起因其实是最近比较火的一首 <em>真夜中のドア〜Stay with Me</em>：</p>
+<iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="150" style="overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/cn/album/%E7%9C%9F%E5%A4%9C%E4%B8%AD%E3%81%AE%E3%83%89%E3%82%A2-stay-with-me/1457964469?i=1457964473"></iframe>
+
+<p>音乐的高潮部分太有感染力，也就以此为契机听了更多的 Citypop。我爱<strong>这种充满都市浪漫气息的音乐风格</strong>。</p>
+<h2>Something Stupid</h2>
+<p>在听<a href="https://zh.wikipedia.org/wiki/%E7%AB%B9%E5%85%A7%E7%91%AA%E8%8E%89%E4%BA%9E">竹内玛莉亚</a>的过程中，我听到了一首熟悉的 <em>Something Stupid</em> ：</p>
+<iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="150" style="overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/cn/album/something-stupid/1541673202?i=1541673210"></iframe>
+
+<p>震惊的原因是，狭隘的我一直以为这首歌是出自于 <a href="https://breakingbad.fandom.com/wiki/Something_Stupid"><em>Better Call Saul</em></a>，当时就很喜欢这首歌，平时也会经常听。现在居然在这又听到了。经过搜索我发现这首歌有很多翻唱，最早由 <strong>Carson and Gaile</strong> 在 1966 年录制并发行。</p>
+<hr>
+<p>可能最近的心态有些变化罢，听的歌很多，自己好像更感性了。我认为这是件好事儿？不然总是麻木的，活着有什么意思～。</p>
+]]></content:encoded>
+            <author>xuancongmeng@gmail.com (Xuancong Meng)</author>
+            <category></category>
+        </item>
         <item>
             <title><![CDATA[Tauri 太丝滑了]]></title>
             <link>https://quarkpixel.github.io/p/251003-tauri-is-smooth</link>
@@ -135,7 +165,7 @@ main.6f18c.js           splash.85cfd.png
 <p>正因为此 Malloc Lab 才得以完成 😂 还有最后三章整本 CS:APP 就啃完了，希望可以一鼓作气 ☝️🤓</p>
 <h2>OK Go 发布新专辑</h2>
 <p>乐队 OK Go 发布了新专辑 And the Adjacent Possible，其中第一首歌的 MV 很令人印象深刻：</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/fwzbIUffcR4?si=eVskIeIPkwuTYZQu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fwzbIUffcR4?si=eVskIeIPkwuTYZQu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="video"></iframe>
 
 <p>看到的第一眼还以为是什么 MV 拍摄幕后花絮，后来发现好像就是正片 。OK Go 的松弛感以及天马行空的想象力，也许就是我喜欢的原因吧。「这个乐队的 MV 很有意思」何尝不是一种有力的营销 👀</p>
 <h2>本站的西文字体终于不像一坨狗屎了</h2>
@@ -341,7 +371,7 @@ main.6f18c.js           splash.85cfd.png
 <h2>与齐泽克「对坠入爱河的恐惧」</h2>
 <p>博主引用了齐泽克的一段访谈：</p>
 <center>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/rrxk2WzrE14?si=4XYjM4YaV947kUBB" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/rrxk2WzrE14?si=4XYjM4YaV947kUBB" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="video"></iframe>
 </center>
 
 <p>这是博主搬来和电影场景并置的片段。但问题是：<strong>为什么要把齐泽克放进来？</strong></p>
@@ -611,7 +641,7 @@ $$</p>
             <content:encoded><![CDATA[<p><strong>这是一篇讨论帖，由于本人没有实际上手过新的操作系统，故所有内容均来自网络，内容可能有误。欢迎发表自己的看法～</strong></p>
 <h2>引言</h2>
 <p>起因来自一条视频，展示了 Apple 在新系统的画笔中支持选择 <a href="https://en.wikipedia.org/wiki/High_dynamic_range">HDR</a> 颜色。</p>
-<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=114789544101486&bvid=BV1TW33zdE2T&cid=30832918627&p=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=114789544101486&bvid=BV1TW33zdE2T&cid=30832918627&p=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" class="video"></iframe>
 
 <p>给我的第一感受就是：<strong>怪</strong>。</p>
 <p>我其实能理解为什么 Apple 会允许选择 HDR 颜色，让系统整体对 HDR 有更深度的融合。但我不禁要问：这样的 HDR 真的合理吗？设计生态真的准备好了吗？</p>
@@ -644,13 +674,13 @@ $$</p>
 <p>我们确实看到了一些令人担忧的现象：抖音上有用户开始使用带有HDR高亮的表情包进行恶搞，这些内容因为比平常的图片更亮而获得关注。</p>
 <details>
   <summary>[视频] 这年头，表情包都自带HDR了？</summary>
-  <iframe src="//player.bilibili.com/player.html?isOutside=true&aid=114636049355816&bvid=BV1HkTuzcE7V&cid=30352540082&p=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+  <iframe src="//player.bilibili.com/player.html?isOutside=true&aid=114636049355816&bvid=BV1HkTuzcE7V&cid=30352540082&p=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" class="video"></iframe>
 </details>
 
 <p>类似的情况还出现在广告投放中，HDR被用作粗暴的注意力抓取工具，而不是精心设计的视觉体验。这些现象本身不是核心问题，而是设计缺位的副作用。</p>
 <details>
   <summary>[视频] 野生的网页 HDR 广告</summary>
-  <iframe src="//player.bilibili.com/player.html?isOutside=true&aid=1101573401&bvid=BV1sw4m1d7L1&cid=1463107028&p=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+  <iframe src="//player.bilibili.com/player.html?isOutside=true&aid=1101573401&bvid=BV1sw4m1d7L1&cid=1463107028&p=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" class="video"></iframe>
 </details>
 
 <p><strong>HDR UI 当前的问题不是 HDR 本身，而是没有明确的 &quot;设计语言&quot; 和规范来驾驭它。</strong></p>
