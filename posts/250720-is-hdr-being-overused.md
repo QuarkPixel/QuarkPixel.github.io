@@ -13,7 +13,7 @@ layout: blog
 
 起因来自一条视频，展示了 Apple 在新系统的画笔中支持选择 [HDR](https://en.wikipedia.org/wiki/High_dynamic_range) 颜色。
 
-<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=114789544101486&bvid=BV1TW33zdE2T&cid=30832918627&p=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=114789544101486&bvid=BV1TW33zdE2T&cid=30832918627&p=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" class="video"></iframe>
 
 给我的第一感受就是：**怪**。
 
@@ -60,14 +60,14 @@ HDR 不只是让画面更亮、更艳，更重要的是它为界面设计引入�
 
 <details>
   <summary>[视频] 这年头，表情包都自带HDR了？</summary>
-  <iframe src="//player.bilibili.com/player.html?isOutside=true&aid=114636049355816&bvid=BV1HkTuzcE7V&cid=30352540082&p=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+  <iframe src="//player.bilibili.com/player.html?isOutside=true&aid=114636049355816&bvid=BV1HkTuzcE7V&cid=30352540082&p=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" class="video"></iframe>
 </details>
 
 类似的情况还出现在广告投放中，HDR被用作粗暴的注意力抓取工具，而不是精心设计的视觉体验。这些现象本身不是核心问题，而是设计缺位的副作用。
 
 <details>
   <summary>[视频] 野生的网页 HDR 广告</summary>
-  <iframe src="//player.bilibili.com/player.html?isOutside=true&aid=1101573401&bvid=BV1sw4m1d7L1&cid=1463107028&p=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+  <iframe src="//player.bilibili.com/player.html?isOutside=true&aid=1101573401&bvid=BV1sw4m1d7L1&cid=1463107028&p=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" class="video"></iframe>
 </details>
 
 **HDR UI 当前的问题不是 HDR 本身，而是没有明确的 "设计语言" 和规范来驾驭它。**

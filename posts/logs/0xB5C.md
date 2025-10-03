@@ -21,7 +21,7 @@ layout: logs
 
 乐队 OK Go 发布了新专辑 And the Adjacent Possible，其中第一首歌的 MV 很令人印象深刻：
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/fwzbIUffcR4?si=eVskIeIPkwuTYZQu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fwzbIUffcR4?si=eVskIeIPkwuTYZQu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="video"></iframe>
 
 看到的第一眼还以为是什么 MV 拍摄幕后花絮，后来发现好像就是正片 。OK Go 的松弛感以及天马行空的想象力，也许就是我喜欢的原因吧。「这个乐队的 MV 很有意思」何尝不是一种有力的营销 👀
 

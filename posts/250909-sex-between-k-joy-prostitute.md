@@ -17,7 +17,7 @@ layout: blog
 博主引用了齐泽克的一段访谈：
 
 <center>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/rrxk2WzrE14?si=4XYjM4YaV947kUBB" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/rrxk2WzrE14?si=4XYjM4YaV947kUBB" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="video"></iframe>
 </center>
 
 这是博主搬来和电影场景并置的片段。但问题是：**为什么要把齐泽克放进来？**
