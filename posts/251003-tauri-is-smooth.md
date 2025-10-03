@@ -12,7 +12,7 @@ layout: blog
 昨天尝试使用 [Tauri](https://tauri.app/) 将网页构建成本地应用，使用体验很丝滑，很爽。
 
 ## “Rust 的定位其实是脚本语言”
-标题的这句调侃出自于 [Тsфdiиg 在推特上的回复](https://x.com/tsoding/status/1969190491246731449)：
+标题的这句调侃出自于 [Tsoding 在推特上的回复](https://x.com/tsoding/status/1969190491246731449)：
 > I always knew that the niche of Rust is a Scripting Language.
 
 这句话其实是他在回应一条新闻[^1]时说的。
