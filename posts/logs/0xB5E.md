@@ -1,7 +1,7 @@
 ---
-weekNumber: 2909
+weekNumber: 0xB5E
 description: 科技新闻大乱斗
-date: 2025-10-03T18:14:00+08:00
+date: 2025-10-11T09:58:00+08:00
 author: Xuancong Meng
 tags:
   - Technique
