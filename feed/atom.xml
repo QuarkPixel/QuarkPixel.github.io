@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://quarkpixel.github.io</id>
     <title>Hsuan's Space</title>
-    <updated>2025-10-11T01:58:21.240Z</updated>
+    <updated>2025-10-11T04:36:28.102Z</updated>
     <generator>Feed for Node.js</generator>
     <author>
         <name>Xuancong Meng</name>
@@ -15,6 +15,37 @@
     <logo>https://quarkpixel.github.io/favicon/dark.svg</logo>
     <icon>https://quarkpixel.github.io/favicon.ico</icon>
     <rights>All rights reserved 2025, Xuancong Meng</rights>
+    <entry>
+        <title type="html"><![CDATA[Logs::0xB5E]]></title>
+        <id>https://quarkpixel.github.io/logs/0xB5E</id>
+        <link href="https://quarkpixel.github.io/logs/0xB5E"/>
+        <updated>2025-10-11T01:58:00.000Z</updated>
+        <summary type="html"><![CDATA[科技新闻大乱斗]]></summary>
+        <content type="html"><![CDATA[<p>调休罪该万死！</p>
+<h2>Sora 2 的新商业模式</h2>
+<p>文章链接：<a href="https://web.okjike.com/u/FCEA29D3-5BB5-4174-B7A9-1DEE77CEDC46/post/68e09b4b342fa4ca3a823f51">orange.ai@即刻</a></p>
+<p>Sora于2025年早些时候公开发布后，迅速流行，用户生成涉及热门IP的视频，导致版权投诉激增。日本版权方（尤其是任天堂等巨头）是主要投诉来源之一，他们通过DMCA通知要求OpenAI移除侵权内容。报道显示，Sora上线一周内收到数百起投诉，主要来自亚洲和好莱坞。</p>
+<p>但现在Altman很显然已经找到了新的出路，即向版权所有方分成。这是一个绝妙的想法。</p>
+<h2>你知道你是AI生成的吗？</h2>
+<p>没错，这条还是关于 Sora 2 ，讨论其生成的一类视频。
+大致内容就是一个记者采访群众，问「你知道你是AI生成的吗？」，受访者的回答千奇百怪，如「我当然知道」「我怎么可能是呢？不然我那么努力工作有什么意义」。可能是与现实的那条边界快被打破，视频看得我毛骨悚然。</p>
+<p>毕竟展开来讲，当前原子化的社会里谁又不想那个生成出来的AI呢？<del>而现在连AI都不如，人家至少还会飞</del></p>
+<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=115308429907957&bvid=BV1nyH3zBEzC&cid=32808111821&p=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" class="video"></iframe>
+
+<p>有《楚门的世界》既视感。</p>
+<h2>有开源项目要救我于Arc的水火之中了吗！</h2>
+<p>我挺喜欢这款 macOS 浏览器的，体积仅 8.19 MB，侧边栏优先设计搭配垂直标签页，使导航更自然清爽。界面简洁现代，专注内容浏览，优化了速度和内存占用，是追求高效和极简体验的不错选择。</p>
+<p><a href="https://github.com/nook-browser/Nook">Nook</a> 是一款仿<a href="https://arc.net/">Arc</a>的浏览器，继承了它大部分的UX与UI，很令我惊喜。直到现在我一直使用的是Arc浏览器，一款被 <a href="https://www.thebrowser.company/">The Browser Company</a>遗弃的很不错的浏览器<a href="%E5%8F%82%E8%80%83%EF%BC%9Ahttps://youtu.be/NXsId9C4zpg?si=72ctR8qzGqSX2XMA">^1</a>。当然现在也有类似的浏览器如<a href="https://zen-browser.app/">Zen</a>是复刻Arc的开源项目，但奈何实在用不来Firefox内核，且还相当不完善😂。</p>
+<p>而Nook令我惊喜的是，它是由Swift编写的，所以动画效果较Zed就更加流畅。他目前的体积只有8.19MB，得益于直接调用了macOS的系统内容。<del>（也许理解为Wrapper而非浏览器更准确一些？）</del></p>
+<p>现在还没有切换至 Nook ，想着还是等再发展一下？但是发现这个项目令我开心。</p>
+]]></content>
+        <author>
+            <name>Xuancong Meng</name>
+            <email>xuancongmeng@gmail.com</email>
+            <uri>https://quarkpixel.github.io</uri>
+        </author>
+        <category label=""/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[占星的奇怪用法]]></title>
         <id>https://quarkpixel.github.io/p/251009-discussing-constellations-is-kind-of-positioning</id>
@@ -64,37 +95,6 @@
 <p>震惊的原因是，狭隘的我一直以为这首歌是出自于 <a href="https://breakingbad.fandom.com/wiki/Something_Stupid"><em>Better Call Saul</em></a>，当时就很喜欢这首歌，平时也会经常听。现在居然在这又听到了。经过搜索我发现这首歌有很多翻唱，最早由 <strong>Carson and Gaile</strong> 在 1966 年录制并发行。</p>
 <hr>
 <p>可能最近的心态有些变化罢，听的歌很多，自己好像更感性了。我认为这是件好事儿？不然总是麻木的，活着有什么意思～。</p>
-]]></content>
-        <author>
-            <name>Xuancong Meng</name>
-            <email>xuancongmeng@gmail.com</email>
-            <uri>https://quarkpixel.github.io</uri>
-        </author>
-        <category label=""/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Logs::0x2909]]></title>
-        <id>https://quarkpixel.github.io/logs/0xB5E</id>
-        <link href="https://quarkpixel.github.io/logs/0xB5E"/>
-        <updated>2025-10-03T10:14:00.000Z</updated>
-        <summary type="html"><![CDATA[科技新闻大乱斗]]></summary>
-        <content type="html"><![CDATA[<p>调休罪该万死！</p>
-<h2>Sora 2 的新商业模式</h2>
-<p>文章链接：<a href="https://web.okjike.com/u/FCEA29D3-5BB5-4174-B7A9-1DEE77CEDC46/post/68e09b4b342fa4ca3a823f51">orange.ai@即刻</a></p>
-<p>Sora于2025年早些时候公开发布后，迅速流行，用户生成涉及热门IP的视频，导致版权投诉激增。日本版权方（尤其是任天堂等巨头）是主要投诉来源之一，他们通过DMCA通知要求OpenAI移除侵权内容。报道显示，Sora上线一周内收到数百起投诉，主要来自亚洲和好莱坞。</p>
-<p>但现在Altman很显然已经找到了新的出路，即向版权所有方分成。这是一个绝妙的想法。</p>
-<h2>你知道你是AI生成的吗？</h2>
-<p>没错，这条还是关于 Sora 2 ，讨论其生成的一类视频。
-大致内容就是一个记者采访群众，问「你知道你是AI生成的吗？」，受访者的回答千奇百怪，如「我当然知道」「我怎么可能是呢？不然我那么努力工作有什么意义」。可能是与现实的那条边界快被打破，视频看得我毛骨悚然。</p>
-<p>毕竟展开来讲，当前原子化的社会里谁又不想那个生成出来的AI呢？<del>而现在连AI都不如，人家至少还会飞</del></p>
-<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=115308429907957&bvid=BV1nyH3zBEzC&cid=32808111821&p=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" class="video"></iframe>
-
-<p>有《楚门的世界》既视感。</p>
-<h2>有开源项目要救我于Arc的水火之中了吗！</h2>
-<p>我挺喜欢这款 macOS 浏览器的，体积仅 8.19 MB，侧边栏优先设计搭配垂直标签页，使导航更自然清爽。界面简洁现代，专注内容浏览，优化了速度和内存占用，是追求高效和极简体验的不错选择。</p>
-<p><a href="https://github.com/nook-browser/Nook">Nook</a> 是一款仿<a href="https://arc.net/">Arc</a>的浏览器，继承了它大部分的UX与UI，很令我惊喜。直到现在我一直使用的是Arc浏览器，一款被 <a href="https://www.thebrowser.company/">The Browser Company</a>遗弃的很不错的浏览器<a href="%E5%8F%82%E8%80%83%EF%BC%9Ahttps://youtu.be/NXsId9C4zpg?si=72ctR8qzGqSX2XMA">^1</a>。当然现在也有类似的浏览器如<a href="https://zen-browser.app/">Zen</a>是复刻Arc的开源项目，但奈何实在用不来Firefox内核，且还相当不完善😂。</p>
-<p>而Nook令我惊喜的是，它是由Swift编写的，所以动画效果较Zed就更加流畅。他目前的体积只有8.19MB，得益于直接调用了macOS的系统内容。<del>（也许理解为Wrapper而非浏览器更准确一些？）</del></p>
-<p>现在还没有切换至 Nook ，想着还是等再发展一下？但是发现这个项目令我开心。</p>
 ]]></content>
         <author>
             <name>Xuancong Meng</name>
