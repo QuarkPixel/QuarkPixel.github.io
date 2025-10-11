@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://quarkpixel.github.io</id>
     <title>Hsuan's Space</title>
-    <updated>2025-10-11T04:36:28.102Z</updated>
+    <updated>2025-10-11T04:36:48.020Z</updated>
     <generator>Feed for Node.js</generator>
     <author>
         <name>Xuancong Meng</name>
@@ -34,7 +34,6 @@
 
 <p>有《楚门的世界》既视感。</p>
 <h2>有开源项目要救我于Arc的水火之中了吗！</h2>
-<p>我挺喜欢这款 macOS 浏览器的，体积仅 8.19 MB，侧边栏优先设计搭配垂直标签页，使导航更自然清爽。界面简洁现代，专注内容浏览，优化了速度和内存占用，是追求高效和极简体验的不错选择。</p>
 <p><a href="https://github.com/nook-browser/Nook">Nook</a> 是一款仿<a href="https://arc.net/">Arc</a>的浏览器，继承了它大部分的UX与UI，很令我惊喜。直到现在我一直使用的是Arc浏览器，一款被 <a href="https://www.thebrowser.company/">The Browser Company</a>遗弃的很不错的浏览器<a href="%E5%8F%82%E8%80%83%EF%BC%9Ahttps://youtu.be/NXsId9C4zpg?si=72ctR8qzGqSX2XMA">^1</a>。当然现在也有类似的浏览器如<a href="https://zen-browser.app/">Zen</a>是复刻Arc的开源项目，但奈何实在用不来Firefox内核，且还相当不完善😂。</p>
 <p>而Nook令我惊喜的是，它是由Swift编写的，所以动画效果较Zed就更加流畅。他目前的体积只有8.19MB，得益于直接调用了macOS的系统内容。<del>（也许理解为Wrapper而非浏览器更准确一些？）</del></p>
 <p>现在还没有切换至 Nook ，想着还是等再发展一下？但是发现这个项目令我开心。</p>
