@@ -4,7 +4,7 @@
         <title>Hsuan's Space</title>
         <link>https://quarkpixel.github.io</link>
         <description>Hsuan's personal blog about tech, life, and thoughts</description>
-        <lastBuildDate>Sun, 19 Oct 2025 13:24:15 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 19 Oct 2025 13:26:44 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js</generator>
         <language>zh-CN</language>
@@ -36,7 +36,7 @@
 <p>上文提到自己甚至束手无策的尝试去使用宗教的力量，我以此为契机试着去了解佛教。因为我不止一次从别人口中听到佛教的好。鉴于目前连入门都算不上，就先不写一些具体的细节了。</p>
 ]]></content:encoded>
             <author>xuancongmeng@gmail.com (Xuancong Meng)</author>
-            <category>Life</category>
+            <category></category>
         </item>
         <item>
             <title><![CDATA[Logs::0xB5E]]></title>

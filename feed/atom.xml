@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://quarkpixel.github.io</id>
     <title>Hsuan's Space</title>
-    <updated>2025-10-19T13:24:15.444Z</updated>
+    <updated>2025-10-19T13:26:44.134Z</updated>
     <generator>Feed for Node.js</generator>
     <author>
         <name>Xuancong Meng</name>
@@ -41,7 +41,7 @@
             <email>xuancongmeng@gmail.com</email>
             <uri>https://quarkpixel.github.io</uri>
         </author>
-        <category label="Life"/>
+        <category label=""/>
     </entry>
     <entry>
         <title type="html"><![CDATA[Logs::0xB5E]]></title>
