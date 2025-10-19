@@ -3,7 +3,8 @@ weekNumber: 0xB5F
 description: 小猫小猫快回家
 date: 2025-10-19T21:22:00+08:00
 author: Xuancong Meng
-tags: Life
+tags:
+  - Life
 layout: logs
 ---
 
