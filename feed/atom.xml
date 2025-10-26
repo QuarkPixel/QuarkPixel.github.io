@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://quarkpixel.github.io</id>
     <title>Hsuan's Space</title>
-    <updated>2025-10-19T13:26:44.134Z</updated>
+    <updated>2025-10-26T05:04:02.922Z</updated>
     <generator>Feed for Node.js</generator>
     <author>
         <name>Xuancong Meng</name>
@@ -15,6 +15,29 @@
     <logo>https://quarkpixel.github.io/favicon/dark.svg</logo>
     <icon>https://quarkpixel.github.io/favicon.ico</icon>
     <rights>All rights reserved 2025, Xuancong Meng</rights>
+    <entry>
+        <title type="html"><![CDATA[Logs::0xB60]]></title>
+        <id>https://quarkpixel.github.io/logs/0xB60</id>
+        <link href="https://quarkpixel.github.io/logs/0xB60"/>
+        <updated>2025-10-26T04:17:00.000Z</updated>
+        <summary type="html"><![CDATA[点点是笨猫]]></summary>
+        <content type="html"><![CDATA[<p>点点<a href="%E4%B9%9F%E5%B0%B1%E6%98%AF%E6%88%91%E5%9C%A8%5B0xB5F%5D(./0xB5F)%E4%B8%AD%E6%8F%90%E5%88%B0%E8%B5%B0%E5%A4%B1%E7%9A%84%E9%82%A3%E5%8F%AA%E3%80%82">^1</a>已经平安回家了，后来因为实在没办法了，请了专业找猫的团队。</p>
+<h2>你为何不喊也不叫</h2>
+<p>点点藏在了我们住的楼的正下方的一个「洞」中，怀疑是知道我们在这但是不知道怎么上楼。这个洞也很有说法，整个小区的楼的边缘都有一层缝，往里面纵深有三四米。</p>
+<p>她在里面也不嚎也不叫，天天下去找他找了一个星期都不回应我们。实在是受不了🤦‍♂️。</p>
+<p><img src="/img/logs/0xb60-0.jpeg" alt=""></p>
+<p>后来点点也不出来，只好我们钻进去抓她。我也是第一次意识到人可以从那么小的缝钻进去，只不过我身上的衣服遭殃了，全是泥巴。</p>
+<h2>爱是我们必经的痛苦</h2>
+<iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="450" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/cn/album/1644823778"></iframe>
+
+]]></content>
+        <author>
+            <name>Xuancong Meng</name>
+            <email>xuancongmeng@gmail.com</email>
+            <uri>https://quarkpixel.github.io</uri>
+        </author>
+        <category label=""/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Logs::0xB5F]]></title>
         <id>https://quarkpixel.github.io/logs/0xB5F</id>
