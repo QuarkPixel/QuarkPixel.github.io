@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://quarkpixel.github.io</id>
     <title>Hsuan's Space</title>
-    <updated>2025-11-08T15:53:12.490Z</updated>
+    <updated>2025-11-08T15:55:59.246Z</updated>
     <generator>Feed for Node.js</generator>
     <author>
         <name>Xuancong Meng</name>
@@ -50,6 +50,8 @@
 <p>在推特上刷到<a href="https://x.com/cerpow/status/1964953851603358112">使用 TypeGPU 实现的超级炫酷的进度条</a>，很有意思。</p>
 <h2>媽媽送給我最特別的禮物，是教我如何欣賞一道彩虹。</h2>
 <p>最近很迷窦靖童的歌，在这里分享一首《烟花》。</p>
+<iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="150" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/cn/album/%E7%83%9F%E8%8A%B1/1680713507?i=1680713510"></iframe>
+
 ]]></content>
         <author>
             <name>Xuancong Meng</name>
