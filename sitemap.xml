@@ -5,6 +5,9 @@
     <loc>https://quarkpixel.github.io/about</loc>
   </url>
   <url>
+    <loc>https://quarkpixel.github.io/archive</loc>
+  </url>
+  <url>
     <loc>https://quarkpixel.github.io</loc>
   </url>
   <url>
@@ -33,6 +36,9 @@
   </url>
   <url>
     <loc>https://quarkpixel.github.io/logs/0xB60</loc>
+  </url>
+  <url>
+    <loc>https://quarkpixel.github.io/logs/0xB62</loc>
   </url>
   <url>
     <loc>https://quarkpixel.github.io/p/250523-never-regarded-rust-as-safety</loc>
@@ -81,5 +87,8 @@
   </url>
   <url>
     <loc>https://quarkpixel.github.io/p/251009-discussing-constellations-is-kind-of-positioning</loc>
+  </url>
+  <url>
+    <loc>https://quarkpixel.github.io/p/251108-how-to-stay-aware</loc>
   </url>
 </urlset>

@@ -11,6 +11,32 @@
     },
     "items": [
         {
+            "id": "https://quarkpixel.github.io/logs/0xB62",
+            "content_html": "<p>最近在思考如何保持觉知，<a href=\"/p/251108-how-to-stay-aware\">想了一些有的没的</a>。</p>\n<h2>「人生皆苦」并非悲观</h2>\n<p>了解了佛教中的「人生皆苦海」概念后，引发了一些思考。\n首先这个概念将苦分为了三层：</p>\n<ul>\n<li><strong>苦苦</strong>\n苦苦是最浅层的，代表着最直接的痛苦。如分手、受伤、生病这些。</li>\n<li><strong>坏苦</strong>\n按我粗浅的理解，坏苦是苦苦的先前态，也就是快乐。因为世事无常，有得必有失。当你养了一只小猫时，你感到的快乐就是坏苦。当他有一天离你而去时，坏苦就应验成了苦苦。</li>\n<li><strong>行苦</strong>\n当你意识到“并没有什么事情是单纯的快乐，都是所谓的「坏苦」时，那这种感受就是行苦了。<strong>听起来很悲观不是吗？世上其实没啥快乐的事，他们的内核都是悲伤的。</strong></li>\n</ul>\n<p>但我发现，这三层苦好像都能对应一种乐：乐乐、好乐以及行乐<a href=\"%E5%90%8D%E5%AD%97%E6%98%AF%E6%88%91%E8%87%AA%E5%B7%B1%E7%BC%96%E7%9A%84%EF%BC%8C%E6%B2%A1%E6%9C%89%E4%BB%BB%E4%BD%95%E4%B8%A5%E8%B0%A8%E5%90%AB%E4%B9%89%EF%BC%8C%E5%8F%AA%E6%98%AF%E4%B8%BA%E4%BA%86%E4%B8%8E%E4%B8%89%E5%B1%82%E8%8B%A6%E5%AF%B9%E5%BA%94%E3%80%82\">^1</a>。</p>\n<ul>\n<li>坏苦：<strong>乐乐</strong>\n最容易理解的，当你在快乐时，虽然是种坏苦，但其最明显的特征还是本身的快乐，因此暂且将其定为“乐乐”。</li>\n<li>苦苦：<strong>好乐</strong>\n最普世的痛苦，何尝不是一种乐呢？记得某个心理学家说过「禁欲这件事本身就让人有性欲」。当你因为某件事而痛苦时，还是因为世事无常，其后定会有一个瞬间让你补齐痛苦的感受，比如禁欲后突破的那一瞬间。</li>\n<li>行苦：<strong>行乐</strong>\n当你意识到当下的痛苦都是暂时的，一定会有熬出头的那一天，且当下经历的痛苦都会转化成自己的力量时，一切都充满了希望。</li>\n</ul>\n<p>这三层乐讨论的其实和三层苦是一样的东西，但我更喜欢后者的表达，差别取决于两者观察的视角不同。佛教中强调“人生皆苦”我认为主要还是警醒人们“苦”是逃不掉的。但我觉得大家生活的已经够苦了，辩证地看待以给自己一些慰籍不是更好吗？当然可能佛教中有与我刚才提到的观点类似的说法，只不过我还没了解到。</p>\n<p>送一首来自 Louis Armstrong 的 <em>What a Wonderful World</em> 给你。</p>\n<iframe allow=\"autoplay *; encrypted-media *;\" frameborder=\"0\" height=\"150\" style=\"width:100%;max-width:660px;overflow:hidden;background:transparent;\" sandbox=\"allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation\" src=\"https://embed.music.apple.com/cn/album/what-a-wonderful-world/1440787250?i=1440787254\"></iframe>\n\n<h2>WebGPU 好起来了</h2>\n<p>在推特上刷到<a href=\"https://x.com/cerpow/status/1964953851603358112\">使用 TypeGPU 实现的超级炫酷的进度条</a>，很有意思。</p>\n<h2>媽媽送給我最特別的禮物，是教我如何欣賞一道彩虹。</h2>\n<p>最近很迷窦靖童的歌，在这里分享一首《烟花》。</p>\n",
+            "url": "https://quarkpixel.github.io/logs/0xB62",
+            "title": "Logs::0xB62",
+            "summary": "''",
+            "date_modified": "2025-11-08T15:06:00.000Z",
+            "author": {
+                "name": "Xuancong Meng",
+                "url": "https://quarkpixel.github.io"
+            },
+            "tags": []
+        },
+        {
+            "id": "https://quarkpixel.github.io/p/251108-how-to-stay-aware",
+            "content_html": "<p>上周没有写周刊，自我内心处于一些纠结焦虑中。但客观的讲，这半个月来我过的很快乐。</p>\n<h2>自觉地活着清醒</h2>\n<p>过的快乐让我感到<strong>惶恐</strong>。因为我觉知不到痛苦，丢失感官信息的感觉不好，就像不会游泳的人脚怎么样也够不到池底。这个时候我也许大多就逆来顺受，肆意的感受快乐麻木自己。事实上我大多时候都是这样的，一大部分上周没有写 log 也主要是因为这点：没有了痛苦，自然就会坚持不住那些自己在痛苦中养成的习惯。</p>\n<p>好在我之间给自己立的 <a href=\"/logs/0xB59#%E4%B8%BA%E4%BB%80%E4%B9%88%E5%86%99-logs\">flag</a> 或多或少还记得，突然不写的决定提醒我好像出现了一些异样。遂有了这些想法，很有意思。</p>\n<p>“在快乐中保持觉知”是一个重要的课题。以前的我可以被痛苦驱动，让自己做出改变；现在的我需要寻找一个更加普世的内驱力来驱动自己。</p>\n",
+            "url": "https://quarkpixel.github.io/p/251108-how-to-stay-aware",
+            "title": "如何保持觉知",
+            "summary": "失踪后的一些想法",
+            "date_modified": "2025-11-08T05:12:00.000Z",
+            "author": {
+                "name": "Xuancong Meng",
+                "url": "https://quarkpixel.github.io"
+            },
+            "tags": []
+        },
+        {
             "id": "https://quarkpixel.github.io/logs/0xB60",
             "content_html": "<p>点点<a href=\"%E4%B9%9F%E5%B0%B1%E6%98%AF%E6%88%91%E5%9C%A8%5B0xB5F%5D(./0xB5F)%E4%B8%AD%E6%8F%90%E5%88%B0%E8%B5%B0%E5%A4%B1%E7%9A%84%E9%82%A3%E5%8F%AA%E3%80%82\">^1</a>已经平安回家了，后来因为实在没办法了，请了专业找猫的团队。</p>\n<h2>你为何不喊也不叫</h2>\n<p>点点藏在了我们住的楼的正下方的一个「洞」中，怀疑是知道我们在这但是不知道怎么上楼。这个洞也很有说法，整个小区的楼的边缘都有一层缝，往里面纵深有三四米。</p>\n<p>她在里面也不嚎也不叫，天天下去找他找了一个星期都不回应我们。实在是受不了🤦‍♂️。</p>\n<p><img src=\"/img/logs/0xb60-0.jpeg\" alt=\"\"></p>\n<p>后来点点也不出来，只好我们钻进去抓她。我也是第一次意识到人可以从那么小的缝钻进去，只不过我身上的衣服遭殃了，全是泥巴。</p>\n<h2>爱是我们必经的痛苦</h2>\n<iframe allow=\"autoplay *; encrypted-media *;\" frameborder=\"0\" height=\"450\" style=\"width:100%;max-width:660px;overflow:hidden;background:transparent;\" sandbox=\"allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation\" src=\"https://embed.music.apple.com/cn/album/1644823778\"></iframe>\n\n",
             "url": "https://quarkpixel.github.io/logs/0xB60",
