@@ -4,7 +4,7 @@
         <title>Hsuan's Space</title>
         <link>https://quarkpixel.github.io</link>
         <description>Hsuan's personal blog about tech, life, and thoughts</description>
-        <lastBuildDate>Sat, 08 Nov 2025 15:55:59 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 14 Nov 2025 01:45:56 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for Node.js</generator>
         <language>zh-CN</language>
@@ -14,6 +14,27 @@
             <link>https://quarkpixel.github.io</link>
         </image>
         <copyright>All rights reserved 2025, Xuancong Meng</copyright>
+        <item>
+            <title><![CDATA[Logs::0xB63]]></title>
+            <link>https://quarkpixel.github.io/logs/0xB63</link>
+            <guid isPermaLink="false">https://quarkpixel.github.io/logs/0xB63</guid>
+            <pubDate>Fri, 14 Nov 2025 01:44:00 GMT</pubDate>
+            <description><![CDATA['何为目标']]></description>
+            <content:encoded><![CDATA[<p>再和老师交流的过程中，老师指出了我没有目标这个事实。好像确实是这样，自己甚至会以此为某种「与众不同」的谈资：</p>
+<blockquote>
+<p>谁能料到未来怎么样？不都是计划赶不上变化，所以做那么多规划干什么呢？过好当下不就行了，以后的就交给以后再说好了。</p>
+</blockquote>
+<p>老师说，她之前就感受到我学习没有目标，整个劲是散的，学习是发散的，所以其实并没有真的学到什么。</p>
+<p>她和我讲这些是因为我向她分享了关于我<a href="/p/251108-how-to-stay-aware">因感受不到痛苦而恐惧</a>。她是这么分析的：</p>
+<blockquote>
+<p>以前你都是被痛苦驱动着，后面一直有个东西推着你，推着就能感受到你的存在。但是现在这个东西消失了，一下子你就没有方向了，<strong>你就不知道你在哪了</strong>。所以你现在缺少一个目标，如果你有个目标，你就知道你应该走向哪，往哪去。</p>
+<p>当然目标不是为了让你去真的实现的，现在变化太快了，谁知道以后怎么样呢？<strong>目标只是为了让你知道你应该往哪个方向使劲</strong>。</p>
+</blockquote>
+<p>是这样的啊，我以前没有太长远的目标，根本原因是我不需要或者没有意识到应该要活着清醒。我确实无解了「目标」的作用。</p>
+]]></content:encoded>
+            <author>xuancongmeng@gmail.com (Xuancong Meng)</author>
+            <category></category>
+        </item>
         <item>
             <title><![CDATA[Logs::0xB62]]></title>
             <link>https://quarkpixel.github.io/logs/0xB62</link>
