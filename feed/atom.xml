@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://quarkpixel.github.io</id>
     <title>Hsuan's Space</title>
-    <updated>2025-11-21T09:18:03.806Z</updated>
+    <updated>2026-04-04T03:18:43.803Z</updated>
     <generator>Feed for Node.js</generator>
     <author>
         <name>Xuancong Meng</name>
@@ -14,7 +14,163 @@
     <subtitle>Hsuan's personal blog about tech, life, and thoughts</subtitle>
     <logo>https://quarkpixel.github.io/favicon/dark.svg</logo>
     <icon>https://quarkpixel.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2025, Xuancong Meng</rights>
+    <rights>All rights reserved 2026, Xuancong Meng</rights>
+    <entry>
+        <title type="html"><![CDATA[看《Zero To Production In Rust》，顺手造个轮子]]></title>
+        <id>https://quarkpixel.github.io/p/260404-lets-zero-to-production-in-rust</id>
+        <link href="https://quarkpixel.github.io/p/260404-lets-zero-to-production-in-rust"/>
+        <updated>2026-04-04T02:44:00.000Z</updated>
+        <summary type="html"><![CDATA[本文纯属事逼找茬]]></summary>
+        <content type="html"><![CDATA[<p>很喜欢这本书。我一直秉持「实践大于理解」的学习理念。这样学起来既有成就感推着自己往下走，又能顺便把常见用法记住了。</p>
+<p>这本书正好符合上述理念：带领搭建邮件订阅服务，每次新概念的引入都是碰见了刚需，可以直觉地通过上下文快速理解。</p>
+<blockquote>
+<p><strong>关于中文版</strong></p>
+<p>我一开始是从多抓鱼淘的二手中文版《从零构建 Rust 生产级服务》，但读了几章后发现翻译错误不少，还有一些莫名其妙的错漏，排版也经不起细看（代码块里本该等宽的字体挤成一坨）。所以现在我中英文对照着看（英语还是太烂了😭），最终还是以英文原版为准。中文版当辅助参考可以，但不太建议当主力。</p>
+</blockquote>
+<p><strong>Z-Library 下载地址：</strong></p>
+<ul>
+<li>英文原版：<a href="https://z-library.sk/book/dRzarqLJOo/zero-to-production-in-rust-an-opinionated-introduction-to-backend-development.html">Zero To Production In Rust</a></li>
+<li>中文版：<a href="https://z-library.sk/book/QRM1ZynBRV/%E4%BB%8E%E9%9B%B6%E6%9E%84%E5%BB%BArust%E7%94%9F%E4%BA%A7%E7%BA%A7%E6%9C%8D%E5%8A%A1.html">从零构建 Rust 生产级服务</a></li>
+</ul>
+<h2>这个系列想做什么</h2>
+<p>这本书写于 2021 年，Rust 生态变化又快得离谱。当时的很多写法现在已经有更简洁、更地道的替代方案了。</p>
+<p>所以我想做的不是逐章摘抄书的内容，而是记录跟着书学的过程中遇到的那些「书上这么写，但现在可以写得更好」的地方。姑且算是一份学习笔记吧，<del>但更多是我强迫症性格的极致体现🤣</del>。</p>
+<hr>
+<h2>为了写得更优雅，我自己造了个轮子</h2>
+<p>进入正题。<a href="https://lpalmieri.com/posts/an-introduction-to-property-based-testing-in-rust/#implementing-the-arbitrary-trait">书的第 6 章</a> 讲到给邮箱验证写属性测试（property-based test），用的是 <code>quickcheck</code> + <code>fake</code> 的组合：</p>
+<pre><code class="language-rust">//! src/domain/subscriber_email.rs
+
+#[cfg(test)]
+mod tests {
+  #[derive(Debug, Clone)]
+  struct ValidEmailFixture(pub String);
+
+  impl quickcheck::Arbitrary for ValidEmailFixture {
+    fn arbitrary&lt;G: quickcheck::Gen&gt;(g: &amp;mut G) -&gt; Self {
+       let email = SafeEmail().fake_with_rng(g);
+       Self(email)
+    }
+  }
+
+  #[quickcheck_macros::quickcheck]
+  fn valid_emails_are_parsed_successfully(valid_email: ValidEmailFixture) -&gt; bool {
+    SubscriberEmail::parse(valid_email.0).is_ok()
+  }
+}
+</code></pre>
+<p>逻辑很清晰，代码也很干净。<code>quickcheck</code> 的 <code>Gen</code> 类型在老版本中实现了 <code>rand::Rng</code>，直接传给 <code>fake</code> 的 <code>fake_with_rng()</code> 就能生成确定性的随机数据。</p>
+<p>但编译器给了我们当头一棒，<del>剧本不是这么来的啊？</del></p>
+<pre><code>error[E0277]: the trait bound `Gen: Rng` is not satisfied
+</code></pre>
+<p>查了一圈才搞明白：<code>quickcheck</code> 升到 1.x 之后，作者把 <code>Gen</code> 从 trait 改成了 struct，并且<strong>有意移除了所有 <code>rand</code> 相关的 trait 实现</strong>。理由是 rand 生态的 semver 变动太频繁了，不想让 quickcheck 的公共 API 被 rand 的版本更新拖着走。</p>
+<p><a href="https://github.com/BurntSushi/quickcheck/issues/241">https://github.com/BurntSushi/quickcheck/issues/241</a></p>
+<p>能理解作者的选择，但这让我们处于尴尬的境地中。</p>
+<ul>
+<li><p><strong>降级到书上用的版本。</strong> 理论上应该这么做——保持 Rust 2021 Edition、用一样的库版本和工具链。但面对一门变化这么快的语言，我给自己定了个目标：书中提到的所有工具都要用最新版本实现对应功能。所以这条路走不通。<del>我就是和自己过不去</del></p>
+</li>
+<li><p>弃用 <code>.fake_with_rng()</code>，直接用 <code>.fake()</code> 生成与 Rng 无关的随机邮箱。但本着折腾为上的原则，我不接受 😜</p>
+</li>
+<li><p><strong>拉 fake 的 git master 分支。</strong> 当时以为问题是 fake 4.4.0（最新发布版）用的 <code>rand 0.9</code>，而 <code>quickcheck 1.1.0</code> 已经升到了 <code>rand 0.10</code>。升级 <code>rand 0.10</code> 的 PR 在当时（2月26日）刚合并到 master，但还没发布新版本。尝试了但失败了，因为问题根本不在 fake。<del>我操 quickcheck 怎么这么坑 😡</del></p>
+</li>
+<li><p><strong>手动种子桥接。</strong> 代码太臃肿了，吃过细糠怎么咽粗粮？见过那么优雅的写法，肯定想让自己代码也那么干净！
+原版：</p>
+<pre><code class="language-rust">impl quickcheck::Arbitrary for ValidEmailFixture {
+    fn arbitrary(g: &amp;mut quickcheck::Gen) -&gt; Self {
+        let email = SafeEmail().fake_with_rng(g);
+        Self(email)
+    }
+}
+</code></pre>
+<p>桥接后：</p>
+<pre><code class="language-rust">impl quickcheck::Arbitrary for ValidEmailFixture {
+    fn arbitrary(g: &amp;mut quickcheck::Gen) -&gt; Self {
+        use quickcheck::Arbitrary;
+        use rand::SeedableRng;
+
+        let seed: [u8; 32] = std::array::from_fn(|_| u8::arbitrary(g));
+        let mut rng = rand::rngs::StdRng::from_seed(seed);
+        let email = SafeEmail().fake_with_rng(&amp;mut rng);
+        Self(email)
+    }
+}
+</code></pre>
+</li>
+</ul>
+<p>折腾了一阵无果，换了个思路：既然 quickcheck 和 rand 生态已经脱钩了，干脆换个测试框架试试。书上提到过一嘴的 <code>proptest</code> 貌似能解决问题：proptest 的内部 RNG 类型 <code>TestRng</code> 实现了 <code>rand_core::RngCore</code>，天然能和 <code>fake</code>、<code>rand</code> 以及整个 rand 生态配合使用。</p>
+<pre><code class="language-rust">proptest! {
+    #[test]
+    fn valid_emails_are_parsed_successfully(
+        rng in any::&lt;u8&gt;().prop_perturb(|_, mut rng| rng.new_rng())
+    ) {
+        let email: String = SafeEmail().fake_with_rng(&amp;mut rng);
+        assert_ok!(SubscriberEmail::try_new(email));
+    }
+}
+</code></pre>
+<p>好像可以运行！但是这段代码怎么还是又臭又长？</p>
+<pre><code class="language-rust">rng in any::&lt;u8&gt;().prop_perturb(|_, mut rng| rng.new_rng())
+</code></pre>
+<p>这像黑魔法一样的东西是什么鬼？一点可读性都没有！为什么不能直接写成这样？<del>（怎么事那么多，事儿逼）</del></p>
+<pre><code class="language-rust">rng in any::&lt;TestRng&gt;()
+</code></pre>
+<p>原因很简单：<code>TestRng</code> 没有实现 proptest 自己的 <code>Arbitrary</code> trait，没法直接 <code>any::&lt;TestRng&gt;()</code> 来拿一个 RNG 当测试参数。得用 <code>prop_perturb</code> 方法把 proptest 内部的 RNG 偷出来用。每次都要写这么一段样板代码，心里还是难受。</p>
+<p>想了想，干脆自己写个库解决这个问题：<a href="https://crates.io/crates/proptest-rng"><strong>proptest-rng</strong></a>。</p>
+<p>思路很简单：写一个 newtype wrapper <code>ProptestRng</code>，让它同时实现 <code>Arbitrary</code>（proptest 能生成它）和 <code>RngCore</code>（rand 生态能用它）。再加上 <code>Deref&lt;Target = TestRng&gt;</code>，<code>TestRng</code> 的方法也能直接调用。</p>
+<p>有意思的是：这个 crate 的依赖<strong>只有 <code>proptest</code></strong>，不需要显式依赖 <code>rand</code> 或 <code>rand_core</code>。因为 <code>rand_core 0.9</code> 里有一个 blanket impl：</p>
+<pre><code class="language-rust">impl&lt;T: DerefMut&gt; RngCore for T where T::Target: RngCore { ... }
+</code></pre>
+<p>也就是说，只要 <code>ProptestRng</code> 实现了 <code>DerefMut&lt;Target = TestRng&gt;</code>，而 <code>TestRng</code> 已经实现了 <code>RngCore</code>，那 <code>ProptestRng</code> 就自动继承了 <code>RngCore</code>。不用多写一行代码，不用多加一个依赖。</p>
+<p>现在代码变成了这样：</p>
+<pre><code class="language-rust">proptest! {
+    #[test]
+    fn valid_emails_are_parsed_successfully(
+        rng in any::&lt;TestRng&gt;()
+    ) {
+        let email: String = SafeEmail().fake_with_rng(&amp;mut rng);
+        assert_ok!(SubscriberEmail::try_new(email));
+    }
+}
+</code></pre>
+<p>甚至还能进一步优化：</p>
+<pre><code class="language-rust">#[test]
+fn valid_emails_are_parsed_successfully(
+    email in any::&lt;ProptestRng&gt;()
+        .prop_map(|mut rng| SafeEmail().fake_with_rng::&lt;String, _&gt;(&amp;mut rng))
+) {
+    assert_ok!(SubscriberEmail::try_new(email));
+}
+</code></pre>
+<p>这样不仅更简洁紧凑，还更测试友好。测试失败时返回的是出问题的 email，而不是一串随机的 Rng 字符串。</p>
+<h3>最终效果</h3>
+<p>对比一下原书的写法：</p>
+<pre><code class="language-rust">#[derive(Debug, Clone)]
+struct ValidEmailFixture(pub String);
+
+impl quickcheck::Arbitrary for ValidEmailFixture {
+  fn arbitrary&lt;G: quickcheck::Gen&gt;(g: &amp;mut G) -&gt; Self {
+    // Cannot compile!
+    let email = SafeEmail().fake_with_rng(g);
+    Self(email)
+  }
+}
+
+#[quickcheck_macros::quickcheck]
+fn valid_emails_are_parsed_successfully(valid_email: ValidEmailFixture) -&gt; bool {
+  SubscriberEmail::parse(valid_email.0).is_ok()
+}
+</code></pre>
+<p>我们的代码完整复现了原书想要的功能，而且更加简洁了！</p>
+<p>在实际项目中，这么折腾肯定是得不偿失的。我是抱着「探索研究」的心态去追求代码的优雅，才有了上面的心路历程。分享出来，供有同样癖好的佬友参考。</p>
+<hr>
+<p>文中提到的 <code>proptest-rng</code> 库源码在 <a href="https://github.com/QuarkPixel/proptest-rng">GitHub</a>，crate 在 <a href="https://crates.io/crates/proptest-rng">crates.io</a>。如果你的项目也在用 proptest + fake 或者其他 rand 生态的 crate 做测试，欢迎试试。</p>
+]]></content>
+        <author>
+            <name>Xuancong Meng</name>
+            <email>xuancongmeng@gmail.com</email>
+            <uri>https://quarkpixel.github.io</uri>
+        </author>
+        <category label=""/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Logs::0xB64]]></title>
         <id>https://quarkpixel.github.io/logs/0xB64</id>
