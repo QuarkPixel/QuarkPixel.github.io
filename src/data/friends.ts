@@ -19,6 +19,12 @@ export const friendLinks: FriendLink[] = [
 		icon: 'tabler:skull'
 	},
 	{
+		href: 'https://smallcoral.github.io/',
+		name: 'SmallCoral 的水族馆',
+		desc: '电子、代码、Minecraft、业余无线电与折腾记录。呼号 BH6TAW。',
+		icon: 'maki:aquarium'
+	},
+	{
 		href: 'https://blog.gxres.net/',
 		name: "Restent's Notebook"
 	},

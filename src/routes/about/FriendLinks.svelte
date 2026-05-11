@@ -3,7 +3,7 @@
 	import { fly, slide } from 'svelte/transition';
 	import { friendLinks } from '$lib/../data/friends.js';
 
-	let isOpen = false;
+	let isOpen = true;
 </script>
 
 <div class="flex flex-col items-center">
