@@ -2,8 +2,14 @@
 	import Icon from '@iconify/svelte';
 	import { fly, slide } from 'svelte/transition';
 	import { friendLinks } from '$lib/../data/friends.js';
+	import { beforeNavigate } from '$app/navigation';
 
 	let isOpen = true;
+	let navigatingAway = false;
+
+	beforeNavigate(() => {
+		navigatingAway = true;
+	});
 </script>
 
 <div class="flex flex-col items-center">
@@ -33,7 +39,7 @@
 					{href}
 					target="_blank"
 					class="btn btn-sm preset-tonal hover:preset-filled overflow-hidden"
-					transition:fly|global={{ delay: index * 30, duration: 300, y: 50 }}
+					transition:fly|global={{ delay: navigatingAway ? 0 : index * 30, duration: navigatingAway ? 0 : 300, y: 50 }}
 					title={desc}
 				>
 					<Icon icon={icon ?? 'gravity-ui:link'} />
