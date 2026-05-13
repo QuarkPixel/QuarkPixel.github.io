@@ -42,7 +42,7 @@
 		>
 			<div>All content copyright by Xuancong Meng, unless otherwise noted.</div>
 			<div>Reproduction without permission of the original author is prohibited.</div>
-			<div>© Xuancong Meng 2025</div>
+			<div>© Xuancong Meng 2025-2026</div>
 		</Marquee>
 	</div>
 </div>
